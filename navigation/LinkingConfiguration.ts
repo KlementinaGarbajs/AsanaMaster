@@ -17,6 +17,11 @@ export default {
               MenuScreen: 'menu',
             },
           },
+          Login: {
+            screens: {
+              LoginScreen: 'login',
+            },
+          },
           Profile: {
             screens: {
               ProfileScreen: 'profile',

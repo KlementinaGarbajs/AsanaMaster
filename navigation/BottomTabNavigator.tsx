@@ -12,7 +12,8 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import MenuScreen from '../screens/MenuScreen';
 import ProfileScreen from '../screens/ProfileScreen';
-import { BottomTabParamList, MenuParamList, ProfileParamList } from '../types';
+import LoginScreen from '../screens/LoginScreen';
+import { BottomTabParamList, MenuParamList, ProfileParamList, LoginParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -21,8 +22,15 @@ export default function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="Menu"
+      initialRouteName="AsanaMaster"
       tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
+      <BottomTab.Screen
+        name="Login"
+        component={LoginNavigator}
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="alert-circle-outline" color={color} />,
+        }}
+      />
       <BottomTab.Screen
         name="Menu"
         component={MenuNavigator}
@@ -60,6 +68,20 @@ function MenuNavigator() {
         options={{ headerTitle: 'Asana Master' }}
       />
     </MenuStack.Navigator>
+  );
+}
+
+
+const LoginStack = createBottomTabNavigator<LoginParamList>();
+
+function LoginNavigator() {
+  return (
+    <LoginStack.Navigator>
+      <LoginStack.Screen
+        name="LoginScreen"
+        component={LoginScreen}
+      />
+    </LoginStack.Navigator>
   );
 }
 

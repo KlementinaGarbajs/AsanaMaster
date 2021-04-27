@@ -11,6 +11,8 @@ export type RootStackParamList = {
 export type BottomTabParamList = {
   Menu: undefined;
   Profile: undefined;
+  Login: undefined;
+  AsanaMaster: undefined
 };
 
 export type MenuParamList = {
@@ -19,4 +21,8 @@ export type MenuParamList = {
 
 export type ProfileParamList = {
   ProfileScreen: undefined;
+};
+
+export type LoginParamList = {
+  LoginScreen: undefined;
 };
