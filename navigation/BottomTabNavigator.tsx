@@ -72,7 +72,7 @@ function MenuNavigator() {
 }
 
 
-const LoginStack = createBottomTabNavigator<LoginParamList>();
+const LoginStack = createStackNavigator<LoginParamList>();
 
 function LoginNavigator() {
   return (
@@ -80,6 +80,7 @@ function LoginNavigator() {
       <LoginStack.Screen
         name="LoginScreen"
         component={LoginScreen}
+        options={{ headerTitle: 'Login' }}
       />
     </LoginStack.Navigator>
   );
