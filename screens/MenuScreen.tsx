@@ -1,18 +1,21 @@
-import * as React from 'react';
+import { useNavigation, NavigationContainer } from '@react-navigation/native';
+import React from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
 import { StyleSheet } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
-
-export default function MenuScreen() {
+function MenuScreen() {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Menu</Text>
-      <View style={styles.separator}/>
-      <EditScreenInfo path="/screens/MenuScreen.tsx" />
+      <Text style={styles.title}>Welcome</Text>
+      <TouchableOpacity style={styles.loginBtn} onPress={() => navigation.navigate('Login')}  >
+        <Text style={styles.loginText}>Back</Text>
+      </TouchableOpacity>
     </View>
   );
 }
+
+export default MenuScreen;
 
 const styles = StyleSheet.create({
   container: {
@@ -24,9 +27,18 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+
+  loginBtn: {
+    width: "30%",
+    backgroundColor: "#034947",
+    borderRadius: 20,
+    height: 40,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 20,
+    marginBottom: 10
+  },
+  loginText: {
+    color: "#edf4ef"
   },
 });
