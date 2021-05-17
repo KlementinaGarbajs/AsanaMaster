@@ -5,40 +5,38 @@ import { useNavigation } from '@react-navigation/native';
 const LoginScreen = () => {
   const navigation = useNavigation();
   return (
-      <ImageBackground style={styles.logoImageContainer}
+    <ImageBackground style={styles.logoImageContainer}
           source={require('../TemplateDiploma/BackGroundSign.png')}
         >
         <View style={styles.container}>
-          <Image style={styles.logoImage}
-            source={require('../TemplateDiploma/path35490.png')}
-          />
-          <Text style={styles.logo}>Asana Master</Text>
-          <View style={styles.inputView} >
-            
-            <TextInput
-              style={styles.inputText}
-              placeholder="Email..."
-              placeholderTextColor="#034947" />
-          </View>
-          <View style={styles.inputView} >
-            <TextInput
-              secureTextEntry
-              style={styles.inputText}
-              placeholder="Password..."
-              placeholderTextColor="#034947" />
-          </View>
-
-          <TouchableOpacity style={styles.loginBtn}  onPress={() => navigation.navigate('Menu')}  >
-            <Text style={styles.loginText}>LOGIN</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.signUpBtn} onPress={() => navigation.navigate('Registration')} >
-            <Text style={styles.signUpText}>Signup</Text>
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Text style={styles.forgot}>Forgot Password?</Text>
-          </TouchableOpacity>
+            <Image style={styles.logoImage}
+                source={require('../TemplateDiploma/path35490.png')}
+            />
+            <Text style={styles.logo}>Asana Master</Text>
+            <View style={styles.inputView} >
+                <TextInput
+                    style={styles.inputText}
+                    placeholder="Name"
+                    placeholderTextColor="#034947" />
+            </View>
+            <View style={styles.inputView} >
+                <TextInput
+                style={styles.inputText}
+                placeholder="Email..."
+                placeholderTextColor="#034947" />
+            </View>
+            <View style={styles.inputView} >
+                <TextInput
+                secureTextEntry
+                style={styles.inputText}
+                placeholder="Password..."
+                placeholderTextColor="#034947" />
+            </View>
+            <TouchableOpacity style={styles.loginBtn}  onPress={() => navigation.navigate('Menu')}  >
+                <Text style={styles.loginText}>SIGN UP</Text>
+            </TouchableOpacity>
         </View>
-      </ImageBackground>
+    </ImageBackground>
 );
 }
 
