@@ -6,9 +6,7 @@ import { StyleSheet } from 'react-native';
 function MenuScreen() {
   const navigation = useNavigation();
   return (
-    <SafeAreaView>
-        <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center' }}>
-
+    <SafeAreaView style={{flex: 1}}>
             <FlatList data={[{name: 'SITTING ASANAS', image:require('../TemplateDiploma/meditate.png')}, 
                             {name: 'STANDING ASANAS', image: require('../TemplateDiploma/halfcamel.png')},
                             {name: 'LAYING ASANAS', image: require('../TemplateDiploma/legstretch3.png')},
@@ -23,7 +21,7 @@ function MenuScreen() {
             renderItem={({item}) =>
             
             <View style={styles.container}>
-                <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('AsanasMenu')}>
+                <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('Asanas')}>
                     <Image style={styles.asanaImage}
                         source={ item.image }
                     />
@@ -31,11 +29,8 @@ function MenuScreen() {
                 </TouchableOpacity>
             </View>}
             numColumns={2} 
+            keyExtractor={(item, index) => index.toString()}
             />
-            <TouchableOpacity style={styles.backBtn} onPress={() => navigation.navigate('Menu')} >
-                <Text style={styles.textBtn}>Back</Text>
-            </TouchableOpacity>
-        </ScrollView>
     </SafeAreaView>
   );
 }
@@ -71,7 +66,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginTop: 20,
-    marginBottom: 10
+    marginBottom: 10,
+    alignSelf: "center"
   },
 
   textBtn: {

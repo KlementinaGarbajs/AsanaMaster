@@ -6,47 +6,40 @@ import { StyleSheet } from 'react-native';
 function MenuScreen() {
   const navigation = useNavigation();
   return (
-    <SafeAreaView >
-      <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center' }}>
-      <View style={styles.container}>
-        <Text style={styles.logo}>Yogi on a journey</Text>
+      <ScrollView contentContainerStyle={{ justifyContent: 'center' }}>
+        <View style={styles.container}>
 
+          <Text style={styles.logo}>Yogi on a journey</Text>
 
-        <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('AsanasMenu')}>
+          <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('Asanas')}>
+              <Image style={styles.logoImage}
+                  source={require('../TemplateDiploma/crow.png')} 
+                />
+                <Text style={styles.text}>ASANAS</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={{ alignItems:"center" }}>
             <Image style={styles.logoImage}
-                source={require('../TemplateDiploma/crow.png')} 
+                source={require('../TemplateDiploma/goals.png')}
               />
-              <Text style={styles.text}>ASANAS</Text>
-        </TouchableOpacity>
+              <Text style={styles.text}>GOALS</Text>
+          </TouchableOpacity>
 
-        <TouchableOpacity style={{ alignItems:"center" }}>
-          <Image style={styles.logoImage}
-              source={require('../TemplateDiploma/goals.png')}
-            />
-            <Text style={styles.text}>GOALS</Text>
-        </TouchableOpacity>
+          <TouchableOpacity style={{ alignItems:"center" }}>
+            <Image style={styles.logoImage}
+                source={require('../TemplateDiploma/writing.png')}
+              />
+              <Text style={styles.text}>NOTES</Text>
+          </TouchableOpacity>
 
-        <TouchableOpacity style={{ alignItems:"center" }}>
-          <Image style={styles.logoImage}
-              source={require('../TemplateDiploma/writing.png')}
-            />
-            <Text style={styles.text}>NOTES</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={{ alignItems:"center" }}>
-          <Image style={styles.logoImage}
-              source={require('../TemplateDiploma/quiz.png')}
-            />
-            <Text style={styles.text}>QUIZ</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.backBtn} onPress={() => navigation.navigate('Login')} >
-          <Text style={styles.textBtn}>Back</Text>
-        </TouchableOpacity>
+          <TouchableOpacity style={{ alignItems:"center" }}>
+            <Image style={styles.logoImage}
+                source={require('../TemplateDiploma/quiz.png')}
+              />
+              <Text style={styles.text}>QUIZ</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
-    </SafeAreaView>
-    
   );
 }
 
@@ -54,11 +47,8 @@ export default MenuScreen;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     marginTop: 50,
-    alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: StatusBar.currentHeight,
   },
 
   title: {
@@ -69,7 +59,8 @@ const styles = StyleSheet.create({
   logo: {
     fontWeight: "bold",
     fontSize: 40,
-    color: "#034947"
+    color: "#034947",
+    alignSelf: "center"
     },
 
   logoImage: {
@@ -93,7 +84,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginTop: 20,
-    marginBottom: 10
+    marginBottom: 10,
+    alignSelf: "center"
   },
 
   textBtn: {
