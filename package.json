@@ -7,6 +7,7 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "test": "jest --watchAll",
+    "server": "cd server && ts-node server.ts"
   },
   "jest": {
     "preset": "jest-expo"
@@ -17,6 +18,8 @@
     "@react-navigation/bottom-tabs": "5.11.2",
     "@react-navigation/native": "^5.8.10",
     "@react-navigation/stack": "~5.12.8",
+    "@types/express": "^4.17.12",
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "expo": "~41.0.0",
     "expo-asset": "~8.3.1",
@@ -28,6 +31,7 @@
     "expo-web-browser": "~9.1.0",
     "express": "^4.17.1",
     "mysql": "^2.18.1",
+    "net": "^1.0.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
@@ -36,17 +40,19 @@
     "react-native-reanimated": "^2.1.0",
     "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "^3.0.0",
-    "react-native-web": "~0.13.12",
+    "react-native-web": "^0.16.3",
     "react-navigation": "^4.4.4",
     "react-navigation-stack": "^2.10.4",
-    "sequelize-cli": "^6.2.0"
+    "ts-node": "^10.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "@types/mysql": "^2.15.18",
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
     "jest-expo": "~41.0.0",
     "typescript": "~4.0.0"
   },
+  "proxy": "http://localhost:8080",
   "private": true
 }

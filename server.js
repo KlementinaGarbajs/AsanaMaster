@@ -1,25 +1,21 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-
 const app = express();
-
-var corsOptions = {
-  origin: "http://localhost:19006"
-};
-
-app.use(cors(corsOptions));
+var router = express.Router();
 
 // parse requests of content-type - application/json
-app.use(bodyParser.json());
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(cors());
+app.get("/api", router);
 
-// simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to asanamaster application." });
-});
+router.use((request, response, next) => {
+  console.log('middleware');
+  next();
+})
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
