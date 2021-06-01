@@ -16,6 +16,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
+
 app.get('/', (req: Request, res: Response) => res.status(301).redirect('/api'));
 app.get('/api', (req: Request, res: Response) =>res.status(200).send({
     message: 'Welcome to Express Api',

@@ -13,7 +13,7 @@ const LoginScreen = () => {
 
   const getAsanas = async () => {
     ClientApi.getAsanas().then((res) => {
-     console.log("ble", res);
+     console.log(res);
    });
   }
   return (
