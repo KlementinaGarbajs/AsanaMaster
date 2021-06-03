@@ -1,10 +1,22 @@
 import { useNavigation } from '@react-navigation/native';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SafeAreaView, ScrollView, StatusBar, View, TouchableOpacity, Text, Image, FlatList } from 'react-native';
 import { StyleSheet } from 'react-native';
+import ClientApi from '../api';
 
 function MenuScreen() {
   const navigation = useNavigation();
+
+  useEffect(() => {
+    const asanas = getAsanas();
+    console.log(asanas);
+  },[]);
+
+  const getAsanas = async () => {
+    ClientApi.getAsanas().then((res) => {
+     console.log(res);
+   });
+  }
   return (
     <SafeAreaView style={{flex: 1}}>
             <FlatList data={[{name: 'SITTING ASANAS', image:require('../TemplateDiploma/meditate.png')}, 

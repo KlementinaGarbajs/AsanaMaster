@@ -4,7 +4,6 @@ import connection from "../database/connection";
 export const asanaManager = (req: Request, res: Response) => {
         const params = req.params;
 
-        console.log("klementina", params);
         switch (params.api) {
             case 'all':
                 getAsanas(req, res);
@@ -18,10 +17,9 @@ export const asanaManager = (req: Request, res: Response) => {
 const getAsanas = async (req: Request, res: Response) => {
     try {
         connection.query('SELECT * FROM asanas', function (err: any, results: any, fields: any) {
-            const asana = results // <-- here
+            const asana = results
             res.json(asana || {})
         });
-        
 
     } catch (e) {
         console.error({method: 'getAsanas', details: e})

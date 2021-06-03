@@ -10,7 +10,7 @@ const port = process.env.PORT || 8080;
 
 app.listen(port);
 
-console.log(`Grill server listening on ${port}`);
+console.log(`Server listening on ${port}`);
 
 app.use(express.json());
 app.use(bodyParser.json());

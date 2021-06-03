@@ -1,21 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import ClientApi from '../api';
 
 const LoginScreen = () => {
   const navigation = useNavigation();
 
-  useEffect(() => {
-    const asanas = getAsanas();
-    console.log(asanas);
-  },[]);
-
-  const getAsanas = async () => {
-    ClientApi.getAsanas().then((res) => {
-     console.log(res);
-   });
-  }
   return (
       <ImageBackground style={styles.logoImageContainer}
           source={require('../TemplateDiploma/BackGroundSign.png')}
