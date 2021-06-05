@@ -1,6 +1,7 @@
 export default class ClientApi {
 
     static getAsanas = () => ClientApi.sendRequest('http://localhost:8080/asanas/all');
+    static getNotes = () => ClientApi.sendRequest('http://localhost:8080/notes/all');
 
     static handleErrors = (resp: any) => {
         console.log(resp);

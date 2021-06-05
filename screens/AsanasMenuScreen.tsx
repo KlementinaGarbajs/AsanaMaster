@@ -1,48 +1,32 @@
 import { useNavigation } from '@react-navigation/native';
-import React, { useEffect } from 'react';
-import { SafeAreaView, ScrollView, StatusBar, View, TouchableOpacity, Text, Image, FlatList } from 'react-native';
+import React from 'react';
+import { SafeAreaView, StatusBar, View, TouchableOpacity, Text, Image, FlatList } from 'react-native';
 import { StyleSheet } from 'react-native';
-import ClientApi from '../api';
 
 function MenuScreen() {
   const navigation = useNavigation();
 
-  useEffect(() => {
-    const asanas = getAsanas();
-    console.log(asanas);
-  },[]);
-
-  const getAsanas = async () => {
-    ClientApi.getAsanas().then((res) => {
-     console.log(res);
-   });
-  }
   return (
     <SafeAreaView style={{flex: 1}}>
-            <FlatList data={[{name: 'SITTING ASANAS', image:require('../TemplateDiploma/meditate.png')}, 
-                            {name: 'STANDING ASANAS', image: require('../TemplateDiploma/halfcamel.png')},
-                            {name: 'LAYING ASANAS', image: require('../TemplateDiploma/legstretch3.png')},
-                            {name: 'INVERSIONS', image:require('../TemplateDiploma/crow.png')},
-                            {name: 'FOLDS', image:require('../TemplateDiploma/legstretch1.png')},
-                            {name: 'TWISTS', image:require('../TemplateDiploma/splitoneleg.png')},
-                            {name: 'BEGINNER', image:require('../TemplateDiploma/legstretch2.png')},
-                            {name: 'INTERMEDIATE', image:require('../TemplateDiploma/path35522.png')},
-                            {name: 'MASTER', image:require('../TemplateDiploma/split.png')},
-                            {name: 'LEARNED ASANAS', image:require('../TemplateDiploma/path35490.png')}
-                        ]} 
-            renderItem={({item}) =>
-            
-            <View style={styles.container}>
-                <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('Asanas')}>
-                    <Image style={styles.asanaImage}
-                        source={ item.image }
-                    />
-                    <Text style={styles.text}>{ item.name }</Text>
-                </TouchableOpacity>
-            </View>}
-            numColumns={2} 
-            keyExtractor={(item, index) => index.toString()}
-            />
+      <FlatList data={[
+                      {name: 'BEGINNER', image:require('../TemplateDiploma/legstretch2.png')},
+                      {name: 'INTERMEDIATE', image:require('../TemplateDiploma/path35522.png')},
+                      {name: 'MASTER', image:require('../TemplateDiploma/split.png')},
+                      {name: 'LEARNED ASANAS', image:require('../TemplateDiploma/path35490.png')}
+                  ]} 
+      renderItem={({item}) =>
+      
+      <View style={styles.container}>
+          <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('AsanasSubmenu', { paramKey: item.name })}>
+              <Image style={styles.asanaImage}
+                  source={ item.image }
+              />
+              <Text style={styles.text}>{ item.name }</Text>
+          </TouchableOpacity>
+      </View>}
+      numColumns={2} 
+      keyExtractor={(item, index) => index.toString()}
+      />
     </SafeAreaView>
   );
 }

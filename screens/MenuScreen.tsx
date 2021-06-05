@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { Text, TouchableOpacity, SafeAreaView, ScrollView, StatusBar, Image, View, ImageBackground, Dimensions } from 'react-native';
+import { Text, TouchableOpacity, ScrollView, Image, View } from 'react-native';
 import { StyleSheet } from 'react-native';
 
 function MenuScreen() {
@@ -25,7 +25,7 @@ function MenuScreen() {
               <Text style={styles.text}>GOALS</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={{ alignItems:"center" }}>
+          <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('NotesMenu')}>
             <Image style={styles.logoImage}
                 source={require('../TemplateDiploma/writing.png')}
               />
@@ -68,9 +68,6 @@ const styles = StyleSheet.create({
     width: 220, 
     height: 220,
     marginTop: 70,
-    borderRadius: 220 / 2,
-    borderWidth: 2,
-    borderColor: "#034947",
     opacity: 0.8,
     aspectRatio: 1, 
     resizeMode: 'contain',
