@@ -7,6 +7,7 @@ import RegistrationScreen from './screens/RegistrationScreen';
 import AsanasMenuScreen from './screens/AsanasMenuScreen';
 import AsanasSubmenuScreen from './screens/AsanasSubmenuScreen';
 import NotesMenu from './screens/NotesMenu';
+import NoteDetailsScreen from './screens/NoteDetailsScreen';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,7 @@ export default function App() {
         <Stack.Screen name="Asanas" component={AsanasMenuScreen} />
         <Stack.Screen name="AsanasSubmenu" component={AsanasSubmenuScreen} />
         <Stack.Screen name="NotesMenu" component={NotesMenu} />
+        <Stack.Screen name="NoteDetails" component={NoteDetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

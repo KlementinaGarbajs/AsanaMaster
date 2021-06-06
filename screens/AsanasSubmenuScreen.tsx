@@ -73,19 +73,7 @@ const styles = StyleSheet.create({
     color: "#034947",
     fontWeight: "bold",
   },
-
-  backBtn: {
-    width: "30%",
-    backgroundColor: "#034947",
-    borderRadius: 20,
-    height: 40,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 20,
-    marginBottom: 10,
-    alignSelf: "center"
-  },
-
+  
   textBtn: {
     color: "#edf4ef"
   },

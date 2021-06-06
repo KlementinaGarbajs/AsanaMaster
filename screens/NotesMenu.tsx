@@ -1,8 +1,9 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
-import { StatusBar, View, Text, ScrollView, SafeAreaView, FlatList, TouchableOpacity } from 'react-native';
+import { View, Text, ScrollView, FlatList, TouchableOpacity } from 'react-native';
 import { StyleSheet } from 'react-native';
 import ClientApi from '../api';
+import { Icon } from 'react-native-elements';
 
 const NotesMenu = ({route}: {route: any}) => {
   const navigation = useNavigation();
@@ -20,23 +21,42 @@ const NotesMenu = ({route}: {route: any}) => {
   }
 
   return (
-    <ScrollView>
+    <ScrollView contentContainerStyle={[{flex: 1, flexDirection: 'column'}]}>
         {notes.map((notes, index) => {
             return (
-                <SafeAreaView style={{flex: 1}}>
-                    <FlatList data={[notes]}
+                <View>
+                    <FlatList nestedScrollEnabled={true} data={[notes]}
                     renderItem={({item}) =>
                         <View style={styles.container}>
-                            <TouchableOpacity style={{ alignItems:"center" }}>
+                            <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('NoteDetails', { paramKey: item })}>
                                 <Text style={styles.text}>{ item.name }</Text>
                             </TouchableOpacity>
-                        </View>}
+                        </View>
+                        }
                     numColumns={2} 
                     keyExtractor={(item, index) => index.toString()}
                     />
-                </SafeAreaView>
+                    <View style={styles.separator} />
+                </View>
             )
         })}
+        <TouchableOpacity
+            style={{
+            borderWidth: 1,
+            borderColor: 'rgba(0,0,0,0.2)',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: 50,
+            height: 50,
+            backgroundColor: '#034947',
+            borderRadius: 100,
+            position: 'absolute',
+            right: 20,
+            bottom: 20
+            }}
+        >
+            <Icon name='add' size={30} color='white' />
+        </TouchableOpacity>
     </ScrollView>
   );
 }
@@ -46,11 +66,16 @@ export default NotesMenu;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 50,
-    alignItems: 'center',
+    marginTop: 5,
+    padding: 10,
     justifyContent: 'center',
-    paddingTop: StatusBar.currentHeight,
+    height: 50,
   },
+
+  separator: {
+    borderWidth: 0.5,
+    borderColor: "rgba(4, 98, 89, 0.5)",
+},
 
   asanaImage: {
     width: 100, 
@@ -62,18 +87,8 @@ const styles = StyleSheet.create({
   text: {
     color: "#034947",
     fontWeight: "bold",
-  },
-
-  backBtn: {
-    width: "30%",
-    backgroundColor: "#034947",
-    borderRadius: 20,
-    height: 40,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 20,
-    marginBottom: 10,
-    alignSelf: "center"
+    fontSize: 16,
+    alignSelf: 'flex-start'
   },
 
   textBtn: {
