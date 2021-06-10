@@ -3,21 +3,21 @@ import React from 'react';
 import { SafeAreaView, StatusBar, View, TouchableOpacity, Text, Image, FlatList } from 'react-native';
 import { StyleSheet } from 'react-native';
 
-function MenuScreen() {
+function AsanasMenuScreen() {
   const navigation = useNavigation();
 
   return (
     <SafeAreaView style={{flex: 1}}>
       <FlatList data={[
-                      {name: 'BEGINNER', image:require('../TemplateDiploma/legstretch2.png')},
-                      {name: 'INTERMEDIATE', image:require('../TemplateDiploma/path35522.png')},
-                      {name: 'MASTER', image:require('../TemplateDiploma/split.png')},
-                      {name: 'LEARNED ASANAS', image:require('../TemplateDiploma/path35490.png')}
+                      {id: 1, name: 'BEGINNER', image: require('../TemplateDiploma/legstretch2.png')},
+                      {id: 2, name: 'INTERMEDIATE', image: require('../TemplateDiploma/path35522.png')},
+                      {id: 3, name: 'MASTER', image: require('../TemplateDiploma/split.png')},
+                      {id: 4, name: 'LEARNED ASANAS', image: require('../TemplateDiploma/path35490.png')}
                   ]} 
       renderItem={({item}) =>
       
-      <View style={styles.container}>
-          <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('AsanasSubmenu', { paramKey: item.name })}>
+      <View style={styles.container} key={item.id}>
+          <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('AsanasSubmenu', { paramKey: item })}>
               <Image style={styles.asanaImage}
                   source={ item.image }
               />
@@ -31,7 +31,7 @@ function MenuScreen() {
   );
 }
 
-export default MenuScreen;
+export default AsanasMenuScreen;
 
 const styles = StyleSheet.create({
   container: {
