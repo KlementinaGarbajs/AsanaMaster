@@ -29,25 +29,25 @@ const AsanasSubmenu = ({route}: {route: any}) => {
 
   return (
     <ScrollView>
-        {asanas.map((asanas, index) => {
-            if (asanas.level === level) {
-                return (
-                    <SafeAreaView style={{flex: 1}} key={index}>
-                        <FlatList data={[asanas]}
-                          renderItem={({item}) =>
-                              <View style={styles.container} key={item.id}>
-                                  <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('AsanaDetails', { paramKey: item })}>
-                                    <Image style={styles.asanaImage} source={{uri: require(`../Asanas/${item.image}`)}} />
-                                    <Text style={styles.text}>{ item.name }</Text>
-                                  </TouchableOpacity>
-                              </View>}
-                          numColumns={2} 
-                          keyExtractor={(item, index) => index.toString()}
-                        />
-                    </SafeAreaView>
-                )
-            }
-        })}
+      {asanas.map((asanas, index) => {
+        if (asanas.level === level) {
+          return (
+            <SafeAreaView style={{flex: 1}} key={index}>
+                <FlatList data={[asanas]}
+                  renderItem={({item}) =>
+                    <View style={styles.container} key={item.id}>
+                        <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('AsanaDetails', { paramKey: item })}>
+                          <Image style={styles.asanaImage} source={{uri: require(`../Asanas/${item.image}`)}} />
+                          <Text style={styles.text}>{ item.name }</Text>
+                        </TouchableOpacity>
+                    </View>}
+                  numColumns={3} 
+                  keyExtractor={(item, index) => index.toString()}
+                />
+            </SafeAreaView>
+          )
+        }
+      })}
     </ScrollView>
   );
 }
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     marginTop: 50,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: StatusBar.currentHeight,
+    paddingVertical: StatusBar.currentHeight,
   },
 
   asanaImage: {
