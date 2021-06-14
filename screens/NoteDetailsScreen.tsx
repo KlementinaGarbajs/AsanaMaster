@@ -8,6 +8,7 @@ import { TouchableHighlight, TouchableOpacity } from 'react-native-gesture-handl
 
 const NoteDetailsScreen = ({route}: {route: any}) => {
   const navigation = useNavigation();
+  navigation.setOptions({ title: route.params.paramKey.name });
 
   console.log(route.params.paramKey);
   return (

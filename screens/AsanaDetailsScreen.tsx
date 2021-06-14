@@ -1,10 +1,11 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState, useEffect } from 'react';
-import { SafeAreaView, StatusBar, Text, View } from 'react-native';
+import { SafeAreaView, StatusBar, Text, View, Image } from 'react-native';
 import { StyleSheet } from 'react-native';
 
 const AsanaDetailsScreen = ({route}: {route: any}) => {
     const navigation = useNavigation();
+    navigation.setOptions({ title: route.params.paramKey.name });
     const [howTo, setHowTo] = useState(Array);
 
     useEffect(() => {
@@ -16,6 +17,7 @@ const AsanaDetailsScreen = ({route}: {route: any}) => {
 
     return (
         <SafeAreaView style={{flex: 1}}>
+            <Image style={styles.asanaImage} source={{uri: require(`../Asanas/${route.params.paramKey.image}`)}} />
             <Text style={styles.logo}>{route.params.paramKey.name}</Text>
             <View style={{ paddingLeft: 10, flexDirection: 'row' }}>
                 <Text style={styles.textBold}>Sanskrit name:</Text>
@@ -56,8 +58,9 @@ const styles = StyleSheet.create({
     },
 
     asanaImage: {
-        width: 100, 
-        height: 100,
+        alignSelf: 'center',
+        width: 150, 
+        height: 150,
         aspectRatio: 1, 
         resizeMode: 'contain',
     },

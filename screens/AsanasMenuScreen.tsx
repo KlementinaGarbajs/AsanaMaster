@@ -17,14 +17,14 @@ function AsanasMenuScreen() {
       renderItem={({item}) =>
       
         <View style={styles.container} key={item.id}>
-            <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('AsanasSubmenu', { paramKey: item })}>
+            <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('Asanas Submenu', { paramKey: item })}>
                 <Image style={styles.asanaImage}
                     source={ item.image }
                 />
                 <Text style={styles.text}>{ item.name }</Text>
             </TouchableOpacity>
         </View>}
-      numColumns={1} 
+      numColumns={1}
       keyExtractor={(item, index) => index.toString()}
       />
     </SafeAreaView>

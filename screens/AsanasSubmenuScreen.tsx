@@ -6,11 +6,14 @@ import ClientApi from '../api';
 
 const AsanasSubmenu = ({route}: {route: any}) => {
   const navigation = useNavigation();
+  navigation.setOptions({ title: route.params.paramKey.name + " ASANAS" });
   const [asanas, setAsanas] = useState<any[]>([]);
   let [level, setLevel] = useState<number>();
 
   useEffect(() => {
-    const asanas = getAsanas();
+    ClientApi.getAsanas().then((res) => {
+      setAsanas(res);
+    });
     
     if (route.params.paramKey.name === "BEGINNER") {
         setLevel(0);
@@ -21,27 +24,22 @@ const AsanasSubmenu = ({route}: {route: any}) => {
     }
   },[]);
 
-  const getAsanas = async () => {
-    ClientApi.getAsanas().then((res) => {
-      setAsanas(res);
-   });
-  }
-
   return (
     <ScrollView>
       {asanas.map((asanas, index) => {
         if (asanas.level === level) {
           return (
-            <SafeAreaView style={{flex: 1}} key={index}>
+            <SafeAreaView key={index}>
                 <FlatList data={[asanas]}
                   renderItem={({item}) =>
                     <View style={styles.container} key={item.id}>
-                        <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('AsanaDetails', { paramKey: item })}>
+                        <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('Asana Details', { paramKey: item })}>
                           <Image style={styles.asanaImage} source={{uri: require(`../Asanas/${item.image}`)}} />
                           <Text style={styles.text}>{ item.name }</Text>
                         </TouchableOpacity>
                     </View>}
-                  numColumns={3} 
+
+                  numColumns={2}
                   keyExtractor={(item, index) => index.toString()}
                 />
             </SafeAreaView>
@@ -66,7 +64,6 @@ const styles = StyleSheet.create({
   asanaImage: {
     width: 100, 
     height: 100,
-    aspectRatio: 1, 
     resizeMode: 'contain',
     },
 

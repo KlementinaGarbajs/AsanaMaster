@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
@@ -14,19 +14,18 @@ const LoginScreen = () => {
             source={require('../TemplateDiploma/path35490.png')}
           />
           <Text style={styles.logo}>Asana Master</Text>
-          <View style={styles.inputView} >
-            
+          <View style={styles.inputView}>
             <TextInput
               style={styles.inputText}
               placeholder="Email..."
-              placeholderTextColor="#034947" />
+              placeholderTextColor="#034947"/>
           </View>
-          <View style={styles.inputView} >
+          <View style={styles.inputView}>
             <TextInput
               secureTextEntry
               style={styles.inputText}
               placeholder="Password..."
-              placeholderTextColor="#034947" />
+              placeholderTextColor="#034947"/>
           </View>
 
           <TouchableOpacity style={styles.loginBtn}  onPress={() => navigation.navigate('Menu')}  >

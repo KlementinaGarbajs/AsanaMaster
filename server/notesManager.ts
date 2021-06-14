@@ -9,7 +9,8 @@ export const notesManager = (req: Request, res: Response) => {
                 getNotes(req, res);
                 break;
             case 'new':
-                newNote(req, res);
+                console.log("klementina")
+                saveNewNote(req, res);
                 break;
             default:
                 res.send('Api ' + params.api + ' does not exist!');
@@ -30,15 +31,16 @@ const getNotes = async (req: Request, res: Response) => {
     }
 }
 
-const newNote = async (req: Request, res: Response) => {
-    try {
-        connection.query('SELECT * FROM notes', function (err: any, results: any, fields: any) {
-            const note = results
-            res.json(note || {})
-        });
 
+const saveNewNote = async (req: Request, res: Response) => {
+    const data = req.body;
+    console.log("bleble", data);
+    try {
+        connection.query("INSERT INTO 'user'('name', 'email', 'password', 'phone') VALUES (?,?,?,?)",
+        [data.name, data.description, data.date, data.rate]),
+        res.status(200).json({ message: 'Saved.'});
     } catch (e) {
-        console.error({method: 'getNotes', details: e})
-        res.status(400).send(e);
+        console.error({method: 'saveNewNote', details: e})
+        res.status(400).send(e.message);
     }
 }

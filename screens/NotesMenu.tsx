@@ -10,25 +10,20 @@ const NotesMenu = ({route}: {route: any}) => {
   const [notes, setNotes] = useState<any[]>([]);
 
   useEffect(() => {
-    const notes = getNotes();
-    console.log(notes);
-  },[]);
-
-  const getNotes = async () => {
     ClientApi.getNotes().then((res) => {
       setNotes(res);
    });
-  }
+  },[]);
 
   return (
     <ScrollView contentContainerStyle={[{flex: 1, flexDirection: 'column'}]}>
         {notes.map((notes, index) => {
             return (
-                <View>
+                <View key={index}>
                     <FlatList nestedScrollEnabled={true} data={[notes]}
                     renderItem={({item}) =>
-                        <View style={styles.container}>
-                            <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('NoteDetails', { paramKey: item })}>
+                        <View style={styles.container} key={item.id}>
+                            <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('Note Details', { paramKey: item })}>
                                 <Text style={styles.text}>{ item.name }</Text>
                             </TouchableOpacity>
                         </View>
@@ -40,7 +35,7 @@ const NotesMenu = ({route}: {route: any}) => {
                 </View>
             )
         })}
-        <TouchableOpacity
+        <TouchableOpacity onPress={() => navigation.navigate('New Note')}
             style={{
             borderWidth: 1,
             borderColor: 'rgba(0,0,0,0.2)',

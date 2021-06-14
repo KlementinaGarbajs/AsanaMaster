@@ -2,24 +2,31 @@ import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { Text, TouchableOpacity, ScrollView, Image, View } from 'react-native';
 import { StyleSheet } from 'react-native';
+import { Icon } from 'react-native-elements';
 
 function MenuScreen() {
   const navigation = useNavigation();
+  navigation.setOptions({ headerRight: () => <View style={{padding: 10}}><Icon
+    name={"logout"}
+    size={30}
+    color="rgba(28, 28, 28, 0.8)"
+    onPress={() => navigation.navigate('Login')}
+  /></View>, title: null, headerLeft: null});
 
   const cards = [
     { name: 'ASANAS', navigate: 'Asanas', image: require('../TemplateDiploma/crow.png') },
     { name: 'GOALS', navigate: 'Goals', image: require('../TemplateDiploma/goals.png') },
-    { name: 'NOTES', navigate: 'NotesMenu', image: require('../TemplateDiploma/writing.png') },
+    { name: 'NOTES', navigate: 'Notes', image: require('../TemplateDiploma/writing.png') },
     { name: 'QUIZ', navigate: 'Quiz', image: require('../TemplateDiploma/quiz.png') }
   ]
 
-  return (   
+  return (
   <View style={styles.container}>
     <Text style={styles.logo}>Yogi on a journey</Text>
       <ScrollView horizontal={true} contentContainerStyle={{paddingVertical: 50}}>
         {cards.map((card, index) => {
           return (
-          <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate(card.navigate)}>
+          <TouchableOpacity key={index} style={{ alignItems:"center" }} onPress={() => navigation.navigate(card.navigate)}>
               <Image style={styles.logoImage}
                   source={card.image} 
                 />

@@ -9,6 +9,7 @@ import AsanasSubmenuScreen from './screens/AsanasSubmenuScreen';
 import NotesMenu from './screens/NotesMenu';
 import NoteDetailsScreen from './screens/NoteDetailsScreen';
 import AsanaDetailsScreen from './screens/AsanaDetailsScreen';
+import NewNoteScreen from './screens/NewNoteScreen';
 
 const Stack = createStackNavigator();
 
@@ -20,10 +21,11 @@ export default function App() {
         <Stack.Screen name="Registration" options={{headerShown: false}} component={RegistrationScreen} />
         <Stack.Screen name="Menu" component={MenuScreen} />
         <Stack.Screen name="Asanas" component={AsanasMenuScreen} />
-        <Stack.Screen name="AsanasSubmenu" component={AsanasSubmenuScreen} />
-        <Stack.Screen name="AsanaDetails" component={AsanaDetailsScreen} />
-        <Stack.Screen name="NotesMenu" component={NotesMenu} />
-        <Stack.Screen name="NoteDetails" component={NoteDetailsScreen} />
+        <Stack.Screen name="Asanas Submenu" component={AsanasSubmenuScreen} />
+        <Stack.Screen name="Asana Details" component={AsanaDetailsScreen} />
+        <Stack.Screen name="Notes" component={NotesMenu} />
+        <Stack.Screen name="Note Details" component={NoteDetailsScreen} />
+        <Stack.Screen name="New Note" options={{headerShown: false}} component={NewNoteScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
