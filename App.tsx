@@ -10,6 +10,10 @@ import NotesMenu from './screens/NotesMenu';
 import NoteDetailsScreen from './screens/NoteDetailsScreen';
 import AsanaDetailsScreen from './screens/AsanaDetailsScreen';
 import NewNoteScreen from './screens/NewNoteScreen';
+import SplitsScreen from './screens/SplitsScreen';
+import BackbendsScreen from './screens/BackbendsScreen';
+import InversionsScreen from './screens/InversionsScreen';
+import GoalsMenu from './screens/GoalsMenu';
 
 const Stack = createStackNavigator();
 
@@ -26,6 +30,10 @@ export default function App() {
         <Stack.Screen name="Notes" component={NotesMenu} />
         <Stack.Screen name="Note Details" component={NoteDetailsScreen} />
         <Stack.Screen name="New Note" options={{headerShown: false}} component={NewNoteScreen} />
+        <Stack.Screen name="Splits" component={SplitsScreen} />
+        <Stack.Screen name="Backbends" component={BackbendsScreen} />
+        <Stack.Screen name="Inversions" component={InversionsScreen} />
+        <Stack.Screen name="Goals" component={GoalsMenu} />
       </Stack.Navigator>
     </NavigationContainer>
   );
