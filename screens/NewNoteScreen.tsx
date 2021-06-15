@@ -10,6 +10,7 @@ function NewNoteScreen() {
     const navigation = useNavigation();
     //const [selectedDate, setSelectedDate] = React.useState(new Date());
     const [date, setDate] = React.useState('2020-10-06');
+    const [rate, setRate] = React.useState(0);
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
 
@@ -20,9 +21,9 @@ function NewNoteScreen() {
         setTitle(event);
     }
 
-
     const closeModal = () => {
         navigation.navigate('Notes');
+        window.location.reload(true);
     }
 
     /*const handleDateChange = (date: React.SetStateAction<Date>) => {
@@ -34,11 +35,12 @@ function NewNoteScreen() {
         name: title,
         description: description,
         date: date,
-        rate: 0
+        rate: rate
     }
-    ClientApi.saveNewNote(values).then(() => {
-        console.log("juhu");
-    });
+        ClientApi.saveNewNote(values).then(() => {
+            console.log("juhu");
+        });    
+
         setTitle('');
         setDescription('');
         closeModal();

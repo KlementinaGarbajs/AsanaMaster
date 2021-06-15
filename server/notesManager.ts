@@ -9,7 +9,6 @@ export const notesManager = (req: Request, res: Response) => {
                 getNotes(req, res);
                 break;
             case 'new':
-                console.log("klementina")
                 saveNewNote(req, res);
                 break;
             default:
@@ -31,16 +30,15 @@ const getNotes = async (req: Request, res: Response) => {
     }
 }
 
-
 const saveNewNote = async (req: Request, res: Response) => {
     const data = req.body;
     console.log("bleble", data);
-    try {
-        connection.query("INSERT INTO 'user'('name', 'email', 'password', 'phone') VALUES (?,?,?,?)",
-        [data.name, data.description, data.date, data.rate]),
-        res.status(200).json({ message: 'Saved.'});
-    } catch (e) {
-        console.error({method: 'saveNewNote', details: e})
-        res.status(400).send(e.message);
-    }
+    var post = {name: data.name, description: data.description, date: data.date, rate: data.rate};
+
+    connection.query("INSERT INTO notes SET ?", post, function(err: any, rows: any, fields: any) {
+        if (!err)
+            console.log('The solution is: ', rows);
+        else
+            console.log('Error while performing Query.', err);
+    });
 }
