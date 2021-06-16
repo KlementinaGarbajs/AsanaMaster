@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
   separator: {
     borderWidth: 0.5,
     borderColor: "rgba(4, 98, 89, 0.5)",
-},
+  },
 
   asanaImage: {
     width: 100, 

@@ -27,7 +27,7 @@ function MenuScreen() {
         {cards.map((card, index) => {
           return (
           <TouchableOpacity key={index} style={{ alignItems:"center" }} onPress={() => navigation.navigate(card.navigate)}>
-              <Image style={styles.logoImage}
+                <Image style={styles.logoImage}
                   source={card.image} 
                 />
                 <Text style={styles.text}>{card.name}</Text>

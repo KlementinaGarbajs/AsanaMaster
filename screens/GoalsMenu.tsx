@@ -9,7 +9,7 @@ function GoalsMenu() {
   const progress = [
     { name: 'SPLITS', navigate: 'Splits', image: require('../Asanas/thelowlunge.png') },
     { name: 'BACKBENDS', navigate: 'Backbends', image: require('../Asanas/thecamel.png') },
-    { name: 'INVERSIONS', navigate: 'Inversions', image: require('../Asanas/headstand.png') },
+    { name: 'INVERSIONS', navigate: 'Inversions', image: require('../Asanas/forearmstand.png') },
   ]
 
   return (

@@ -4,19 +4,18 @@ import { SafeAreaView, StatusBar, Text, View } from 'react-native';
 import { StyleSheet } from 'react-native';
 import Moment from 'moment';
 import { Icon } from 'react-native-elements';
-import { TouchableHighlight, TouchableOpacity } from 'react-native-gesture-handler';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const NoteDetailsScreen = ({route}: {route: any}) => {
   const navigation = useNavigation();
   navigation.setOptions({ title: route.params.paramKey.name });
 
-  console.log(route.params.paramKey);
   return (
     <SafeAreaView style={{flex: 1}}>
         <Text style={styles.logo}>{route.params.paramKey.name}</Text>
         <View style={{ flexDirection: 'row' }}>
             <Text style={styles.textBold}>Date:</Text>
-            <Text style={styles.text}>{Moment(route.params.paramKey.date).format('d MMM')}</Text>
+            <Text style={styles.text}>{Moment(route.params.paramKey.updated_at).format('D MMM')}</Text>
         </View>
         
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>

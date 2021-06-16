@@ -23,7 +23,6 @@ function NewNoteScreen() {
 
     const closeModal = () => {
         navigation.navigate('Notes');
-        window.location.reload(true);
     }
 
     /*const handleDateChange = (date: React.SetStateAction<Date>) => {
