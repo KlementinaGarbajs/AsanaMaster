@@ -2,11 +2,13 @@ import { useNavigation } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
 import { StatusBar, View, Text, ScrollView, SafeAreaView, FlatList, TouchableOpacity, Image } from 'react-native';
 import { StyleSheet } from 'react-native';
-import ClientApi from '../api';
+import ClientApi from '../api';import { LogBox } from 'react-native';
+
+LogBox.ignoreLogs(['VirtualizedLists should never be nested inside plain ScrollViews with the same orientation - use another VirtualizedList-backed container instead.']);
 
 const AsanasSubmenu = ({route}: {route: any}) => {
   const navigation = useNavigation();
-  navigation.setOptions({ title: route.params.paramKey.name + " ASANAS" });
+
   const [asanas, setAsanas] = useState<any[]>([]);
   let [level, setLevel] = useState<number>();
 
@@ -14,7 +16,9 @@ const AsanasSubmenu = ({route}: {route: any}) => {
     ClientApi.getAsanas().then((res) => {
       setAsanas(res);
     });
-    
+  },[]);
+
+  useEffect(() => {
     if (route.params.paramKey.name === "BEGINNER") {
         setLevel(0);
     } else if (route.params.paramKey.name === "INTERMEDIATE") {
@@ -22,31 +26,32 @@ const AsanasSubmenu = ({route}: {route: any}) => {
     } else if (route.params.paramKey.name === "MASTER") {
         setLevel(2);
     }
+    navigation.setOptions({ title: route.params.paramKey.name + " ASANAS" });
   },[]);
 
   return (
-    <ScrollView>
-      {asanas.map((asanas, index) => {
-        if (asanas.level === level) {
-          return (
-            <SafeAreaView key={index}>
-                <FlatList data={[asanas]}
+    <SafeAreaView>
+      <ScrollView>
+        {asanas.map((asanas, index) => {
+          if (asanas.level === level) {
+            return (
+                <FlatList key={index} data={[asanas]}
                   renderItem={({item}) =>
                     <View style={styles.container} key={item.id}>
-                        <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('Asana Details', { paramKey: item })}>
-                          <Image style={styles.asanaImage} source={{uri: require(`../Asanas/${item.image}`)}} />
-                          <Text style={styles.text}>{ item.name }</Text>
-                        </TouchableOpacity>
+                      <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('Asana Details', { paramKey: item })}>
+                        <Image style={styles.asanaImage} source={require('../Asanas/thecrow.png')} />
+                        <Text style={styles.text}>{ item.name }</Text>
+                      </TouchableOpacity>
                     </View>}
 
-                  numColumns={2}
+                  numColumns={1}
                   keyExtractor={(item, index) => index.toString()}
                 />
-            </SafeAreaView>
-          )
-        }
-      })}
-    </ScrollView>
+            )
+          }
+        })}
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
@@ -62,9 +67,9 @@ const styles = StyleSheet.create({
   },
 
   asanaImage: {
-    width: 100, 
-    height: 100,
-    resizeMode: 'contain',
+    width: 150, 
+    height: 150,
+    aspectRatio: 1
     },
 
   text: {

@@ -5,7 +5,6 @@ export default class ClientApi {
     static saveNewNote = (data: {}) =>  ClientApi.sendRequest('http://localhost:8080/notes/new', 'POST', data);
 
     static handleErrors = (resp: any) => {
-        console.log(resp);
         if (resp.ok) {
             return resp.json();
         } else {
@@ -19,7 +18,6 @@ export default class ClientApi {
             const parameters = {method: method, headers: new Headers(), body: JSON.stringify(data)};
             parameters.headers.append('Content-Type', 'application/json');
 
-            console.log(parameters.body)
             return fetch(path, parameters)
                 .then((resp) => ClientApi.handleErrors(resp));
         }

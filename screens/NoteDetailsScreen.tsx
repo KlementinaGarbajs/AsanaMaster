@@ -1,14 +1,28 @@
 import { useNavigation } from '@react-navigation/native';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SafeAreaView, StatusBar, Text, View } from 'react-native';
 import { StyleSheet } from 'react-native';
 import Moment from 'moment';
 import { Icon } from 'react-native-elements';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+
+/*
+<TouchableOpacity style={{ padding: 5 }}>
+    <Icon name='emoji-emotions' size={30} color='rgba(6, 152, 111, 0.8)' />
+</TouchableOpacity>
+<TouchableOpacity style={{ padding: 5 }}>
+    <Icon name='emoji-emotions' size={30} color='rgba(149, 152, 6, 0.8)' />
+</TouchableOpacity>
+<TouchableOpacity style={{ padding: 5 }}>
+    <Icon name='emoji-emotions' size={30} color='rgba(152, 6, 6, 0.8)' />
+</TouchableOpacity>
+*/
 
 const NoteDetailsScreen = ({route}: {route: any}) => {
   const navigation = useNavigation();
-  navigation.setOptions({ title: route.params.paramKey.name });
+
+  useEffect(() => {
+    navigation.setOptions({ title: route.params.paramKey.name });
+  },[]);
 
   return (
     <SafeAreaView style={{flex: 1}}>
@@ -20,15 +34,7 @@ const NoteDetailsScreen = ({route}: {route: any}) => {
         
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <Text style={styles.text}>How do I feel today?</Text>
-            <TouchableOpacity style={{ padding: 5 }}>
                 <Icon name='emoji-emotions' size={30} color='rgba(6, 152, 111, 0.8)' />
-            </TouchableOpacity>
-            <TouchableOpacity style={{ padding: 5 }}>
-                <Icon name='emoji-emotions' size={30} color='rgba(149, 152, 6, 0.8)' />
-            </TouchableOpacity>
-            <TouchableOpacity style={{ padding: 5 }}>
-                <Icon name='emoji-emotions' size={30} color='rgba(152, 6, 6, 0.8)' />
-            </TouchableOpacity>
         </View>
         <View style={{ paddingVertical: 20, paddingHorizontal: 10 }}>
             <Text style={styles.textDescription}>{route.params.paramKey.description}</Text>

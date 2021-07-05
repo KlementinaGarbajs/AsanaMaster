@@ -1,0 +1,19 @@
+\babel@toc {english}{}
+\babel@toc {slovene}{}
+\contentsline {chapter}{Povzetek}{}{chapter*.2}%
+\babel@toc {english}{}
+\contentsline {chapter}{Abstract}{}{chapter*.3}%
+\babel@toc {slovene}{}
+\contentsline {chapter}{\numberline {1}Uvod}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Joga}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Zgodovina joge}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Asane in njihov pomen}{6}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Opis aplikacije}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Ideja in cilji aplikacije}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Glavne funkcionalnosti aplikacije}{9}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Tehnologije in orodja}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Osprednje delovanje aplikacije}{11}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Zaledje aplikacije}{11}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Testno okolje}{13}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Prototip aplikacije}{15}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Zaklju\IeC {\v c}ek}{17}{chapter.7}%

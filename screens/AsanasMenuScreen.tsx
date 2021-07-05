@@ -24,7 +24,7 @@ function AsanasMenuScreen() {
                 <Text style={styles.text}>{ item.name }</Text>
             </TouchableOpacity>
         </View>}
-      numColumns={1}
+      numColumns={2}
       keyExtractor={(item, index) => index.toString()}
       />
     </SafeAreaView>

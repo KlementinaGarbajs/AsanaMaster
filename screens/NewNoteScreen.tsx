@@ -2,9 +2,9 @@ import { useNavigation } from '@react-navigation/native';
 import React, { useState, useEffect, useRef } from 'react';
 import { View, TextInput, Text } from 'react-native';
 import { StyleSheet } from 'react-native';
-import DatePicker from 'react-native-datepicker'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import ClientApi from '../api';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 function NewNoteScreen() {
     const navigation = useNavigation();
@@ -46,7 +46,7 @@ function NewNoteScreen() {
     }
 
   return (
-    <View>
+    <SafeAreaView>
         <Text style={styles.logo}>Note to myself</Text>
         <View style={styles.inputView}>
             <TextInput
@@ -67,7 +67,7 @@ function NewNoteScreen() {
                 value={description}/>
         </View>
 
-        <View style={{ flex: 1, flexDirection: "row" }}>
+        <View style={{ flexDirection: "row" }}>
             <TouchableOpacity style={styles.backBtn} onPress={() => navigation.navigate('Notes')}>
                 <Text style={styles.backBtnText}>Back</Text>
             </TouchableOpacity>
@@ -75,7 +75,7 @@ function NewNoteScreen() {
                 <Text style={styles.saveBtnText}>Save</Text>
             </TouchableOpacity>
         </View>
-    </View>
+    </SafeAreaView>
   );
 }
 
