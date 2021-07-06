@@ -1,54 +1,36 @@
 import React, { useEffect } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { Icon } from 'react-native-elements';
 
-const LoginScreen = () => {
+const OnBoardingTwo = () => {
   const navigation = useNavigation();
 
   return (
       <ImageBackground style={styles.logoImageContainer}
-          source={require('../TemplateDiploma/BackGroundSign.png')}
+          source={require('../../TemplateDiploma/BackGroundSign.png')}
         >
         <View style={styles.container}>
-          <Image style={styles.logoImage}
-            source={require('../TemplateDiploma/path35490.png')}
-          />
-          <Text style={styles.logo}>Asana Master</Text>
-          <View style={styles.inputView}>
-            <TextInput
-              style={styles.inputText}
-              placeholder="Email..."
-              placeholderTextColor="#034947"/>
-          </View>
-          <View style={styles.inputView}>
-            <TextInput
-              secureTextEntry
-              style={styles.inputText}
-              placeholder="Password..."
-              placeholderTextColor="#034947"/>
-          </View>
-
-          <TouchableOpacity style={styles.loginBtn}  onPress={() => navigation.navigate('AboutOne')}  >
-            <Text style={styles.loginText}>LOGIN</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.signUpBtn} onPress={() => navigation.navigate('Registration')} >
-            <Text style={styles.signUpText}>Signup</Text>
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Text style={styles.forgot}>Forgot Password?</Text>
-          </TouchableOpacity>
+          <Text style={styles.logo}>Jou</Text>
         </View>
+        <TouchableOpacity>
+        <View style={{padding: 10}}><Icon
+          name={"arrow-right"}
+          size={30}
+          color="rgba(28, 28, 28, 0.8)"
+          onPress={() => navigation.navigate('Menu')}
+        /></View>
+        </TouchableOpacity>
       </ImageBackground>
 );
 }
 
-export default LoginScreen;
+export default OnBoardingTwo;
 
 const styles = StyleSheet.create({
 container: {
   flex: 1,
-  alignItems: 'center',
-  justifyContent: 'center'
+  alignItems: 'center'
 },
 
 logo: {

@@ -14,6 +14,8 @@ import SplitsScreen from './screens/SplitsScreen';
 import BackbendsScreen from './screens/BackbendsScreen';
 import InversionsScreen from './screens/InversionsScreen';
 import GoalsMenu from './screens/GoalsMenu';
+import OnBoardingOne from './screens/OnBoarding/OnBoardingOne';
+import OnBoardingTwo from './screens/OnBoarding/OnBoardingTwo';
 
 const Stack = createStackNavigator();
 
@@ -23,6 +25,8 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="Login" options={{headerShown: false}} component={LoginScreen} />
         <Stack.Screen name="Registration" options={{headerShown: false}} component={RegistrationScreen} />
+        <Stack.Screen name="AboutOne" options={{headerShown: false}} component={OnBoardingOne} />
+        <Stack.Screen name="AboutTwo" options={{headerShown: false}} component={OnBoardingTwo} />
         <Stack.Screen name="Menu" component={MenuScreen} />
         <Stack.Screen name="Asanas" component={AsanasMenuScreen} />
         <Stack.Screen name="Asanas Submenu" component={AsanasSubmenuScreen} />
