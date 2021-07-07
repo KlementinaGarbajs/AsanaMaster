@@ -1,4 +1,3 @@
-import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { Text, View, TouchableOpacity, Modal, Image} from 'react-native';
 import { StyleSheet } from 'react-native';
@@ -6,6 +5,14 @@ import { AirbnbRating } from 'react-native-ratings';
 import Card from "../components/Card";
 import { Icon } from 'react-native-elements';
 import ImageViewer from 'react-native-image-zoom-viewer';
+import YoutubePlayer from 'react-native-youtube-iframe';
+import { ScrollView } from 'react-native-gesture-handler';
+
+//day 3 snso8Drg_PQ
+//day 4 BJKk3Jd-hGA
+//day 5 9TiVGK24DeY
+//day 6 Pf4KTaEs-RI
+//day 7 TQGzwetU_QU
 
 function SplitsScreen() {
 
@@ -13,18 +20,33 @@ function SplitsScreen() {
   const images = [{
     url: require('../TemplateDiploma/splitprogress1.jpg'),
  
-    props: {
-        // headers: ...
-    }
   }, {
     url: require('../TemplateDiploma/splitprogress2.jpg'),
-    props: {
-        // Or you can set source directory.
-    }
   }]
 
   return (
+    <ScrollView>
     <View style={styles.container}>
+      <Card title="Start your journey" containerStyle={styles.card}>
+        <ScrollView style={{ height: 350 }}>
+        <View style={{paddingHorizontal: 10 }}>
+          <Text style={styles.logo}>DAY 1</Text>
+          <YoutubePlayer
+              height={150}
+              width={260}
+              videoId={"7__5szNyObA"}
+          />
+        </View>
+        <View style={{paddingHorizontal: 10 }}>
+          <Text style={styles.logo}>DAY 2</Text>
+          <YoutubePlayer
+              height={150}
+              width={260}
+              videoId={"tSYtyL4aLzI"}
+          />
+        </View>
+        </ScrollView>
+      </Card>
       <TouchableOpacity style={{ flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
         <Text style={styles.title}>Upload your progress photos!</Text>
         <Icon name='camera' size={30} style={{ padding: 5 }} color='rgba(6, 152, 111, 0.8)' />
@@ -53,6 +75,7 @@ function SplitsScreen() {
           size={16} />
       </Card>
   </View>
+  </ScrollView>
   );
 }
 
@@ -60,12 +83,14 @@ export default SplitsScreen;
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 20,
+    marginTop: 40,
     justifyContent: 'center',
     alignContent: 'center'
   },
 
   logo: {
+    marginTop: 10,
+    paddingVertical: 10,
     fontSize: 20,
     color: "#034947",
   },

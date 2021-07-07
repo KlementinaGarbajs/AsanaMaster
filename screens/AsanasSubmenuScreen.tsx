@@ -30,11 +30,11 @@ const AsanasSubmenu = ({route}: {route: any}) => {
   },[]);
 
   return (
-    <SafeAreaView>
-      <ScrollView>
-        {asanas.map((asanas, index) => {
+        asanas.map((asanas, index) => {
           if (asanas.level === level) {
             return (
+              <SafeAreaView>
+                <ScrollView>
                 <FlatList key={index} data={[asanas]}
                   renderItem={({item}) =>
                     <View style={styles.container} key={item.id}>
@@ -44,14 +44,14 @@ const AsanasSubmenu = ({route}: {route: any}) => {
                       </TouchableOpacity>
                     </View>}
 
-                  numColumns={1}
+                  numColumns={2}
                   keyExtractor={(item, index) => index.toString()}
                 />
+                </ScrollView>
+              </SafeAreaView>
             )
           }
-        })}
-      </ScrollView>
-    </SafeAreaView>
+        })
   );
 }
 
@@ -62,14 +62,13 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 50,
     alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: StatusBar.currentHeight,
+    justifyContent: 'center'
   },
 
   asanaImage: {
-    width: 150, 
-    height: 150,
-    aspectRatio: 1
+    flex: 1,
+    width: 100, 
+    height: 100
     },
 
   text: {

@@ -12,7 +12,6 @@ function AsanasMenuScreen() {
                       {id: 1, name: 'BEGINNER', image: require('../TemplateDiploma/legstretch2.png')},
                       {id: 2, name: 'INTERMEDIATE', image: require('../TemplateDiploma/path35522.png')},
                       {id: 3, name: 'MASTER', image: require('../TemplateDiploma/split.png')},
-                      {id: 4, name: 'LEARNED ASANAS', image: require('../TemplateDiploma/path35490.png')}
                   ]} 
       renderItem={({item}) =>
       
@@ -24,7 +23,6 @@ function AsanasMenuScreen() {
                 <Text style={styles.text}>{ item.name }</Text>
             </TouchableOpacity>
         </View>}
-      numColumns={2}
       keyExtractor={(item, index) => index.toString()}
       />
     </SafeAreaView>
@@ -43,8 +41,8 @@ const styles = StyleSheet.create({
   },
 
   asanaImage: {
-    width: 100, 
-    height: 100,
+    width: 150, 
+    height: 150,
     aspectRatio: 1, 
     resizeMode: 'contain',
     },

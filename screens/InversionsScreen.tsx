@@ -6,20 +6,35 @@ import { AirbnbRating } from 'react-native-ratings';
 import Card from "../components/Card";
 import { Icon } from 'react-native-elements';
 import ImageViewer from 'react-native-image-zoom-viewer';
+import YoutubePlayer from 'react-native-youtube-iframe';
 
-function SplitsScreen() {
+function InversionsScreen() {
 
   let [visible, setVisible] = useState<boolean>(false);
   const images = [{
     url: require('../Asanas/thecamel.png'),
- 
-    props: {
-        // headers: ...
-    }
   }]
 
   return (
     <View style={styles.container}>
+      <Card title="Start your journey" containerStyle={styles.card}>
+        <View style={{paddingHorizontal: 20, flexDirection: "row" }}>
+          <Text style={styles.logo}>Day 1</Text>
+          <YoutubePlayer
+              height={80}
+              width={100}
+              videoId={"eXLWMHANqlw"}
+          />
+        </View>
+        <View style={{paddingHorizontal: 20, flexDirection: "row" }}>
+          <Text style={styles.logo}>Day 2</Text>
+          <YoutubePlayer
+              height={80}
+              width={100}
+              videoId={"eXLWMHANqlw"}
+          />
+        </View>
+      </Card>
       <TouchableOpacity style={{ flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
         <Text style={styles.title}>Upload your progress photos!</Text>
         <Icon name='camera' size={30} style={{ padding: 5 }} color='rgba(6, 152, 111, 0.8)' />
@@ -45,7 +60,7 @@ function SplitsScreen() {
   );
 }
 
-export default SplitsScreen;
+export default InversionsScreen;
 
 const styles = StyleSheet.create({
   container: {
@@ -55,7 +70,7 @@ const styles = StyleSheet.create({
   },
 
   logo: {
-    fontSize: 20,
+    fontSize: 24,
     color: "#034947",
   },
 

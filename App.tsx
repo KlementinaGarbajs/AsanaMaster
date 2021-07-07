@@ -16,6 +16,8 @@ import InversionsScreen from './screens/InversionsScreen';
 import GoalsMenu from './screens/GoalsMenu';
 import OnBoardingOne from './screens/OnBoarding/OnBoardingOne';
 import OnBoardingTwo from './screens/OnBoarding/OnBoardingTwo';
+import OnBoardingThree from './screens/OnBoarding/OnBoardingThree';
+import { CardStyleInterpolators } from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
@@ -24,9 +26,10 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Login" options={{headerShown: false}} component={LoginScreen} />
-        <Stack.Screen name="Registration" options={{headerShown: false}} component={RegistrationScreen} />
-        <Stack.Screen name="AboutOne" options={{headerShown: false}} component={OnBoardingOne} />
-        <Stack.Screen name="AboutTwo" options={{headerShown: false}} component={OnBoardingTwo} />
+        <Stack.Screen name="Registration" options={{headerShown: false, cardStyleInterpolator: CardStyleInterpolators.forFadeFromBottomAndroid }} component={RegistrationScreen} />
+        <Stack.Screen name="About Yoga" options={{headerShown: false, cardStyleInterpolator: CardStyleInterpolators.forRevealFromBottomAndroid }} component={OnBoardingOne} />
+        <Stack.Screen name="About" options={{headerShown: false, cardStyleInterpolator: CardStyleInterpolators.forRevealFromBottomAndroid }} component={OnBoardingTwo} />
+        <Stack.Screen name="About App" options={{headerShown: false, cardStyleInterpolator: CardStyleInterpolators.forRevealFromBottomAndroid }} component={OnBoardingThree} />
         <Stack.Screen name="Menu" component={MenuScreen} />
         <Stack.Screen name="Asanas" component={AsanasMenuScreen} />
         <Stack.Screen name="Asanas Submenu" component={AsanasSubmenuScreen} />

@@ -7,15 +7,11 @@ import Card from "../components/Card";
 import { Icon } from 'react-native-elements';
 import ImageViewer from 'react-native-image-zoom-viewer';
 
-function SplitsScreen() {
+function BackbendsScreen() {
 
   let [visible, setVisible] = useState<boolean>(false);
   const images = [{
     url: require('../Asanas/thecamel.png'),
- 
-    props: {
-        // headers: ...
-    }
   }]
 
   return (
@@ -48,7 +44,7 @@ function SplitsScreen() {
   );
 }
 
-export default SplitsScreen;
+export default BackbendsScreen;
 
 const styles = StyleSheet.create({
   container: {

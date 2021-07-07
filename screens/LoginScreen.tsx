@@ -28,7 +28,7 @@ const LoginScreen = () => {
               placeholderTextColor="#034947"/>
           </View>
 
-          <TouchableOpacity style={styles.loginBtn}  onPress={() => navigation.navigate('AboutOne')}  >
+          <TouchableOpacity style={styles.loginBtn}  onPress={() => navigation.navigate('About Yoga')}  >
             <Text style={styles.loginText}>LOGIN</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.signUpBtn} onPress={() => navigation.navigate('Registration')} >

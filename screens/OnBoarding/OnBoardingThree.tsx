@@ -4,27 +4,25 @@ import { useNavigation } from '@react-navigation/native';
 import { Icon } from 'react-native-elements';
 import Card from "../../components/Card";
 
-const OnBoardingTwo = () => {
+const OnBoardingThree = () => {
   const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
     <Card containerStyle={styles.card}>
-        <Text style={styles.logo}>What is Asana Master?</Text>
+        <Text style={styles.logo}>What is Yoga?</Text>
         <Text style={styles.text}>
-          With Asana Master you will{'\n'}{'\n'}
-          <Icon name={"circle"} size={10} color="#034947"/> learn more about yoga{'\n'}
-          <Icon name={"circle"} size={10} color="#034947"/> learn new asanas{'\n'}
-          <Icon name={"circle"} size={10} color="#034947"/> improve your flexibility{'\n'}
-          <Icon name={"circle"} size={10} color="#034947"/> track your progress
+            Yoga is an art, a science and a philosophy. 
+            It touches the life of man at every level, physical, mental, and spiritual. 
+            It is a practical method for making one’s life purposeful, useful and noble.
         </Text>
     </Card>
     <View style={{ flexDirection: "row" }}>
-      <Icon
+        <Icon
         name={"arrow-left"}
         size={30}
         color="white"
-        onPress={() => navigation.navigate('About Yoga')}
+        onPress={() => navigation.navigate('About')}
       />
       <Icon
         name={"arrow-right"}
@@ -37,7 +35,7 @@ const OnBoardingTwo = () => {
   )
 }
 
-export default OnBoardingTwo;
+export default OnBoardingThree;
 
 const styles = StyleSheet.create({
     container: {
