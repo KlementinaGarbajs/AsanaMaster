@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, TouchableOpacity, Modal, Image} from 'react-native';
+import { Text, View, TouchableOpacity, Modal, Image, FlatList} from 'react-native';
 import { StyleSheet } from 'react-native';
 import { AirbnbRating } from 'react-native-ratings';
 import Card from "../components/Card";
@@ -7,12 +7,6 @@ import { Icon } from 'react-native-elements';
 import ImageViewer from 'react-native-image-zoom-viewer';
 import YoutubePlayer from 'react-native-youtube-iframe';
 import { ScrollView } from 'react-native-gesture-handler';
-
-//day 3 snso8Drg_PQ
-//day 4 BJKk3Jd-hGA
-//day 5 9TiVGK24DeY
-//day 6 Pf4KTaEs-RI
-//day 7 TQGzwetU_QU
 
 function SplitsScreen() {
 
@@ -29,28 +23,34 @@ function SplitsScreen() {
     <View style={styles.container}>
       <Card title="Start your journey" containerStyle={styles.card}>
         <ScrollView style={{ height: 350 }}>
-        <View style={{paddingHorizontal: 10 }}>
-          <Text style={styles.logo}>DAY 1</Text>
-          <YoutubePlayer
-              height={150}
-              width={260}
-              videoId={"7__5szNyObA"}
+          <FlatList data={[
+                          {id: 1, link: "7__5szNyObA"},
+                          {id: 2, link: "tSYtyL4aLzI"},
+                          {id: 3, link: "snso8Drg_PQ"},
+                          {id: 4, link: "BJKk3Jd"},
+                          {id: 5, link: "9TiVGK24DeY"},
+                          {id: 6, link: "Pf4KTaEs"},
+                          {id: 7, link: "TQGzwetU_QU"},
+                      ]} 
+          renderItem={({item}) =>
+          <View style={{paddingHorizontal: 10 }}>
+            <Text style={styles.logo}>DAY {item.id}</Text>
+            <YoutubePlayer
+                height={150}
+                width={260}
+                videoId={item.link}
+            />
+          </View>}
+          keyExtractor={(item, index) => index.toString()}
           />
-        </View>
-        <View style={{paddingHorizontal: 10 }}>
-          <Text style={styles.logo}>DAY 2</Text>
-          <YoutubePlayer
-              height={150}
-              width={260}
-              videoId={"tSYtyL4aLzI"}
-          />
-        </View>
         </ScrollView>
       </Card>
+
       <TouchableOpacity style={{ flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
         <Text style={styles.title}>Upload your progress photos!</Text>
         <Icon name='camera' size={30} style={{ padding: 5 }} color='rgba(6, 152, 111, 0.8)' />
       </TouchableOpacity>
+
       <Card containerStyle={styles.card}>
         <View style={{ flexDirection: "row" }}>
           <TouchableOpacity onPress={() => setVisible(true)}>
@@ -83,7 +83,7 @@ export default SplitsScreen;
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 40,
+    marginTop: 20,
     justifyContent: 'center',
     alignContent: 'center'
   },

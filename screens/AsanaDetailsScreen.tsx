@@ -36,14 +36,14 @@ const AsanaDetailsScreen = ({route}: {route: any}) => {
                     <Text style={styles.textDescription}>{route.params.paramKey.description}</Text>
                 </View>
 
-                {/*
+                
                 <Text style={[styles.textBold, {paddingLeft: 10}]}>Watch a video tutorial:</Text>
                 <View style={{paddingHorizontal: 20}}>
                     <YoutubePlayer
                         height={200}
                         videoId={route.params.paramKey.video_id}
                     />
-                </View>*/}
+                </View>
 
                 <View style={{ paddingHorizontal: 10, paddingVertical: 10 }}>
                     <Text style={styles.textBold}>How to?</Text>

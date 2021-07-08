@@ -33,9 +33,9 @@ const AsanasSubmenu = ({route}: {route: any}) => {
         asanas.map((asanas, index) => {
           if (asanas.level === level) {
             return (
-              <SafeAreaView>
+              <SafeAreaView key={index} >
                 <ScrollView>
-                <FlatList key={index} data={[asanas]}
+                <FlatList data={[asanas]}
                   renderItem={({item}) =>
                     <View style={styles.container} key={item.id}>
                       <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('Asana Details', { paramKey: item })}>
