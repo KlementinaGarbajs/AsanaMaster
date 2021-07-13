@@ -11,6 +11,9 @@ export const notesManager = (req: Request, res: Response) => {
             case 'new':
                 saveNewNote(req, res);
                 break;
+            case 'delete':
+                deleteNote(req, res);
+                break;
             default:
                 res.send('Api ' + params.api + ' does not exist!');
                 break;
@@ -32,10 +35,21 @@ const getNotes = async (req: Request, res: Response) => {
 
 const saveNewNote = async (req: Request, res: Response) => {
     const data = req.body;
-    console.log("bleble", data);
     var post = {name: data.name, description: data.description, date: data.date, rate: data.rate};
 
     connection.query("INSERT INTO notes SET ?", post, function(err: any, rows: any, fields: any) {
+        if (!err)
+            console.log('The solution is: ', rows);
+        else
+            console.log('Error while performing Query.', err);
+    });
+}
+
+const deleteNote = async (req: Request, res: Response) => {
+    const data = req.body;
+    console.log("klekemrmr");
+
+    connection.query("DELETE FROM notes WHERE id = ?", data, function(err: any, rows: any, fields: any) {
         if (!err)
             console.log('The solution is: ', rows);
         else

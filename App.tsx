@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigation } from '@react-navigation/native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import MenuScreen from './screens/MenuScreen';
@@ -16,8 +17,9 @@ import InversionsScreen from './screens/InversionsScreen';
 import GoalsMenu from './screens/GoalsMenu';
 import OnBoardingOne from './screens/OnBoarding/OnBoardingOne';
 import OnBoardingTwo from './screens/OnBoarding/OnBoardingTwo';
-import OnBoardingThree from './screens/OnBoarding/OnBoardingThree';
 import { CardStyleInterpolators } from '@react-navigation/stack';
+import { Icon } from 'react-native-elements';
+import { View } from 'react-native';
 
 const Stack = createStackNavigator();
 
@@ -28,8 +30,7 @@ export default function App() {
         <Stack.Screen name="Login" options={{headerShown: false}} component={LoginScreen} />
         <Stack.Screen name="Registration" options={{headerShown: false, cardStyleInterpolator: CardStyleInterpolators.forFadeFromBottomAndroid }} component={RegistrationScreen} />
         <Stack.Screen name="About Yoga" options={{headerShown: false, cardStyleInterpolator: CardStyleInterpolators.forRevealFromBottomAndroid }} component={OnBoardingOne} />
-        <Stack.Screen name="About" options={{headerShown: false, cardStyleInterpolator: CardStyleInterpolators.forRevealFromBottomAndroid }} component={OnBoardingTwo} />
-        <Stack.Screen name="About App" options={{headerShown: false, cardStyleInterpolator: CardStyleInterpolators.forRevealFromBottomAndroid }} component={OnBoardingThree} />
+        <Stack.Screen name="About" options={{headerShown: false, cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} component={OnBoardingTwo} />
         <Stack.Screen name="Menu" component={MenuScreen} />
         <Stack.Screen name="Asanas" component={AsanasMenuScreen} />
         <Stack.Screen name="Asanas Submenu" component={AsanasSubmenuScreen} />

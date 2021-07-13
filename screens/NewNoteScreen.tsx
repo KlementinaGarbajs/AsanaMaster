@@ -1,16 +1,24 @@
 import { useNavigation } from '@react-navigation/native';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, TextInput, Text } from 'react-native';
 import { StyleSheet } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import ClientApi from '../api';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { Icon } from 'react-native-elements';
 
 function NewNoteScreen() {
     const navigation = useNavigation();
-    //const [selectedDate, setSelectedDate] = React.useState(new Date());
-    const [date, setDate] = React.useState('2020-10-06');
-    const [rate, setRate] = React.useState(0);
+
+    useEffect(() => {
+        navigation.setOptions({ headerRight: () => <View style={{padding: 10}}><Icon
+        name={"home"}
+        size={30}
+        color="rgba(28, 28, 28, 0.8)"
+        onPress={() => navigation.navigate('Menu')}
+    /></View>, title: null, headerLeft: null});
+    },[]);
+    
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
 
@@ -25,19 +33,13 @@ function NewNoteScreen() {
         navigation.navigate('Notes');
     }
 
-    /*const handleDateChange = (date: React.SetStateAction<Date>) => {
-        setSelectedDate(date);
-    };*/
-
-  const saveNote = async() => {
-    const values = {
-        name: title,
-        description: description,
-        date: date,
-        rate: rate
-    }
+    const saveNote = async() => {
+        const values = {
+            name: title,
+            description: description
+        }
         ClientApi.saveNewNote(values).then(() => {
-            console.log("juhu");
+            console.log("Saved");
         });    
 
         setTitle('');

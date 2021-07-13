@@ -12,11 +12,13 @@ const OnBoardingTwo = () => {
     <Card containerStyle={styles.card}>
         <Text style={styles.logo}>What is Asana Master?</Text>
         <Text style={styles.text}>
-          With Asana Master you will{'\n'}{'\n'}
+          Your mind, emotions, and body are tightly intertwined, 
+          that's why we developed application with which you will{'\n'}{'\n'}
           <Icon name={"circle"} size={10} color="#034947"/> learn more about yoga{'\n'}
           <Icon name={"circle"} size={10} color="#034947"/> learn new asanas{'\n'}
           <Icon name={"circle"} size={10} color="#034947"/> improve your flexibility{'\n'}
-          <Icon name={"circle"} size={10} color="#034947"/> track your progress
+          <Icon name={"circle"} size={10} color="#034947"/> track your progress{'\n'}
+          <Icon name={"circle"} size={10} color="#034947"/> express your feelings
         </Text>
     </Card>
     <View style={{ flexDirection: "row" }}>

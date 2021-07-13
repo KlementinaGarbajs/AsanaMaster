@@ -4,6 +4,7 @@ import { SafeAreaView, StatusBar, Text, View, Image } from 'react-native';
 import { StyleSheet } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import YoutubePlayer from 'react-native-youtube-iframe';
+import { Icon } from 'react-native-elements';
 
 const AsanaDetailsScreen = ({route}: {route: any}) => {
     const navigation = useNavigation();
@@ -15,6 +16,15 @@ const AsanaDetailsScreen = ({route}: {route: any}) => {
 
         setHowTo(howToArray);
         navigation.setOptions({ title: route.params.paramKey.name });
+    },[]);
+
+    useEffect(() => {
+        navigation.setOptions({ headerRight: () => <View style={{padding: 10}}><Icon
+        name={"home"}
+        size={30}
+        color="rgba(28, 28, 28, 0.8)"
+        onPress={() => navigation.navigate('Menu')}
+    /></View>, title: null, headerLeft: null});
     },[]);
 
     return (

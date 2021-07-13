@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
-import { StatusBar, View, Text, ScrollView, SafeAreaView, FlatList, TouchableOpacity, Image } from 'react-native';
+import { View, Text, ScrollView, SafeAreaView, FlatList, TouchableOpacity, Image } from 'react-native';
 import { StyleSheet } from 'react-native';
 import ClientApi from '../api';import { LogBox } from 'react-native';
 

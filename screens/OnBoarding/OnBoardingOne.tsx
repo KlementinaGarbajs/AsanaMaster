@@ -15,6 +15,7 @@ const OnBoardingOne = () => {
               Yoga is an art, a science and a philosophy. 
               It touches the life of man at every level, physical, mental, and spiritual. 
               It is a practical method for making one’s life purposeful, useful and noble.
+              Yoga can be practiced by adults of any age or physical condition, just listen to your body.
           </Text>
       </Card>
       <Icon

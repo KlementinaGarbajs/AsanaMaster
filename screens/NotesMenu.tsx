@@ -10,10 +10,25 @@ const NotesMenu = ({route}: {route: any}) => {
   const [notes, setNotes] = useState<any[]>([]);
 
   useEffect(() => {
+      navigation.setOptions({ headerRight: () => <View style={{padding: 10}}><Icon
+      name={"home"}
+      size={30}
+      color="rgba(28, 28, 28, 0.8)"
+      onPress={() => navigation.navigate('Menu')}
+  /></View>, title: null, headerLeft: null});
+  },[]);
+
+  useEffect(() => {
     ClientApi.getNotes().then((res) => {
       setNotes(res);
    });
   },[]);
+
+  const deleteNote = (id: any) => async () => {
+    ClientApi.deleteNote(id).then(() => {
+        console.log("Note Deleted");
+    });
+  }
 
   return (
     <ScrollView contentContainerStyle={[{flex: 1, flexDirection: 'column'}]}>
@@ -26,6 +41,9 @@ const NotesMenu = ({route}: {route: any}) => {
                             <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('Note Details', { paramKey: item })}>
                                 <Text style={styles.text}>{ item.name }</Text>
                             </TouchableOpacity>
+                            <TouchableOpacity onPress={(deleteNote(item.id))}>
+                                  <Text>Delete</Text>
+                              </TouchableOpacity>
                         </View>
                         }
                     numColumns={2} 

@@ -21,6 +21,15 @@ const NoteDetailsScreen = ({route}: {route: any}) => {
   const navigation = useNavigation();
 
   useEffect(() => {
+        navigation.setOptions({ headerRight: () => <View style={{padding: 10}}><Icon
+        name={"home"}
+        size={30}
+        color="rgba(28, 28, 28, 0.8)"
+        onPress={() => navigation.navigate('Menu')}
+    /></View>, title: null, headerLeft: null});
+    },[]);
+
+  useEffect(() => {
     navigation.setOptions({ title: route.params.paramKey.name });
   },[]);
 
@@ -32,10 +41,6 @@ const NoteDetailsScreen = ({route}: {route: any}) => {
             <Text style={styles.text}>{Moment(route.params.paramKey.updated_at).format('D MMM')}</Text>
         </View>
         
-        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-            <Text style={styles.text}>How do I feel today?</Text>
-                <Icon name='emoji-emotions' size={30} color='rgba(6, 152, 111, 0.8)' />
-        </View>
         <View style={{ paddingVertical: 20, paddingHorizontal: 10 }}>
             <Text style={styles.textDescription}>{route.params.paramKey.description}</Text>
         </View>
