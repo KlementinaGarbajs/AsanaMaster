@@ -15,7 +15,7 @@ const NotesMenu = ({route}: {route: any}) => {
       size={30}
       color="rgba(28, 28, 28, 0.8)"
       onPress={() => navigation.navigate('Menu')}
-  /></View>, title: null, headerLeft: null});
+  /></View>, title: "Notes", headerLeft: null});
   },[]);
 
   useEffect(() => {
@@ -25,7 +25,10 @@ const NotesMenu = ({route}: {route: any}) => {
   },[]);
 
   const deleteNote = (id: any) => async () => {
-    ClientApi.deleteNote(id).then(() => {
+    const values = {
+      id: id
+    }
+    ClientApi.deleteNote(values).then(() => {
         console.log("Note Deleted");
     });
   }
@@ -38,12 +41,12 @@ const NotesMenu = ({route}: {route: any}) => {
                     <FlatList nestedScrollEnabled={true} data={[notes]}
                     renderItem={({item}) =>
                         <View style={styles.container} key={item.id}>
-                            <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('Note Details', { paramKey: item })}>
-                                <Text style={styles.text}>{ item.name }</Text>
-                            </TouchableOpacity>
-                            <TouchableOpacity onPress={(deleteNote(item.id))}>
-                                  <Text>Delete</Text>
+                              <TouchableOpacity style={{ flexDirection: "column" }} onPress={() => navigation.navigate('Note Details', { paramKey: item })}>
+                                  <Text style={styles.text}>{ item.name }</Text>
                               </TouchableOpacity>
+                            <TouchableOpacity style={{ marginLeft: 'auto', paddingRight: 15, paddingTop: 10, flexDirection: 'column' }} onPress={(deleteNote(item.id))}>
+                            <Icon name={"delete"} size={20} color="#034947"/>
+                            </TouchableOpacity>
                         </View>
                         }
                     numColumns={2} 
@@ -79,9 +82,9 @@ export default NotesMenu;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: "row",
     marginTop: 5,
     padding: 10,
-    justifyContent: 'center',
     height: 50,
   },
 

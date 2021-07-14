@@ -14,7 +14,7 @@ function AsanasMenuScreen() {
       size={30}
       color="rgba(28, 28, 28, 0.8)"
       onPress={() => navigation.navigate('Menu')}
-  /></View>, title: null, headerLeft: null});
+  /></View>, title: "Asanas", headerLeft: null});
   },[]);
 
   return (

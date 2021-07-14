@@ -3,7 +3,7 @@ export default class ClientApi {
     static getAsanas = () => ClientApi.sendRequest('http://localhost:8080/asanas/all');
     static getNotes = () => ClientApi.sendRequest('http://localhost:8080/notes/all');
     static saveNewNote = (data: {}) =>  ClientApi.sendRequest('http://localhost:8080/notes/new', 'POST', data);
-    static deleteNote = (data: {}) =>  ClientApi.sendRequest('http://localhost:8080/notes/delete/', 'DELETE', data);
+    static deleteNote = (data: {}) =>  ClientApi.sendRequest('http://localhost:8080/notes/delete', 'DELETE', data);
 
     static handleErrors = (resp: any) => {
         if (resp.ok) {

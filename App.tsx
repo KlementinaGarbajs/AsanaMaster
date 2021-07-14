@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { useNavigation } from '@react-navigation/native';
+import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import MenuScreen from './screens/MenuScreen';
@@ -18,8 +17,6 @@ import GoalsMenu from './screens/GoalsMenu';
 import OnBoardingOne from './screens/OnBoarding/OnBoardingOne';
 import OnBoardingTwo from './screens/OnBoarding/OnBoardingTwo';
 import { CardStyleInterpolators } from '@react-navigation/stack';
-import { Icon } from 'react-native-elements';
-import { View } from 'react-native';
 
 const Stack = createStackNavigator();
 

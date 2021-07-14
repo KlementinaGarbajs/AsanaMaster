@@ -15,7 +15,6 @@ const AsanaDetailsScreen = ({route}: {route: any}) => {
         const howToArray = howTo.split('*');
 
         setHowTo(howToArray);
-        navigation.setOptions({ title: route.params.paramKey.name });
     },[]);
 
     useEffect(() => {

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, ScrollView, SafeAreaView, FlatList, TouchableOpacity, Image } from 'react-native';
 import { StyleSheet } from 'react-native';
 import ClientApi from '../api';import { LogBox } from 'react-native';
+import { Icon, Avatar } from 'react-native-elements';
 
 LogBox.ignoreLogs(['VirtualizedLists should never be nested inside plain ScrollViews with the same orientation - use another VirtualizedList-backed container instead.']);
 
@@ -11,11 +12,21 @@ const AsanasSubmenu = ({route}: {route: any}) => {
 
   const [asanas, setAsanas] = useState<any[]>([]);
   let [level, setLevel] = useState<number>();
+  let text = route.params.paramKey.name;
 
   useEffect(() => {
     ClientApi.getAsanas().then((res) => {
       setAsanas(res);
     });
+  },[]);
+
+  useEffect(() => {
+      navigation.setOptions({ headerRight: () => <View style={{padding: 10}}><Icon
+      name={"home"}
+      size={30}
+      color="rgba(28, 28, 28, 0.8)"
+      onPress={() => navigation.navigate('Menu')}
+  /></View>, title: text.slice(0, 1) + text.slice(1,text.length).toLowerCase() + " asanas", headerLeft: null});
   },[]);
 
   useEffect(() => {
@@ -26,7 +37,6 @@ const AsanasSubmenu = ({route}: {route: any}) => {
     } else if (route.params.paramKey.name === "MASTER") {
         setLevel(2);
     }
-    navigation.setOptions({ title: route.params.paramKey.name + " ASANAS" });
   },[]);
 
   return (
