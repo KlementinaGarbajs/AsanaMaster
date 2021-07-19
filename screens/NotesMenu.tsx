@@ -22,7 +22,7 @@ const NotesMenu = ({route}: {route: any}) => {
     ClientApi.getNotes().then((res) => {
       setNotes(res);
    });
-  },[]);
+  },[notes]);
 
   const deleteNote = (id: any) => async () => {
     const values = {
@@ -44,7 +44,7 @@ const NotesMenu = ({route}: {route: any}) => {
                               <TouchableOpacity style={{ flexDirection: "column" }} onPress={() => navigation.navigate('Note Details', { paramKey: item })}>
                                   <Text style={styles.text}>{ item.name }</Text>
                               </TouchableOpacity>
-                            <TouchableOpacity style={{ marginLeft: 'auto', paddingRight: 15, paddingTop: 10, flexDirection: 'column' }} onPress={(deleteNote(item.id))}>
+                            <TouchableOpacity style={{ marginLeft: 'auto', paddingRight: 15, paddingTop: 2, flexDirection: 'column' }} onPress={(deleteNote(item.id))}>
                             <Icon name={"delete"} size={20} color="#034947"/>
                             </TouchableOpacity>
                         </View>

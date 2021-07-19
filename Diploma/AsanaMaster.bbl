@@ -6,6 +6,11 @@ Asane.
   \url{https://www.vodenevadbe.si/post/kaj-pomeni-beseda-asana}.
 \newblock [Dostopano: 26. 5. 2021].
 
+\bibitem{EXPO}
+Expo.
+\newblock Dosegljivo: \url{https://docs.expo.io/}.
+\newblock [Dostopano: 25. 6. 2021].
+
 \bibitem{oJogi}
 O jogi.
 \newblock Dosegljivo: \url{https://www.hathajoga.si/joga}.
@@ -21,5 +26,20 @@ Susan Hollister.
 \newblock {\em The Top 100 Best Yoga Poses Relieve Stress, Increase
   Flexibility, and Gain Strength}.
 \newblock Addison-Wesley, 2017.
+
+\bibitem{npm}
+npm.
+\newblock Dosegljivo: \url{https://docs.npmjs.com/cli/v6/commands/npm}.
+\newblock [Dostopano: 25. 6. 2021].
+
+\bibitem{RN}
+Rn.
+\newblock Dosegljivo: \url{https://www.netguru.com/glossary/react-native}.
+\newblock [Dostopano: 25. 6. 2021].
+
+\bibitem{verywellfit}
+verywellfit.
+\newblock Dosegljivo: \url{https://www.verywellfit.com}.
+\newblock [Dostopano: 5. 6. 2021].
 
 \end{thebibliography}

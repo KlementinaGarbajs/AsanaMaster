@@ -8,9 +8,11 @@ import ImageViewer from 'react-native-image-zoom-viewer';
 import YoutubePlayer from 'react-native-youtube-iframe';
 import { ScrollView } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
+import ClientApi from '../api';
 
 function SplitsScreen() {
   const navigation = useNavigation();
+  const [rating, setRating] = useState<number>();
 
   useEffect(() => {
       navigation.setOptions({ headerRight: () => <View style={{padding: 10}}><Icon
@@ -20,6 +22,22 @@ function SplitsScreen() {
       onPress={() => navigation.navigate('Menu')}
   /></View>, title: "Splits", headerLeft: null});
   },[]);
+
+  useEffect(() => {
+    ClientApi.getRatings().then((res) => {
+      setRating(res[0].rating);
+   });
+  },[]);
+
+  useEffect(() => {
+      const values = {
+          rating: rating
+      }
+
+      ClientApi.saveRatingSplits(values).then(() => {
+          console.log("Saved");
+      });
+  },[rating]);
 
   let [visible, setVisible] = useState<boolean>(false);
   const images = [{
@@ -37,11 +55,11 @@ function SplitsScreen() {
           <FlatList data={[
                           {id: 1, link: "7__5szNyObA"},
                           {id: 2, link: "tSYtyL4aLzI"},
-                          {id: 3, link: "snso8Drg_PQ"},
+                          /*{id: 3, link: "snso8Drg_PQ"},
                           {id: 4, link: "BJKk3Jd"},
                           {id: 5, link: "9TiVGK24DeY"},
                           {id: 6, link: "Pf4KTaEs"},
-                          {id: 7, link: "TQGzwetU_QU"},
+                          {id: 7, link: "TQGzwetU_QU"},*/
                       ]} 
           renderItem={({item}) =>
           <View style={{paddingHorizontal: 10 }}>
@@ -82,7 +100,8 @@ function SplitsScreen() {
           reviews={["Terrible", "Bad", "Meh", "OK", "Good", "Very Good", "Wow", "Amazing", "Unbelievable", "Done!"]}
           selectedColor={"#034947"}
           reviewColor={"rgba(4, 98, 89, 0.5)"}
-          defaultRating={10}
+          defaultRating={rating}
+          onFinishRating={setRating}
           size={16} />
       </Card>
   </View>

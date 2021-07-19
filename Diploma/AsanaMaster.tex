@@ -386,7 +386,9 @@ Razvoj mobilnih aplikacij ne bi smel biti več tako osredotočen le na eno glavn
 
 \section{Načrtovanje aplikacije in zbiranje podatkov}
 
-Načrtovanje aplikacije se je začelo s prototipom uporabniškega vmesnika mobilne aplikacije, saj je oblikovanje uporabniškega vmesnika pomemben sestavni del oblikovanja uporabniške izkušnje. Pri oblikovanju mobilne aplikacije se je pomembno usmeriti tako na estetiko kot seveda, tudi na funkcionalnost aplikacije. Prototip je bil izdelan s pomočjo spletne platforme za izdelavo prototipov Proto.io, (Slika~\ref{protoio}). Izdelani so bili nekateri ključni zasloni aplikacije, glavne funkcionalnosti aplikacije, povezave med njimi in oblikovano glavno ozadje aplikacije na začetnem prijavnem zaslonu, ter ostali gradniki aplikacije.\\
+Načrtovanje aplikacije se je začelo s prototipom uporabniškega vmesnika mobilne aplikacije, saj je oblikovanje uporabniškega vmesnika pomemben sestavni del oblikovanja uporabniške izkušnje. Pri oblikovanju mobilne aplikacije se je pomembno usmeriti tako na estetiko kot seveda, tudi na funkcionalnost aplikacije. Vmesnik smo poskusili narediti čim bolj pregleden in enostaven za uporabo. Prav s tem namenom je v aplikacijo dodanih kar nekaj slik in tudi videoposnetkov. 
+
+Prototip smo izdelali s pomočjo spletne platforme za izdelavo prototipov Proto.io, (Slika~\ref{protoio}). Izdelani so bili nekateri ključni zasloni aplikacije, glavne funkcionalnosti aplikacije, povezave med njimi in oblikovano glavno ozadje aplikacije na začetnem prijavnem zaslonu, ter ostali gradniki aplikacije.\\
 
 \begin{figure}[htbp]
 \begin{center}
@@ -396,34 +398,73 @@ Načrtovanje aplikacije se je začelo s prototipom uporabniškega vmesnika mobil
 \label{protoio}
 \end{figure}
 
-Sledila je raziskava tehnologij in primernih orodij za sam razvoj mobilne aplikacije, pri čemer je prišlo predvsem do primerjave različnih orodij za izdelavo mobilne aplikacije. Primerjali smo integrirano razvojno okolje (angl. integrated development environment, IDE) za razvoj aplikacij za operacijski sistem Android, ter razvojnim okoljem Expo, ki z uporabo React Native platforme in orodij, omogoča razvoj tako spletnih, kot mobilnih aplikacij na operacijskem sistemu Android in iOS. Zaradi možnosti razvoja na obeh operacijskih sistemih, smo prišli do zaključka, da bomo za razvoj aplikacije uporabili Expo.\\
+Izdelavi prototipa je sledila raziskava tehnologij in primernih orodij za sam razvoj mobilne aplikacije, pri čemer je prišlo predvsem do primerjave različnih orodij za izdelavo mobilne aplikacije. Primerjali smo integrirano razvojno okolje (angl. integrated development environment, IDE) za razvoj aplikacij za operacijski sistem Android, ter razvojnim okoljem Expo, ki z uporabo React Native platforme in orodij, omogoča razvoj tako spletnih, kot mobilnih aplikacij na operacijskem sistemu Android in iOS. Zaradi možnosti razvoja na obeh operacijskih sistemih, smo prišli do zaključka, da bomo za razvoj aplikacije uporabili Expo.\\
 
-Po začetnem načrtovanju izdelave smo se nato lotili še zbiranja podatkov o jogi in položajih v jogi. Podatki o jogi in položajih so vzeti iz knjige The Top 100 Best Yoga Poses Relieve Stress, Increase Flexibility, and Gain Strength, avtorice Susan Hollister~\cite{yoga}. Vir nekaterih slik je tudi zgoraj omenjena knjiga, nekatere pa smo pridobili preko spletne strani Verywellfit (https://www.verywellfit.com/). Videoposnetki, ki uporabnikom omogočajo izboljšanje položajev in napredovanja, pa so predvajani preko platforme, za deljenje videoposnetkov, Youtube.
+Po začetnem načrtovanju izdelave smo se nato lotili še zbiranja podatkov o jogi in položajih v jogi. Podatki o jogi in položajih so vzeti iz knjige The Top 100 Best Yoga Poses Relieve Stress, Increase Flexibility, and Gain Strength, avtorice Susan Hollister~\cite{yoga}. Vir nekaterih slik je tudi zgoraj omenjena knjiga, nekatere pa smo pridobili preko spletne strani Verywellfit~\cite{verywellfit}. Videoposnetki, ki uporabnikom omogočajo izboljšanje položajev in napredovanja, pa so predvajani preko platforme, za deljenje videoposnetkov, Youtube.
 
 \section{Glavne funkcionalnosti in delovanje aplikacije}
-Ob zagonu mobilne aplikacije uporabnik najprej pride na stran za prijavo. V kolikor uporabnik še ni registriran, mora najprej opraviti registracijo, s klikom na gumb "Sign in", kar ga preusmeri na stran za registracijo. Za uspešno registracijo mora vnesti svoje ali poljubno ime, svoj elektronski naslov in geslo, ki ga bo uporabljal za prijavo. V kolikor je uporabnik že registriran, a je pozabil svoje geslo, si lahko preko klika na gumb "Forgot password?", na svoj elektronski naslov, pošlje povezavo za ponastavitev gesla. Po uspešni prijavi preko enega izmed zgoraj omenjenih načinov je uporabnik preusmerjen v jedro aplikacije. Ob prvi prijavi, uporabnika ob vstopu v aplikacijo pozdravi kratek "on boarding", kjer se seznani s pojmom joga in s kratkim opisom bistva aplikacije. Po zaključenem "on boardingom" je uporabnik nato preusmerjen v glavni meni, ki je razdeljen na 3 glavne podmenije: "Asanas", "Goals" in "Notes".\\
+Ob zagonu mobilne aplikacije uporabnik najprej pride na stran za prijavo. V kolikor uporabnik še ni registriran, mora najprej opraviti registracijo, s klikom na gumb Sign in, kar ga preusmeri na stran za registracijo. Za uspešno registracijo mora vnesti svoje ali poljubno ime, svoj elektronski naslov in geslo, ki ga bo uporabljal za prijavo. V kolikor je uporabnik že registriran, a je pozabil svoje geslo, si lahko preko klika na gumb Forgot password?, na svoj elektronski naslov, pošlje povezavo za ponastavitev gesla. Po uspešni prijavi preko enega izmed zgoraj omenjenih načinov je uporabnik preusmerjen v jedro aplikacije. Ob prvi prijavi, uporabnika ob vstopu v aplikacijo pozdravi kratek uvod v aplikacijo, kjer se seznani s pojmom joga in s kratkim opisom bistva aplikacije. Po zaključenem uvodu v aplikacijo je uporabnik nato preusmerjen v glavni meni, ki je razdeljen na 3 glavne podmenije: Asanas, Goals in Notes.\\
 
-Podmeni Asanas se razdeli še na 3 dodatne podstrani, ki določajo različne težavnosti položajev, to so "Begginer", "Intermediate" in "Master". V bazi podatkov imamo pri vsakem položaju shranjeno še njegovo stopnjo težavnosti, kar nam omogoča enostavno sortiranje v omenjene težavnosti. S klikom na eno izmed težavnosti se nam odpre seznam z imeni in slikami položajev. S klikom na določen položaj, pa se nam odpre stran z angleškim imenom, sanskrit imenom, sliko, opisom izvedbe in videoposnetkom položaja. Uporabnik ima možnost ogleda videopostneka položaja, s klikom na posnetek. Vir videoposnetka je portal Youtube, posnetek pa se predvaja neposredno v sami aplikaciji, torej brez dodatnega odpiranja videoposnetka izven mobilne aplikacije. \\
+Podmeni Asanas se razdeli še na 3 dodatne podstrani, ki določajo različne težavnosti položajev, to so Begginer, Intermediate in Master. V bazi podatkov imamo pri vsakem položaju shranjeno še njegovo stopnjo težavnosti, kar nam omogoča enostavno sortiranje v omenjene težavnosti. S klikom na eno izmed težavnosti se nam odpre seznam z imeni in slikami položajev. S klikom na določen položaj, pa se nam odpre stran z angleškim imenom, sanskrit imenom, sliko, opisom izvedbe in videoposnetkom položaja. Uporabnik ima možnost ogleda videopostneka položaja, s klikom na posnetek. Vir videoposnetka je portal Youtube, posnetek pa se predvaja neposredno v sami aplikaciji, torej brez dodatnega odpiranja videoposnetka izven mobilne aplikacije. \\
 
-Podmeni Goals se prav tako razdeli na 3 dodatne podstrani, ki predstavljajo 3 kategorije, v katerih se lahko uporabnik izboljša in spremlja svoj napredek. Kategorije so slednje, "Splits", "Backbends" in "Inversions". Ko si uporabnik izbere eno izmed kategorij, se odpre starn s 7 dnevnim programom različnih videoposnetkov, ki naj bi jim uporabnik sledil za lasten napredek. Prav tako kot pri položajih, smo tudi tukaj naredili tako, da uporabnik predvaja in odpre videoposnetek neposredno v aplikaciji, brez odpiranja novega okna izven aplikacije. 
+Podmeni Goals se prav tako razdeli na 3 dodatne podstrani, ki predstavljajo 3 kategorije, v katerih se lahko uporabnik izboljša in spremlja svoj napredek. Kategorije so slednje, Splits, Backbends in Inversions. Ko si uporabnik izbere eno izmed kategorij, se odpre starn s 7 dnevnim programom različnih videoposnetkov, ki naj bi jim uporabnik sledil za lasten napredek. Prav tako kot pri položajih, smo tudi tukaj naredili tako, da uporabnik predvaja in odpre videoposnetek neposredno v aplikaciji, brez odpiranja novega okna izven aplikacije. 
 Pod programom sledi še možnost dodajanja slik, s katerimi uporabnik lažje sledi napredku in pa možnosti samoocene, da si lahko lažje določi kje na poti do cilja se nahaja.\\
 
-Podmeni Notes ima seznam zapiskov, ki jih je uporabnik ustvaril, ter spodaj desno gumb za dodajanje novega zapiska. S klikom na gumb za dodajanje zapiska, se uporabniku odpre forma za vnos naslova zapiska in okno za vnos vsebine zapiska. Spodaj pod oknom za vsebino pa se nahajata še 2 gumba, levo gumb "Back", ki uporabnika vrne v seznam zapiskov in desno gumb "Save", ki omogoča shranitev zapiska. Zapisek, ki ga je uporabnik napisal in shranil, se v naslednjem koraku prikaže na seznamu zapiskov. Vsak zapisek v seznamu je prikazan z imenom na levi strani vrstice, na desni strani pa se nahaja gumb za izbris zapiska.
+Podmeni Notes ima seznam zapiskov, ki jih je uporabnik ustvaril, ter spodaj desno gumb za dodajanje novega zapiska. S klikom na gumb za dodajanje zapiska, se uporabniku odpre forma za vnos naslova zapiska in okno za vnos vsebine zapiska. Spodaj pod oknom za vsebino pa se nahajata še 2 gumba, levo gumb Back, ki uporabnika vrne v seznam zapiskov in desno gumb Save, ki omogoča shranitev zapiska. Zapisek, ki ga je uporabnik napisal in shranil, se v naslednjem koraku prikaže na seznamu zapiskov. Vsak zapisek v seznamu je prikazan z imenom na levi strani vrstice, na desni strani pa se nahaja gumb za izbris zapiska.
 S klikom na zapisek se odpre stran z naslovom zapiska, datum, kdaj je bil zapisek ustvarjen in zapisano besedilo. \\
  
-V glavnem meniju se v glavi nahaja gumb za odjavo, v vsakem podmeniju pa se v glavi nahaja gumb "Home", ki omogoča vrnitev v glavni meni. 
+V glavnem meniju se v glavi nahaja gumb za odjavo, v vsakem podmeniju pa se v glavi nahaja gumb Home, ki omogoča vrnitev v glavni meni. 
 
 
 \chapter{Tehnologije in orodja}
 \label{ch2}
 
+Mobilna aplikacija je razvita z uporabo ogrodja React Native in orodja Expo, kar omogoča izdelavo mobilnih aplikacij tako za operacijski sistem Android kot iOS. Za pisanje kode sta bila uporabljena jezika TypeScript in JavaScript. Koda aplikacije je bila napisana v programu Visual Studio Code. Za shranjevanje podatkov, ki so prikazani v aplikaciji, je uporabljena relacijska podatkovna baza MySql, ki je povezana z lokalnim strežnikom. 
+Za testiranje aplikacije je bilo uporabljeno orodje React DevTools, ki omogoča enostavno testiranje aplikacij, tako na spletnem vmesniku, mobilnem simulatorju, kot tudi na mobilni napravi (Slika). Vse spremembe v kodi, ter zgodovina spremenjenih verzij aplikacije so shranjene v programu Git.
 
+\includegraphics[scale=0.2]{../../../../../var/folders/k_/h6pfbkjd50lfxvygrngfcj900000gn/T/TemporaryItems/(A Document Being Saved By screencaptureui 16)/Screenshot 2021-07-16 at 11.50.09.png} 
 
-\section{Zaledje aplikacije}
+\section{npm}
+Npm je upravitelj paketov za platformo Node JavaScript. Namešča module, tako da jih vozlišče lahko najde, in inteligentno obvladuje konflikte med odvisnostmi. Izjemno prilagodljiv je za podporo najrazličnejšim primerom uporabe. Najpogosteje se uporablja za objavljanje, odkrivanje, nameščanje in razvoj vozliščnih programov.~\cite{npm}
+
+\section{React Native}
+React Native je JavaScript okvir za pisanje izvornih mobilnih aplikacij za operacijska sistema iOS in Android. Temelji na Reactu, Facebookovi JavaScript knjižnici za gradnjo uporabniških vmesnikov, a namesto na brskalnik cilja na mobilne platforme. 
+
+React Native, je Facebook prvič izdal kot odprtokodni projekt leta 2015. V samo nekaj letih je postal ena najboljših rešitev za mobilni razvoj. React Native razvoj se uporablja za pogon nekaterih vodilnih svetovnih mobilnih aplikacij, vključno z Instagramom, Facebookom in Skypeom.~\cite{RN}
+
+\section{Expo}
+Expo je ogrodje, ki se uporablja za izdelavo React Native aplikacij. Gre za nabor orodij in storitev, zgrajenih okoli React Native-a in izvornih platform, ki nam pomagajo razvijati, graditi, uvajati in hitro iterirati v iOS, Android in spletne aplikacije iz iste kodne baze JavaScript / TypeScript. Z uporabo Expo-ta ne potrebujemo znanja o izvorni iOS ali Android kodi, kar pomeni, da tudi uporaba orodij kot sta Xcode ali Android Studio, ni potrebna. Njegov cilj je omogočiti hiter razvoj, ne da bi morali veliko časa porabiti za vzpostavljanje razvojnega okolja. Expo ne zahteva nastavitve IDE-jev, specifičnih za platforme, kot je to v primeru React Native CLI, in ke zato celoten postopek namestitve veliko bolj enostaven.~\cite{EXPO}
+
+\section{JavaScript}
+JavaScript (krajše tudi JS) je skriptni programski jezik, katerega je razvil Netscape, da bi bil v pomoč programerjem pri izdelavi spletnih strani. Večina tistih, ki pozna vsaj nekaj osnov programiranja, ko zasliši ime JavaScript, hitro poveže s programskim jezikom Java, s katerim imata kar nekaj skupnih lastnosti. Na splošno velja, da so skriptni jeziki enostavnejši in hitrejši v primerjavi s kodo v bolj kompleksnih programskih jezikih kot C in C++. Pri skriptnih jezikih v splošnem obdelava kode traja dalje kot pri zbirnih jezikih, vendar pa so veliko bolj uporabni pri krajših programih zaradi njihove enostavnosti. Uporabnost JavaScript-a pride najbolj do izraza pri razvoju dinamičnih spletnih strani in dodajanju interaktivnosti na želeno stran.
+
+https://www.theserverside.com/definition/JavaScript
+
+\section{TypeScript}
+TypeScript je odprtokodni jezik, ki temelji na JavaScriptu, enem izmed najbolj uporabljenih jezikov na svetu, z dodajanjem statičnih definicij tipa. Tipi nam ponujajo način za opis oblike predmeta, zagotavljajo boljšo dokumentacijo in omogočajo TypeScriptu, da preveri, ali koda deluje pravilno.
+
+Vsa veljavna koda napisana v jeziku JavaScript je tudi koda TypeScript. TypeScript se prek prevajalnika TypeScript ali Babel pretvori v JavaScript. JavaScript koda je čista in preprosta in se izvaja kjerkoli, kjer deluje JavaScript: v brskalniku, na Node.JS ali v aplikacijah.https://www.typescriptlang.org/
+
+\section{Visual Studio Code}
+Za pisanje kode je bil uporabljen program Visual Studio Code, znan tudi kot VS Code, ki je Microsoftov brezplačen odprtokodni urejevalnik besedil. VS Code je na voljo za Windows, Linux in macOS. Čeprav je urejevalnik razmeroma lahek, vključuje nekaj zmogljivih funkcij, zaradi katerih je VS Code v zadnjem času postalo eno najbolj priljubljenih orodij za razvojno okolje.
+
+\section{MySQL}
+Prilagodljiv in zmogljiv program, MySQL je najbolj priljubljen odprtokodni sistem zbirk podatkov na svetu. Kot del široko uporabljenega svežnja tehnologij LAMP (ki ga sestavljajo operacijski sistem, ki temelji na Linuxu, spletni strežnik Apache, baza podatkov MySQL in PHP za obdelavo) se uporablja za shranjevanje in pridobivanje podatkov v najrazličnejših priljubljenih aplikacijah. , spletna mesta in storitve.
+https://www.digitalocean.com/community/tutorials/what-is-mysql
+
+\section{TablePlus}
+Za pregledovanje in urejanje baze podatkov je bil uporabljen program TablePlus. TablePlus je sodobna, izvorna aplikacija s čistim uporabniškim vmesnikom, ki razvijalcem omogoča sočasno upravljanje podatkovnih baz na zelo hiter in varen način. TablePlus podpira večino priljubljenih baz podatkov, kot so MySQL, Postgres, SQL Server, SQLite, Microsoft SQL Server, Redis, Redshift, Oracle in še veliko več.
+https://mariadb.com/kb/en/tableplus/
+
+\section{Git}
+Git je brezplačen in odprtokodni porazdeljeni sistem za nadzor različic, zasnovan za hitro in učinkovito obdelavo vsega, od majhnih do zelo velikih projektov.
+https://git-scm.com/
+
 
 
 \chapter{Testno okolje}
 \label{ch3}
+
 
 
 \chapter{Prototip aplikacije}

@@ -62,9 +62,9 @@ function NewNoteScreen() {
         <Text style={styles.logo}>How do I feel today?</Text>
         <View style={styles.inputViewBig}>
             <TextInput
-                multiline
-                numberOfLines={30}
-                style={{ fontSize: 16 }}
+                multiline={true}
+                numberOfLines={20}
+                style={{ fontSize: 16, textAlignVertical: 'top', padding: 10 }}
                 onChangeText={(e) => setNoteDescription(e)}
                 value={description}/>
         </View>
@@ -123,16 +123,15 @@ const styles = StyleSheet.create({
         marginVertical: 20,
         marginHorizontal: 10,
         justifyContent: "center",
-        paddingHorizontal: 10
+        padding: 10,
     },
 
     inputViewBig: {
-        height: 300,
+        maxHeight: 300,
         backgroundColor: "white",
         marginBottom: 10,
         marginVertical: 20,
         marginHorizontal: 10,
-        padding: 10
     },
 
     backBtn: {
