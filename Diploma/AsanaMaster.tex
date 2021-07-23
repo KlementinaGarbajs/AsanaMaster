@@ -403,23 +403,67 @@ Izdelavi prototipa je sledila raziskava tehnologij in primernih orodij za sam ra
 Po začetnem načrtovanju izdelave smo se nato lotili še zbiranja podatkov o jogi in položajih v jogi. Podatki o jogi in položajih so vzeti iz knjige The Top 100 Best Yoga Poses Relieve Stress, Increase Flexibility, and Gain Strength, avtorice Susan Hollister~\cite{yoga}. Vir nekaterih slik je tudi zgoraj omenjena knjiga, nekatere pa smo pridobili preko spletne strani Verywellfit~\cite{verywellfit}. Videoposnetki, ki uporabnikom omogočajo izboljšanje položajev in napredovanja, pa so predvajani preko platforme, za deljenje videoposnetkov, Youtube.
 
 \section{Glavne funkcionalnosti in delovanje aplikacije}
-Ob zagonu mobilne aplikacije uporabnik najprej pride na stran za prijavo. V kolikor uporabnik še ni registriran, mora najprej opraviti registracijo, s klikom na gumb Sign in, kar ga preusmeri na stran za registracijo. Za uspešno registracijo mora vnesti svoje ali poljubno ime, svoj elektronski naslov in geslo, ki ga bo uporabljal za prijavo. V kolikor je uporabnik že registriran, a je pozabil svoje geslo, si lahko preko klika na gumb Forgot password?, na svoj elektronski naslov, pošlje povezavo za ponastavitev gesla. Po uspešni prijavi preko enega izmed zgoraj omenjenih načinov je uporabnik preusmerjen v jedro aplikacije. Ob prvi prijavi, uporabnika ob vstopu v aplikacijo pozdravi kratek uvod v aplikacijo, kjer se seznani s pojmom joga in s kratkim opisom bistva aplikacije. Po zaključenem uvodu v aplikacijo je uporabnik nato preusmerjen v glavni meni, ki je razdeljen na 3 glavne podmenije: Asanas, Goals in Notes.\\
+Ob zagonu mobilne aplikacije uporabnik najprej pride na stran za prijavo, (Slika~\ref{prijava}, ~\ref{registracija}). V kolikor uporabnik še ni registriran, mora najprej opraviti registracijo, s klikom na gumb Sign in, kar ga preusmeri na stran za registracijo. Za uspešno registracijo mora vnesti svoje ali poljubno ime, svoj elektronski naslov in geslo, ki ga bo uporabljal za prijavo. V kolikor je uporabnik že registriran, a je pozabil svoje geslo, si lahko preko klika na gumb Forgot password?, na svoj elektronski naslov, pošlje povezavo za ponastavitev gesla. Po uspešni prijavi preko enega izmed zgoraj omenjenih načinov je uporabnik preusmerjen v jedro aplikacije. Ob prvi prijavi, uporabnika ob vstopu v aplikacijo pozdravi kratek uvod v aplikacijo, kjer se seznani s pojmom joga in s kratkim opisom bistva aplikacije. Po zaključenem uvodu v aplikacijo je uporabnik nato preusmerjen v glavni meni, ki je razdeljen na 3 glavne podmenije: Asanas, Goals in Notes.
 
-Podmeni Asanas se razdeli še na 3 dodatne podstrani, ki določajo različne težavnosti položajev, to so Begginer, Intermediate in Master. V bazi podatkov imamo pri vsakem položaju shranjeno še njegovo stopnjo težavnosti, kar nam omogoča enostavno sortiranje v omenjene težavnosti. S klikom na eno izmed težavnosti se nam odpre seznam z imeni in slikami položajev. S klikom na določen položaj, pa se nam odpre stran z angleškim imenom, sanskrit imenom, sliko, opisom izvedbe in videoposnetkom položaja. Uporabnik ima možnost ogleda videopostneka položaja, s klikom na posnetek. Vir videoposnetka je portal Youtube, posnetek pa se predvaja neposredno v sami aplikaciji, torej brez dodatnega odpiranja videoposnetka izven mobilne aplikacije. \\
+\begin{figure}[!tbp]
+  \centering
+  \begin{minipage}[b]{0.34\textwidth}
+    \includegraphics[width=\textwidth]{prijava.jpg}
+    \caption{Prijavni obrazec ob vstopu v aplikacijo.}
+    \label{prijava}
+  \end{minipage}
+  \begin{minipage}[b]{0.34\textwidth}
+    \includegraphics[width=\textwidth]{registracija.jpg}
+    \caption{Obrazec za registracijo.}
+	\label{registracija}
+  \end{minipage}
+  \begin{minipage}[b]{0.34\textwidth}
+    \includegraphics[width=\textwidth]{pozdrav1.jpg}
+    \caption{Prijavni obrazec ob vstopu v aplikacijo.}
+    \label{pozdrav1}
+  \end{minipage}
+  \begin{minipage}[b]{0.342\textwidth}
+    \includegraphics[width=\textwidth]{pozdrav2.jpg}
+    \caption{Drugo pozdravno besedilo.}
+	\label{pozdrav2}
+  \end{minipage}
+\end{figure}
+
+Podmeni Asanas se razdeli še na 3 dodatne podstrani, ki določajo različne težavnosti položajev, to so Begginer, Intermediate in Master. V bazi podatkov imamo pri vsakem položaju shranjeno še njegovo stopnjo težavnosti, kar nam omogoča enostavno sortiranje v omenjene težavnosti. S klikom na eno izmed težavnosti se nam odpre seznam z imeni in slikami položajev. S klikom na določen položaj, pa se nam odpre stran z angleškim imenom, sanskrit imenom, sliko, opisom izvedbe in videoposnetkom položaja, (Slika~\ref{asana}). Uporabnik ima možnost ogleda videopostneka položaja, s klikom na posnetek. Vir videoposnetka je portal Youtube, posnetek pa se predvaja neposredno v sami aplikaciji, torej brez dodatnega odpiranja videoposnetka izven mobilne aplikacije. 
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[scale=.14]{asana.jpg}
+\end{center}
+\caption{Stran s podrobnostmi o asani v podmeniju Asanas.}
+\label{asana}
+\end{figure}
 
 Podmeni Goals se prav tako razdeli na 3 dodatne podstrani, ki predstavljajo 3 kategorije, v katerih se lahko uporabnik izboljša in spremlja svoj napredek. Kategorije so slednje, Splits, Backbends in Inversions. Ko si uporabnik izbere eno izmed kategorij, se odpre starn s 7 dnevnim programom različnih videoposnetkov, ki naj bi jim uporabnik sledil za lasten napredek. Prav tako kot pri položajih, smo tudi tukaj naredili tako, da uporabnik predvaja in odpre videoposnetek neposredno v aplikaciji, brez odpiranja novega okna izven aplikacije. 
 Pod programom sledi še možnost dodajanja slik, s katerimi uporabnik lažje sledi napredku in pa možnosti samoocene, da si lahko lažje določi kje na poti do cilja se nahaja.\\
 
-Podmeni Notes ima seznam zapiskov, ki jih je uporabnik ustvaril, ter spodaj desno gumb za dodajanje novega zapiska. S klikom na gumb za dodajanje zapiska, se uporabniku odpre forma za vnos naslova zapiska in okno za vnos vsebine zapiska. Spodaj pod oknom za vsebino pa se nahajata še 2 gumba, levo gumb Back, ki uporabnika vrne v seznam zapiskov in desno gumb Save, ki omogoča shranitev zapiska. Zapisek, ki ga je uporabnik napisal in shranil, se v naslednjem koraku prikaže na seznamu zapiskov. Vsak zapisek v seznamu je prikazan z imenom na levi strani vrstice, na desni strani pa se nahaja gumb za izbris zapiska.
+Podmeni Notes ima seznam zapiskov, ki jih je uporabnik ustvaril, ter spodaj desno gumb za dodajanje novega zapiska. S klikom na gumb za dodajanje zapiska, se uporabniku odpre forma za vnos naslova zapiska in okno za vnos vsebine zapiska. Spodaj pod oknom za vsebino pa se nahajata še 2 gumba, levo gumb Back, ki uporabnika vrne v seznam zapiskov in desno gumb Save, ki omogoča shranitev zapiska, (Slika~\ref{notes}). 
+
+Zapisek, ki ga je uporabnik napisal in shranil, se v naslednjem koraku prikaže na seznamu zapiskov. Vsak zapisek v seznamu je prikazan z imenom na levi strani vrstice, na desni strani pa se nahaja gumb za izbris zapiska.
 S klikom na zapisek se odpre stran z naslovom zapiska, datum, kdaj je bil zapisek ustvarjen in zapisano besedilo. \\
- 
+
+
 V glavnem meniju se v glavi nahaja gumb za odjavo, v vsakem podmeniju pa se v glavi nahaja gumb Home, ki omogoča vrnitev v glavni meni. 
+
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[scale=.2]{notes.jpg}
+\end{center}
+\caption{Stran za dodajanje novega zapiska, v podmeniju notes.}
+\label{notes}
+\end{figure}
 
 
 \chapter{Tehnologije in orodja}
 \label{ch2}
 
-Mobilna aplikacija je razvita z uporabo ogrodja React Native in orodja Expo, kar omogoča izdelavo mobilnih aplikacij tako za operacijski sistem Android kot iOS. Za pisanje kode sta bila uporabljena jezika TypeScript in JavaScript. Koda aplikacije je bila napisana v programu Visual Studio Code. Za shranjevanje podatkov, ki so prikazani v aplikaciji, je uporabljena relacijska podatkovna baza MySql, ki je povezana z lokalnim strežnikom. 
+Mobilna aplikacija je razvita z uporabo ogrodja React Native in ogrodja Expo, kar omogoča izdelavo mobilnih aplikacij tako za operacijski sistem Android kot iOS. Za pisanje kode sta bila uporabljena jezika TypeScript in JavaScript. Koda aplikacije je bila napisana v programu Visual Studio Code. Za shranjevanje podatkov, ki so prikazani v aplikaciji, je uporabljena relacijska podatkovna baza MySql, ki je povezana z lokalnim strežnikom. 
 Za testiranje aplikacije je bilo uporabljeno orodje React DevTools, ki omogoča enostavno testiranje aplikacij, tako na spletnem vmesniku, mobilnem simulatorju, kot tudi na mobilni napravi (Slika). Vse spremembe v kodi, ter zgodovina spremenjenih verzij aplikacije so shranjene v programu Git.
 
 \includegraphics[scale=0.2]{../../../../../var/folders/k_/h6pfbkjd50lfxvygrngfcj900000gn/T/TemporaryItems/(A Document Being Saved By screencaptureui 16)/Screenshot 2021-07-16 at 11.50.09.png} 
@@ -428,7 +472,7 @@ Za testiranje aplikacije je bilo uporabljeno orodje React DevTools, ki omogoča 
 Npm je upravitelj paketov za platformo Node JavaScript. Namešča module, tako da jih vozlišče lahko najde, in inteligentno obvladuje konflikte med odvisnostmi. Izjemno prilagodljiv je za podporo najrazličnejšim primerom uporabe. Najpogosteje se uporablja za objavljanje, odkrivanje, nameščanje in razvoj vozliščnih programov.~\cite{npm}
 
 \section{React Native}
-React Native je JavaScript okvir za pisanje izvornih mobilnih aplikacij za operacijska sistema iOS in Android. Temelji na Reactu, Facebookovi JavaScript knjižnici za gradnjo uporabniških vmesnikov, a namesto na brskalnik cilja na mobilne platforme. 
+React Native je JavaScript ogrodje za pisanje izvornih mobilnih aplikacij za operacijska sistema iOS in Android. Temelji na Reactu, Facebookovi JavaScript knjižnici za gradnjo uporabniških vmesnikov, a namesto na brskalnik cilja na mobilne platforme. 
 
 React Native, je Facebook prvič izdal kot odprtokodni projekt leta 2015. V samo nekaj letih je postal ena najboljših rešitev za mobilni razvoj. React Native razvoj se uporablja za pogon nekaterih vodilnih svetovnih mobilnih aplikacij, vključno z Instagramom, Facebookom in Skypeom.~\cite{RN}
 
