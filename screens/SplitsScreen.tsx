@@ -9,10 +9,13 @@ import YoutubePlayer from 'react-native-youtube-iframe';
 import { ScrollView } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 import ClientApi from '../api';
+import * as ImagePicker from 'expo-image-picker';
 
 function SplitsScreen() {
   const navigation = useNavigation();
   const [rating, setRating] = useState<number>();
+  const [image, setImage] = useState("");
+  const [allImages, setImages] = useState<any[]>([]);
 
   useEffect(() => {
       navigation.setOptions({ headerRight: () => <View style={{padding: 10}}><Icon
@@ -38,6 +41,39 @@ function SplitsScreen() {
           console.log("Saved");
       });
   },[rating]);
+
+  useEffect(() => {
+    const values = {
+        url: image,
+        user_id: 6
+    }
+
+    ClientApi.saveImage(values).then(() => {
+        console.log("Saved");
+      });
+    },[image]);
+
+  useEffect(() => {
+    ClientApi.getImages().then((res) => {
+      setImages(res);
+      console.log(allImages);
+    });
+  },[allImages]);
+
+  const pickImage = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.All,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
+
+    console.log(result);
+
+    if (!result.cancelled) {
+      setImage(result.uri);
+    }
+  };
 
   let [visible, setVisible] = useState<boolean>(false);
   const images = [{
@@ -75,7 +111,7 @@ function SplitsScreen() {
         </ScrollView>
       </Card>
 
-      <TouchableOpacity style={{ flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
+      <TouchableOpacity style={{ flexDirection: "row", alignItems: "center", justifyContent: "center" }} onPress={pickImage}>
         <Text style={styles.title}>Upload your progress photos!</Text>
         <Icon name='camera' size={30} style={{ padding: 5 }} color='rgba(6, 152, 111, 0.8)' />
       </TouchableOpacity>

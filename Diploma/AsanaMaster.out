@@ -1,24 +1,27 @@
 \BOOKMARK [0][-]{chapter*.2}{Povzetek}{}% 1
 \BOOKMARK [0][-]{chapter*.3}{Abstract}{}% 2
 \BOOKMARK [0][-]{chapter.1}{Uvod}{}% 3
-\BOOKMARK [0][-]{chapter.2}{Joga}{}% 4
-\BOOKMARK [1][-]{section.2.1}{Zgodovina joge}{chapter.2}% 5
-\BOOKMARK [1][-]{section.2.2}{Asane in njihov pomen}{chapter.2}% 6
-\BOOKMARK [0][-]{chapter.3}{Opis aplikacije}{}% 7
-\BOOKMARK [1][-]{section.3.1}{Ideja in zasnova aplikacije}{chapter.3}% 8
-\BOOKMARK [1][-]{section.3.2}{Nacrtovanje aplikacije in zbiranje podatkov}{chapter.3}% 9
-\BOOKMARK [1][-]{section.3.3}{Glavne funkcionalnosti in delovanje aplikacije}{chapter.3}% 10
-\BOOKMARK [0][-]{chapter.4}{Tehnologije in orodja}{}% 11
-\BOOKMARK [1][-]{section.4.1}{npm}{chapter.4}% 12
-\BOOKMARK [1][-]{section.4.2}{React Native}{chapter.4}% 13
-\BOOKMARK [1][-]{section.4.3}{Expo}{chapter.4}% 14
-\BOOKMARK [1][-]{section.4.4}{JavaScript}{chapter.4}% 15
-\BOOKMARK [1][-]{section.4.5}{TypeScript}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.6}{Visual Studio Code}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.7}{MySQL}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.8}{TablePlus}{chapter.4}% 19
-\BOOKMARK [1][-]{section.4.9}{Git}{chapter.4}% 20
-\BOOKMARK [0][-]{chapter.5}{Testno okolje}{}% 21
-\BOOKMARK [0][-]{chapter.6}{Prototip aplikacije}{}% 22
-\BOOKMARK [0][-]{chapter.7}{Zakljucek}{}% 23
-\BOOKMARK [0][-]{chapter.7}{Literatura}{}% 24
+\BOOKMARK [1][-]{section.1.1}{Pregled sorodnih aplikacij}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Struktura diplome}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Joga}{}% 6
+\BOOKMARK [1][-]{section.2.1}{O jogi}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{Zgodovina joge}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.3}{Asane in njihov pomen}{chapter.2}% 9
+\BOOKMARK [0][-]{chapter.3}{Opis aplikacije}{}% 10
+\BOOKMARK [1][-]{section.3.1}{Ideja in cilji diplome}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.2}{Funkcionalnosti aplikacije}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.3}{Nacrtovanje aplikacije in zbiranje podatkov}{chapter.3}% 13
+\BOOKMARK [0][-]{chapter.4}{Uporabljena tehnologija in orodja}{}% 14
+\BOOKMARK [1][-]{section.4.1}{npm}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.2}{React Native}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.3}{Expo}{chapter.4}% 17
+\BOOKMARK [1][-]{section.4.4}{JavaScript}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.5}{TypeScript}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.6}{Visual Studio Code}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.7}{MySQL}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.8}{TablePlus}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.9}{Git}{chapter.4}% 23
+\BOOKMARK [0][-]{chapter.5}{Predstavitev aplikacije}{}% 24
+\BOOKMARK [1][-]{section.5.1}{Glavne funkcionalnosti in delovanje aplikacije}{chapter.5}% 25
+\BOOKMARK [0][-]{chapter.6}{Sklepne ugotovitve}{}% 26
+\BOOKMARK [0][-]{chapter.6}{Literatura}{}% 27

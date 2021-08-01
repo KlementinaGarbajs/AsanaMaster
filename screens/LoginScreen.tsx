@@ -1,9 +1,74 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
+const API_URL = 'http://localhost:8080';
+
 const LoginScreen = () => {
-  const navigation = useNavigation();
+    const navigation = useNavigation();
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const [isError, setIsError] = useState(false);
+    const [message, setMessage] = useState('');
+
+    const onLoggedIn = (token: any) => {
+      fetch(`${API_URL}/private`, {
+          method: 'GET',
+          headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${token}`, 
+          },
+      })
+      .then(async res => { 
+          try {
+              const jsonRes = await res.json();
+              if (res.status === 200) {
+                  setMessage(jsonRes.message);
+              }
+          } catch (err) {
+              console.log(err);
+          };
+      })
+      .catch(err => {
+          console.log(err);
+      });
+    }
+
+    const onSubmitHandler = () => {
+      const payload = {
+          email,
+          password,
+      };
+      fetch(`${API_URL}/${'login'}`, {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload),
+      })
+      .then(async res => { 
+          try {
+              const jsonRes = await res.json();
+              if (res.status !== 200) {
+                  setIsError(true);
+                  setMessage(jsonRes.message);
+              } else {
+                  onLoggedIn(jsonRes.token);
+                  setIsError(false);
+                  setMessage(jsonRes.message);
+              }
+          } catch (err) {
+              console.log(err);
+          };
+      })
+      .catch(err => {
+          console.log(err);
+      });
+
+      navigation.navigate('Menu')
+  };
 
   return (
       <ImageBackground style={styles.logoImageContainer}
@@ -18,20 +83,22 @@ const LoginScreen = () => {
             <TextInput
               style={styles.inputText}
               placeholder="Email..."
+              onChangeText={setEmail}
               placeholderTextColor="#034947"/>
           </View>
           <View style={styles.inputView}>
             <TextInput
               secureTextEntry
+              onChangeText={setPassword}
               style={styles.inputText}
               placeholder="Password..."
               placeholderTextColor="#034947"/>
           </View>
 
-          <TouchableOpacity style={styles.loginBtn}  onPress={() => navigation.navigate('About Yoga')}  >
+          <TouchableOpacity style={styles.loginBtn} onPress={onSubmitHandler}>
             <Text style={styles.loginText}>LOGIN</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.signUpBtn} onPress={() => navigation.navigate('Registration')} >
+          <TouchableOpacity style={styles.signUpBtn} onPress={() => navigation.navigate('Registration')}>
             <Text style={styles.signUpText}>Signup</Text>
           </TouchableOpacity>
           <TouchableOpacity>

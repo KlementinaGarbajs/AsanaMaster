@@ -5,24 +5,27 @@
 \contentsline {chapter}{Abstract}{}{chapter*.3}%
 \babel@toc {slovene}{}
 \contentsline {chapter}{\numberline {1}Uvod}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Joga}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Zgodovina joge}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Asane in njihov pomen}{6}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Opis aplikacije}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Ideja in zasnova aplikacije}{9}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Na\IeC {\v c}rtovanje aplikacije in zbiranje podatkov}{10}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Glavne funkcionalnosti in delovanje aplikacije}{11}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Tehnologije in orodja}{17}{chapter.4}%
-\contentsline {section}{\numberline {4.1}npm}{18}{section.4.1}%
-\contentsline {section}{\numberline {4.2}React Native}{18}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Expo}{18}{section.4.3}%
-\contentsline {section}{\numberline {4.4}JavaScript}{19}{section.4.4}%
-\contentsline {section}{\numberline {4.5}TypeScript}{19}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Visual Studio Code}{19}{section.4.6}%
-\contentsline {section}{\numberline {4.7}MySQL}{20}{section.4.7}%
-\contentsline {section}{\numberline {4.8}TablePlus}{20}{section.4.8}%
-\contentsline {section}{\numberline {4.9}Git}{20}{section.4.9}%
-\contentsline {chapter}{\numberline {5}Testno okolje}{21}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Prototip aplikacije}{23}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Zaklju\IeC {\v c}ek}{25}{chapter.7}%
-\contentsline {chapter}{Literatura}{26}{chapter.7}%
+\contentsline {section}{\numberline {1.1}Pregled sorodnih aplikacij}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Struktura diplome}{3}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Joga}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}O jogi}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Zgodovina joge}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Asane in njihov pomen}{8}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Opis aplikacije}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Ideja in cilji diplome}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Funkcionalnosti aplikacije}{12}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Na\IeC {\v c}rtovanje aplikacije in zbiranje podatkov}{12}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Uporabljena tehnologija in orodja}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}npm}{16}{section.4.1}%
+\contentsline {section}{\numberline {4.2}React Native}{16}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Expo}{16}{section.4.3}%
+\contentsline {section}{\numberline {4.4}JavaScript}{17}{section.4.4}%
+\contentsline {section}{\numberline {4.5}TypeScript}{17}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Visual Studio Code}{17}{section.4.6}%
+\contentsline {section}{\numberline {4.7}MySQL}{18}{section.4.7}%
+\contentsline {section}{\numberline {4.8}TablePlus}{18}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Git}{18}{section.4.9}%
+\contentsline {chapter}{\numberline {5}Predstavitev aplikacije}{19}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Glavne funkcionalnosti in delovanje aplikacije}{19}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Sklepne ugotovitve}{25}{chapter.6}%
+\contentsline {chapter}{Literatura}{26}{chapter.6}%

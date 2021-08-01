@@ -304,15 +304,31 @@ In kaj je asana? Sanskrtski izraz asana pomeni poza ali položaj telesa. Asana j
 
 Prav z namenom pravilnega izvajanja položajev in spremljanjem napredka pri tem, pa sem se za svojo diplomsko nalogo odločila razviti mobilno aplikacijo, ki bi bodočim joga učiteljem in tudi vsem ostalim praktikantom joge omogočala lažje in bolj zabavno obliko učenja, ter dodatno motivacijo za napredek. Aplikacijo sem razvila z uporabo ogrodja React Native in odprtokodno platformo Expo. Za pisanje kode sem uporabila jezike, Java Script, TypeScript in SQL. Aplikacija teče na Expotovem lokalnem strežniku, za povezavo do baze podatkov pa je uporabljen strežnik Express. Podatki so shranjeni v MySql bazi, ki teče preko lokalnega MySQL strežnika.
 
+\section{Pregled sorodnih aplikacij}
+Pri pregledu sorodnih aplikacij sem prišla do ugotovitev, da slovenske aplikacije na trgu ni, saj je slovenski trg žal premajhen.
+
+Ena izmed boljših aplikacij, ki jo trenutno uporabljam tudi sama, je aplikacija Track Yoga, kjer ima uporabnik možnost pregleda nad različnimi asanami, prikazanimi tudi z videoposnetki, prav tako pa ima na voljo različno dolge posnetke vodene prakse oz. možnost sledenja programu, npr. programu za izboljšanje fleksibilnosti, zmanjševanju stresa, meditacija itd,... V aplikaciji ima vsak uporabnik tudi svoj profil, kjer si lahko nastavi tedenske cilje, spremlja koliko programov in vodenih vadb je že opravil, sledi svojemu napredku z zbiranjem značk (angl. Badge) itd. 
+
+Aplikacija je torej na nek način podobna moji, vendar pa nima možnosti delanja zapiskov in ne omogoča spremljanja lastnega napredka, kot je objavljanje slik, podajanje samoocene in interaktivno sledenje programu, kar bi uporabnika še bolj motiviralo.
+
+Ena izmed aplikacij, ki so osredotočene bolj na učenje posameznika o asanah, pa je aplikacija Yoga 108. V aplikaciji uporavniku ponujajo pregled nad različnimi asanami, njihovimi izgovorjavami in angleškimi prevodi, vendar pa ne ponujajo podrobnega opisa asane, njenih prednosti in prikaza pravilne izvedbe z videoposnetkom. 
+Prav tako, kot že prej omenjena aplikacija, tudi ta ne omogoča delanja zapiskov in spremljanja napredka.
+
+Obstaja seveda tudi veliko drugih aplikacij, ki pa so vse bolj ali manj osredotočene le na to, da uporabnika vodijo pri vadbi joge in ponujajo različne programe z videoposnetki, katerim potem posameznik sledi in prakticira jogo, a lahko uporabnik te aplikacije le pasivno uporablja.
+
+\section{Struktura diplome}
+Diplomsko delo je razdeljeno na sedem večjih poglavij. 
+Poglavje \textit{Uvod} je namenjeno predstavitvi sorodnih del, ter splošni strukturi razvoje diplomske naloge, zato je tudi razdeljeno na več podpoglavij. Sledi poglavje \textit{Joga} v katerem je predstavljena Joga, zgodovina joge in pomen asan. Poglavje \textit{Opis aplikacije in načrtovanje} je namenjeno predvsem predstavitvi glavnih funkcionalnosti, ki jih aplikacija ponuja. V naslednjem poglavu \textit{uporabljena tehnologija in orodja} je predstavljena arhitektura sistema in uporabljene tehnologije ter orodja, za razvoj aplikacije. V poglavju \textit{Predstavitev aplikacije} so s pomočjo zaslonskih posnetkov predstavljene funkcionalnosti aplikacije, v zaključnem poglavju pa je namenjeno sklepnim ugotovitvam in idejam za možni nadaljnji razvoj.
+
 \chapter{Joga}
 \label{ch0}
 
+\section{O jogi}
+Joga združuje načine zavedanja, zaznavanja, doživljanja, soočanja, spoznavanja in delovanja, preko katerih je človek zmožen bivati neodvisno od lastne pogojenosti. V jogijskih spisih je ta zmožnost bivanja opisana kot stanje odrešitve, saj je preko nje človek odrešen trpljenja kateremu je podvržen kot človeško bitje bivajoče v tem svetu. Joga namreč izhaja iz spoznanja, da trpljenje ni neločljivo povezano s človeškim bitjem oziroma ni neizogibno vsebovano v svetu v katerem živi. Trpljenje je šele učinek nezmožnosti delovati na določen način. \\ 
+
+Beseda joga izhaja iz korena besede yuj, kar pomeni povezovati. Joga povezuje snovnost in duhovnost, telo in duha. Medsebojno sodelovanje telesa in duha povezuje v usklajeno, dopolnjujoče se gibanje. Če želi človek povezati svoje telo in duha na omenjeni način, se mora biti najprej zmožen razvezati oziroma oddaljiti od lastnih določujočih pogojev.~\cite{oJogi}\\ 
+
 \section{Zgodovina joge}
-
-\textbf{Kaj je joga in njeno bistvo?}\\
-
-Joga združuje načine zavedanja, zaznavanja, doživljanja, soočanja, spoznavanja in delovanja, preko katerih je človek zmožen bivati neodvisno od lastne pogojenosti. V jogijskih spisih je ta zmožnost bivanja opisana kot stanje odrešitve, saj je preko nje človek odrešen trpljenja kateremu je podvržen kot človeško bitje bivajoče v tem svetu. Joga namreč izhaja iz spoznanja, da trpljenje ni neločljivo povezano s človeškim bitjem oziroma ni neizogibno vsebovano v svetu v katerem živi. Trpljenje je šele učinek nezmožnosti delovati na določen način. Beseda joga izhaja iz korena besede yuj, kar pomeni povezovati. Joga povezuje snovnost in duhovnost, telo in duha. Medsebojno so-delovanje telesa in duha povezuje v usklajeno, dopolnjujoče se gibanje. Če želi človek povezati svoje telo in duha na omenjeni način, se mora biti najprej zmožen razvezati oziroma oddaljiti od lastnih določujočih pogojev.~\cite{oJogi}\\ 
-
 Kot posebna metoda preseganja človeške pogojenosti, je omenjena že v starodavnih vedskih spisih katerih nastanke zgodovinarji umeščajo na območje današnja Indije. Preden se je namreč razširila kot uveljavljena praksa so kot prevladujoči načini samo-preseganja služili predvsem obredni rituali žrtvovanja. Preko ritualov žrtvovanja, ki so vsebovali elemente smrti in ponovnega rojstva, so si ljudje poskušali zagotoviti moč nadzora nad lastno minljivostjo. 
 
 V obdobju prvih upanišadskih spisov so obredni rituali začeli izgubljati svoj vlogo prevladujočega načina samo-preseganja. Zmožnost odrešitve je prenehala obstajati kot poseben privilegij pogojen s poznavanjem ritualnih praks, saj se je iz rituala, kot sredstva odrešitve, pozornost preusmerila na osebo in način njenega bivanja. Modreci ršiji - avtorji upanišadskih spisov - so namreč v svojih nazorih poudarjali, da je odrešitev zmožen doseči prav vsak z načinom svojega bivanja in delovanja.
@@ -370,22 +386,36 @@ Izvedba asane naj bi bila stabilna in hkrati selektivno sproščena. Dihanje je 
 
 Skozi asane se nam razkrivajo naši ustaljeni psihofizični vzorci, ki jih običajno doživimo kot omejitve. V jogi ni tekmovalnosti, vsak je v svoji asani, ki trenutno ustreza njegovemu psihofizičnemu stanju. Učitelji joge pogosto pravijo, da je tista asana, ki nam je najmanj všeč, pravzaprav naša asana.
 
-Z rednim in discipliniranim izvajanjem asan se prožnost telesa izredno poveča. Mnoge asane učinkujejo tudi terapevtsko in lahko odpravijo težave, ki nas pestijo dolgo časa in so morda videti nerešljive, odpravi pa jih lahko že pravilna drža telesa. Hkrati se poveča tudi naša prožnost duha: opazimo lahko spremembe v svojem dojemanju sveta, samozavesti, odprtosti, sposobnosti, da ocenimo položaj in ugotovimo, kaj je bistvo in kaj nepomembna navlaka. Trdno stojimo na tleh, z odprtim srcem in notranjo radostjo, ki ne potrebuje zunanjih dražljajev. Takrat smo prestopili prvo, pomembno stopnico na poti joge.~\cite{Asane} \\
-
+Z rednim in discipliniranim izvajanjem asan se prožnost telesa izredno poveča. Mnoge asane učinkujejo tudi terapevtsko in lahko odpravijo težave, ki nas pestijo dolgo časa in so morda videti nerešljive, odpravi pa jih lahko že pravilna drža telesa. Hkrati se poveča tudi naša prožnost duha: opazimo lahko spremembe v svojem dojemanju sveta, samozavesti, odprtosti, sposobnosti, da ocenimo položaj in ugotovimo, kaj je bistvo in kaj nepomembna navlaka. Trdno stojimo na tleh, z odprtim srcem in notranjo radostjo, ki ne potrebuje zunanjih dražljajev. Takrat smo prestopili prvo, pomembno stopnico na poti joge.~\cite{Asane}
 Bistvo izvajanja asane ni nujno v popolni izvedbi. Bistvo asane je v popolnem medsebojnem zavedanju duše in telesa.
 
 
-\chapter{Opis aplikacije}
+\chapter{Opis aplikacije in načrtovanje}
 \label{ch1}
 
-\section{Ideja in zasnova aplikacije}
-
+\section{Ideja in cilji diplome}
 Živimo v svetu, kjer je imeti veliko mobilnih aplikacij nekaj običajnega, saj za vsako aktivnost, ki si jo izmislimo, obstaja mobilna aplikacija. A ko se želiš nekaj naučiti oz. v nečem izboljšati, ti lahko ravno prevelik nabor različnih aplikacij predstavlja oviro. V kolikor morda nisi najbolj organiziran človek, ti lahko možnost izbire ustvari še večjo zmedo. Prav iz tega razloga, se je rodila ideja o aplikaciji Asana Master, kjer ima uporabnik zgolj z eno aplikacijo možnost učenja o različnih položajih v jogi, možnost spremljanja programa za izboljšanje gibčnosti, inverzij itd., prav tako pa ima možnost ob tem še spremljati svoj lasten napredek in izraziti svoje občutke. Torej vse zapakirano na enem mestu. 
 
 Razvoj mobilnih aplikacij ne bi smel biti več tako osredotočen le na eno glavno funkcionalnost, saj počasi prihaja čas, ko smo ljudje vedno bolj zasičeni z različnimi podatki, aplikacijami in načini shranjevanja, zato se bomo vedno bolj nagibali k aplikacijam, ki omogočajo več funkcionalnosti v enem.
 
-\section{Načrtovanje aplikacije in zbiranje podatkov}
+\section{Funkcionalnosti aplikacije}
+Glavne funkcionalnosti, ki jih ima uporabnik na voljo z aplikacijo AsanaMaster so sledeče:
 
+ \begin{itemize}
+  \item \textbf{Registracija}: kreiranje novega uporabniškega računa
+  \item \textbf{Prijava}: prijava v aplikacijo z uporabniškim računom
+  \item \textbf{Pozabljeno geslo}: resetiranje pozabljenega gesla s pošiljanjem novega gesla na elektronski naslov uporabnika
+  \item \textbf{Ogled posnetkov}: ogled posnetkov v aplikaciji
+  \item \textbf{Označevanje asane}: označevanje naučene asane
+  \item \textbf{Ocenjevanje napredka}: ocenjevanje lastnega napredka
+  \item \textbf{Nalaganje slik}: nalaganje slik napredka
+  \item \textbf{Ogled slik}: ogled slik napredka
+  \item \textbf{Kreiranje novega zapiska}: uporabnik lahko kreira zapisek
+  \item \textbf{Brisanje zapiska}: uporabnik lahko željeni zapisek izbriše
+  \item \textbf{Ogled profila}: ogled uporabniškega profila
+\end{itemize}
+
+\section{Načrtovanje aplikacije in zbiranje podatkov}
 Načrtovanje aplikacije se je začelo s prototipom uporabniškega vmesnika mobilne aplikacije, saj je oblikovanje uporabniškega vmesnika pomemben sestavni del oblikovanja uporabniške izkušnje. Pri oblikovanju mobilne aplikacije se je pomembno usmeriti tako na estetiko kot seveda, tudi na funkcionalnost aplikacije. Vmesnik smo poskusili narediti čim bolj pregleden in enostaven za uporabo. Prav s tem namenom je v aplikacijo dodanih kar nekaj slik in tudi videoposnetkov. 
 
 Prototip smo izdelali s pomočjo spletne platforme za izdelavo prototipov Proto.io, (Slika~\ref{protoio}). Izdelani so bili nekateri ključni zasloni aplikacije, glavne funkcionalnosti aplikacije, povezave med njimi in oblikovano glavno ozadje aplikacije na začetnem prijavnem zaslonu, ter ostali gradniki aplikacije.\\
@@ -402,65 +432,7 @@ Izdelavi prototipa je sledila raziskava tehnologij in primernih orodij za sam ra
 
 Po začetnem načrtovanju izdelave smo se nato lotili še zbiranja podatkov o jogi in položajih v jogi. Podatki o jogi in položajih so vzeti iz knjige The Top 100 Best Yoga Poses Relieve Stress, Increase Flexibility, and Gain Strength, avtorice Susan Hollister~\cite{yoga}. Vir nekaterih slik je tudi zgoraj omenjena knjiga, nekatere pa smo pridobili preko spletne strani Verywellfit~\cite{verywellfit}. Videoposnetki, ki uporabnikom omogočajo izboljšanje položajev in napredovanja, pa so predvajani preko platforme, za deljenje videoposnetkov, Youtube.
 
-\section{Glavne funkcionalnosti in delovanje aplikacije}
-Ob zagonu mobilne aplikacije uporabnik najprej pride na stran za prijavo, (Slika~\ref{prijava}, ~\ref{registracija}). V kolikor uporabnik še ni registriran, mora najprej opraviti registracijo, s klikom na gumb Sign in, kar ga preusmeri na stran za registracijo. Za uspešno registracijo mora vnesti svoje ali poljubno ime, svoj elektronski naslov in geslo, ki ga bo uporabljal za prijavo. V kolikor je uporabnik že registriran, a je pozabil svoje geslo, si lahko preko klika na gumb Forgot password?, na svoj elektronski naslov, pošlje povezavo za ponastavitev gesla. Po uspešni prijavi preko enega izmed zgoraj omenjenih načinov je uporabnik preusmerjen v jedro aplikacije. Ob prvi prijavi, uporabnika ob vstopu v aplikacijo pozdravi kratek uvod v aplikacijo, kjer se seznani s pojmom joga in s kratkim opisom bistva aplikacije. Po zaključenem uvodu v aplikacijo je uporabnik nato preusmerjen v glavni meni, ki je razdeljen na 3 glavne podmenije: Asanas, Goals in Notes.
-
-\begin{figure}[!tbp]
-  \centering
-  \begin{minipage}[b]{0.34\textwidth}
-    \includegraphics[width=\textwidth]{prijava.jpg}
-    \caption{Prijavni obrazec ob vstopu v aplikacijo.}
-    \label{prijava}
-  \end{minipage}
-  \begin{minipage}[b]{0.34\textwidth}
-    \includegraphics[width=\textwidth]{registracija.jpg}
-    \caption{Obrazec za registracijo.}
-	\label{registracija}
-  \end{minipage}
-  \begin{minipage}[b]{0.34\textwidth}
-    \includegraphics[width=\textwidth]{pozdrav1.jpg}
-    \caption{Prijavni obrazec ob vstopu v aplikacijo.}
-    \label{pozdrav1}
-  \end{minipage}
-  \begin{minipage}[b]{0.342\textwidth}
-    \includegraphics[width=\textwidth]{pozdrav2.jpg}
-    \caption{Drugo pozdravno besedilo.}
-	\label{pozdrav2}
-  \end{minipage}
-\end{figure}
-
-Podmeni Asanas se razdeli še na 3 dodatne podstrani, ki določajo različne težavnosti položajev, to so Begginer, Intermediate in Master. V bazi podatkov imamo pri vsakem položaju shranjeno še njegovo stopnjo težavnosti, kar nam omogoča enostavno sortiranje v omenjene težavnosti. S klikom na eno izmed težavnosti se nam odpre seznam z imeni in slikami položajev. S klikom na določen položaj, pa se nam odpre stran z angleškim imenom, sanskrit imenom, sliko, opisom izvedbe in videoposnetkom položaja, (Slika~\ref{asana}). Uporabnik ima možnost ogleda videopostneka položaja, s klikom na posnetek. Vir videoposnetka je portal Youtube, posnetek pa se predvaja neposredno v sami aplikaciji, torej brez dodatnega odpiranja videoposnetka izven mobilne aplikacije. 
-
-\begin{figure}[htbp]
-\begin{center}
-\includegraphics[scale=.14]{asana.jpg}
-\end{center}
-\caption{Stran s podrobnostmi o asani v podmeniju Asanas.}
-\label{asana}
-\end{figure}
-
-Podmeni Goals se prav tako razdeli na 3 dodatne podstrani, ki predstavljajo 3 kategorije, v katerih se lahko uporabnik izboljša in spremlja svoj napredek. Kategorije so slednje, Splits, Backbends in Inversions. Ko si uporabnik izbere eno izmed kategorij, se odpre starn s 7 dnevnim programom različnih videoposnetkov, ki naj bi jim uporabnik sledil za lasten napredek. Prav tako kot pri položajih, smo tudi tukaj naredili tako, da uporabnik predvaja in odpre videoposnetek neposredno v aplikaciji, brez odpiranja novega okna izven aplikacije. 
-Pod programom sledi še možnost dodajanja slik, s katerimi uporabnik lažje sledi napredku in pa možnosti samoocene, da si lahko lažje določi kje na poti do cilja se nahaja.\\
-
-Podmeni Notes ima seznam zapiskov, ki jih je uporabnik ustvaril, ter spodaj desno gumb za dodajanje novega zapiska. S klikom na gumb za dodajanje zapiska, se uporabniku odpre forma za vnos naslova zapiska in okno za vnos vsebine zapiska. Spodaj pod oknom za vsebino pa se nahajata še 2 gumba, levo gumb Back, ki uporabnika vrne v seznam zapiskov in desno gumb Save, ki omogoča shranitev zapiska, (Slika~\ref{notes}). 
-
-Zapisek, ki ga je uporabnik napisal in shranil, se v naslednjem koraku prikaže na seznamu zapiskov. Vsak zapisek v seznamu je prikazan z imenom na levi strani vrstice, na desni strani pa se nahaja gumb za izbris zapiska.
-S klikom na zapisek se odpre stran z naslovom zapiska, datum, kdaj je bil zapisek ustvarjen in zapisano besedilo. \\
-
-
-V glavnem meniju se v glavi nahaja gumb za odjavo, v vsakem podmeniju pa se v glavi nahaja gumb Home, ki omogoča vrnitev v glavni meni. 
-
-
-\begin{figure}[htbp]
-\begin{center}
-\includegraphics[scale=.2]{notes.jpg}
-\end{center}
-\caption{Stran za dodajanje novega zapiska, v podmeniju notes.}
-\label{notes}
-\end{figure}
-
-
-\chapter{Tehnologije in orodja}
+\chapter{Uporabljena tehnologija in orodja}
 \label{ch2}
 
 Mobilna aplikacija je razvita z uporabo ogrodja React Native in ogrodja Expo, kar omogoča izdelavo mobilnih aplikacij tako za operacijski sistem Android kot iOS. Za pisanje kode sta bila uporabljena jezika TypeScript in JavaScript. Koda aplikacije je bila napisana v programu Visual Studio Code. Za shranjevanje podatkov, ki so prikazani v aplikaciji, je uporabljena relacijska podatkovna baza MySql, ki je povezana z lokalnim strežnikom. 
@@ -506,16 +478,66 @@ https://git-scm.com/
 
 
 
-\chapter{Testno okolje}
+\chapter{Predstavitev aplikacije}
 \label{ch3}
+\section{Glavne funkcionalnosti in delovanje aplikacije}
+Ob zagonu mobilne aplikacije uporabnik najprej pride na stran za prijavo, (Slika~\ref{prijava}, ~\ref{registracija}). V kolikor uporabnik še ni registriran, mora najprej opraviti registracijo, s klikom na gumb Sign in, kar ga preusmeri na stran za registracijo. Za uspešno registracijo mora vnesti svoje ali poljubno ime, svoj elektronski naslov in geslo, ki ga bo uporabljal za prijavo. V kolikor je uporabnik že registriran, a je pozabil svoje geslo, si lahko preko klika na gumb Forgot password?, na svoj elektronski naslov, pošlje povezavo za ponastavitev gesla. Po uspešni prijavi preko enega izmed zgoraj omenjenih načinov je uporabnik preusmerjen v jedro aplikacije. Ob prvi prijavi, uporabnika ob vstopu v aplikacijo pozdravi kratek uvod v aplikacijo, kjer se seznani s pojmom joga in s kratkim opisom bistva aplikacije. Po zaključenem uvodu v aplikacijo je uporabnik nato preusmerjen v glavni meni, ki je razdeljen na 3 glavne podmenije: Asanas, Goals in Notes.
+
+\begin{figure}[!tbp]
+  \centering
+  \begin{minipage}[b]{0.34\textwidth}
+    \includegraphics[width=\textwidth]{prijava.jpg}
+    \caption{Prijavni obrazec ob vstopu v aplikacijo.}
+    \label{prijava}
+  \end{minipage}
+  \begin{minipage}[b]{0.34\textwidth}
+    \includegraphics[width=\textwidth]{registracija.jpg}
+    \caption{Obrazec za registracijo.}
+	\label{registracija}
+  \end{minipage}
+  \begin{minipage}[b]{0.34\textwidth}
+    \includegraphics[width=\textwidth]{pozdrav1.jpg}
+    \caption{Prijavni obrazec ob vstopu v aplikacijo.}
+    \label{pozdrav1}
+  \end{minipage}
+  \begin{minipage}[b]{0.342\textwidth}
+    \includegraphics[width=\textwidth]{pozdrav2.jpg}
+    \caption{Drugo pozdravno besedilo.}
+	\label{pozdrav2}
+  \end{minipage}
+\end{figure}
+
+Podmeni Asanas se razdeli še na 3 dodatne podstrani, ki določajo različne težavnosti položajev, to so Begginer, Intermediate in Master. V bazi podatkov imamo pri vsakem položaju shranjeno še njegovo stopnjo težavnosti, kar nam omogoča enostavno sortiranje v omenjene težavnosti. S klikom na eno izmed težavnosti se nam odpre seznam z imeni in slikami položajev. S klikom na določen položaj, pa se nam odpre stran z angleškim imenom, sanskrit imenom, sliko, opisom izvedbe in videoposnetkom položaja, (Slika~\ref{asana}). Uporabnik ima možnost ogleda videopostneka položaja, s klikom na posnetek. Vir videoposnetka je portal Youtube, posnetek pa se predvaja neposredno v sami aplikaciji, torej brez dodatnega odpiranja videoposnetka izven mobilne aplikacije. 
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[scale=.14]{asana.jpg}
+\end{center}
+\caption{Stran s podrobnostmi o asani v podmeniju Asanas.}
+\label{asana}
+\end{figure}
+
+Podmeni Goals se prav tako razdeli na 3 dodatne podstrani, ki predstavljajo 3 kategorije, v katerih se lahko uporabnik izboljša in spremlja svoj napredek. Kategorije so slednje, Splits, Backbends in Inversions. Ko si uporabnik izbere eno izmed kategorij, se odpre starn s 7 dnevnim programom različnih videoposnetkov, ki naj bi jim uporabnik sledil za lasten napredek. Prav tako kot pri položajih, smo tudi tukaj naredili tako, da uporabnik predvaja in odpre videoposnetek neposredno v aplikaciji, brez odpiranja novega okna izven aplikacije. 
+Pod programom sledi še možnost dodajanja slik, s katerimi uporabnik lažje sledi napredku in pa možnosti samoocene, da si lahko lažje določi kje na poti do cilja se nahaja.\\
+
+Podmeni Notes ima seznam zapiskov, ki jih je uporabnik ustvaril, ter spodaj desno gumb za dodajanje novega zapiska. S klikom na gumb za dodajanje zapiska, se uporabniku odpre forma za vnos naslova zapiska in okno za vnos vsebine zapiska. Spodaj pod oknom za vsebino pa se nahajata še 2 gumba, levo gumb Back, ki uporabnika vrne v seznam zapiskov in desno gumb Save, ki omogoča shranitev zapiska, (Slika~\ref{notes}). 
+
+Zapisek, ki ga je uporabnik napisal in shranil, se v naslednjem koraku prikaže na seznamu zapiskov. Vsak zapisek v seznamu je prikazan z imenom na levi strani vrstice, na desni strani pa se nahaja gumb za izbris zapiska.
+S klikom na zapisek se odpre stran z naslovom zapiska, datum, kdaj je bil zapisek ustvarjen in zapisano besedilo. \\
+
+V glavnem meniju se v glavi nahaja gumb za odjavo, v vsakem podmeniju pa se v glavi nahaja gumb Home, ki omogoča vrnitev v glavni meni. 
 
 
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[scale=.2]{notes.jpg}
+\end{center}
+\caption{Stran za dodajanje novega zapiska, v podmeniju notes.}
+\label{notes}
+\end{figure}
 
-\chapter{Prototip aplikacije}
-\label{ch4}
 
-
-\chapter{Zaključek}
+\chapter{Sklepne ugotovitve}
 \label{stroka}
 
 

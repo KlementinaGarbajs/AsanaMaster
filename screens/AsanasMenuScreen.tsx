@@ -4,7 +4,6 @@ import { SafeAreaView, StatusBar, View, TouchableOpacity, Text, Image, FlatList 
 import { StyleSheet } from 'react-native';
 import { Icon } from 'react-native-elements';
 
-
 function AsanasMenuScreen() {
   const navigation = useNavigation();
 

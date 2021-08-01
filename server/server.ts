@@ -1,6 +1,8 @@
 import {Errback, NextFunction, Request, Response} from 'express';
 import {asanaManager} from './asanaManager';
 import {notesManager} from './notesManager';
+import { registrationManager } from './registrationManager';
+import { imagesManager } from './imagesManager';
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -25,6 +27,8 @@ app.get('/api', (req: Request, res: Response) =>res.status(200).send({
 
 app.all('/asanas/:api', asanaManager);
 app.all('/notes/:api', notesManager);
+app.all('/register', registrationManager);
+app.all('/images', imagesManager);
 
 // Throw error when user enters wrong Endpoints
 app.use((req: Request, res: Response) => res.status(404).send({error: 'Oops! Endpoint not found, Please Check that you are entering the right thing!',}));
