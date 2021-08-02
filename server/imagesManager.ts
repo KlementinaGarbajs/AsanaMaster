@@ -21,25 +21,26 @@ const saveImage = async (req: Request, res: Response) => {
     const data = req.body;
     var post = {url: data.url, user_id: data.user_id};
 
-    console.log(post, "bleble");
-
     connection.query("INSERT INTO images SET ?", post, function(err: any, rows: any) {
-        if (!err)
+        if (!err){
+            console.log("kuku");
             console.log('The solution is: ', rows);
-        else
+        } else {
+            console.log("lulu");
             console.log('Error while performing Query.', err);
+        }
     });
 }
 
 const getImages = async (req: Request, res: Response) => {
     try {
         connection.query('SELECT * FROM images WHERE user_id = 6', function (err: any, results: any, fields: any) {
-            const note = results
-            res.json(note || {})
+            const image = results
+            res.json(image || {})
         });
 
     } catch (e) {
-        console.error({method: 'getNotes', details: e})
+        console.error({method: 'getImages', details: e})
         res.status(400).send(e);
     }
 }

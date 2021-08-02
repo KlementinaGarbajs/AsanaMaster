@@ -16,6 +16,7 @@ function SplitsScreen() {
   const [rating, setRating] = useState<number>();
   const [image, setImage] = useState("");
   const [allImages, setImages] = useState<any[]>([]);
+  let [visible, setVisible] = useState<boolean>(false);
 
   useEffect(() => {
       navigation.setOptions({ headerRight: () => <View style={{padding: 10}}><Icon
@@ -33,32 +34,20 @@ function SplitsScreen() {
   },[]);
 
   useEffect(() => {
-      const values = {
-          rating: rating
-      }
-
-      ClientApi.saveRatingSplits(values).then(() => {
-          console.log("Saved");
-      });
-  },[rating]);
-
-  useEffect(() => {
     const values = {
-        url: image,
-        user_id: 6
+        rating: rating
     }
 
-    ClientApi.saveImage(values).then(() => {
+    ClientApi.saveRatingSplits(values).then(() => {
         console.log("Saved");
-      });
-    },[image]);
+    });
+  },[rating]);
 
   useEffect(() => {
     ClientApi.getImages().then((res) => {
       setImages(res);
-      console.log(allImages);
     });
-  },[allImages]);
+  },[image]);
 
   const pickImage = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
@@ -72,16 +61,26 @@ function SplitsScreen() {
 
     if (!result.cancelled) {
       setImage(result.uri);
+      saveImage(result.uri);
     }
   };
 
-  let [visible, setVisible] = useState<boolean>(false);
-  const images = [{
-    url: require('../TemplateDiploma/splitprogress1.jpg'),
- 
-  }, {
-    url: require('../TemplateDiploma/splitprogress2.jpg'),
-  }]
+  const saveImage =  async (url: string) => {
+    const values = {
+        url: url,
+        user_id: 6
+    }
+
+    ClientApi.saveImage(values).then(() => {
+      console.log("Saved");
+    });
+  };
+
+  const images: { url: any; }[] | undefined = [];
+
+  allImages.forEach(element => {
+    images.push({url: element.url});
+  });
 
   return (
     <ScrollView>
@@ -117,17 +116,16 @@ function SplitsScreen() {
       </TouchableOpacity>
 
       <Card containerStyle={styles.card}>
-        <View style={{ flexDirection: "row" }}>
-          <TouchableOpacity onPress={() => setVisible(true)}>
-            <Image style={styles.logoImage} source={require('../TemplateDiploma/splitprogress1.jpg')} />
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => setVisible(true)}>
-            <Image style={styles.logoImage} source={require('../TemplateDiploma/splitprogress2.jpg')} />
-          </TouchableOpacity>
-          <Modal visible={visible} transparent={true}>
-              <ImageViewer onDoubleClick={() => setVisible(false)} imageUrls={images}/>
-            </Modal>
-        </View>
+        <ScrollView style={{ flexDirection: "row" }} horizontal={true}>
+          {images.map((item, key) => (
+            <TouchableOpacity key={key} onPress={() => setVisible(true)}>
+              <Image style={styles.logoImage} source={{uri: item.url}} />
+            </TouchableOpacity>
+          ))}
+        </ScrollView>
+        <Modal visible={visible} transparent={true}>
+            <ImageViewer onDoubleClick={() => setVisible(false)} imageUrls={images}/>
+          </Modal>
       </Card>
 
       <Card title="RATE YOUR PROGRESS" containerStyle={styles.card}>
