@@ -7,21 +7,23 @@
 \BOOKMARK [1][-]{section.2.1}{O jogi}{chapter.2}% 7
 \BOOKMARK [1][-]{section.2.2}{Zgodovina joge}{chapter.2}% 8
 \BOOKMARK [1][-]{section.2.3}{Asane in njihov pomen}{chapter.2}% 9
-\BOOKMARK [0][-]{chapter.3}{Opis aplikacije}{}% 10
-\BOOKMARK [1][-]{section.3.1}{Ideja in cilji diplome}{chapter.3}% 11
+\BOOKMARK [0][-]{chapter.3}{Opis aplikacije in nacrtovanje}{}% 10
+\BOOKMARK [1][-]{section.3.1}{Ideja in cilji aplijacije}{chapter.3}% 11
 \BOOKMARK [1][-]{section.3.2}{Funkcionalnosti aplikacije}{chapter.3}% 12
 \BOOKMARK [1][-]{section.3.3}{Nacrtovanje aplikacije in zbiranje podatkov}{chapter.3}% 13
 \BOOKMARK [0][-]{chapter.4}{Uporabljena tehnologija in orodja}{}% 14
 \BOOKMARK [1][-]{section.4.1}{npm}{chapter.4}% 15
 \BOOKMARK [1][-]{section.4.2}{React Native}{chapter.4}% 16
 \BOOKMARK [1][-]{section.4.3}{Expo}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.4}{JavaScript}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.5}{TypeScript}{chapter.4}% 19
-\BOOKMARK [1][-]{section.4.6}{Visual Studio Code}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.7}{MySQL}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.8}{TablePlus}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.9}{Git}{chapter.4}% 23
-\BOOKMARK [0][-]{chapter.5}{Predstavitev aplikacije}{}% 24
-\BOOKMARK [1][-]{section.5.1}{Glavne funkcionalnosti in delovanje aplikacije}{chapter.5}% 25
-\BOOKMARK [0][-]{chapter.6}{Sklepne ugotovitve}{}% 26
-\BOOKMARK [0][-]{chapter.6}{Literatura}{}% 27
+\BOOKMARK [1][-]{section.4.4}{Express}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.5}{JavaScript}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.6}{TypeScript}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.7}{Visual Studio Code}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.8}{MySQL}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.9}{TablePlus}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.10}{Git}{chapter.4}% 24
+\BOOKMARK [0][-]{chapter.5}{Predstavitev aplikacije}{}% 25
+\BOOKMARK [1][-]{section.5.1}{Glavne funkcionalnosti in delovanje aplikacije}{chapter.5}% 26
+\BOOKMARK [0][-]{chapter.6}{Sklepne ugotovitve}{}% 27
+\BOOKMARK [1][-]{section.6.1}{Ideje za nadaljni razvoj}{chapter.6}% 28
+\BOOKMARK [0][-]{section.6.1}{Literatura}{}% 29

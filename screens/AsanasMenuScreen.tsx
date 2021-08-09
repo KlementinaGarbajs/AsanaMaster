@@ -19,10 +19,10 @@ function AsanasMenuScreen() {
   return (
     <SafeAreaView style={{flex: 1}}>
       <FlatList data={[
-                      {id: 1, name: 'BEGINNER', image: require('../TemplateDiploma/legstretch2.png')},
-                      {id: 2, name: 'INTERMEDIATE', image: require('../TemplateDiploma/path35522.png')},
-                      {id: 3, name: 'MASTER', image: require('../TemplateDiploma/split.png')},
-                  ]} 
+          {id: 1, name: 'BEGINNER', image: require('../TemplateDiploma/legstretch2.png')},
+          {id: 2, name: 'INTERMEDIATE', image: require('../TemplateDiploma/path35522.png')},
+          {id: 3, name: 'MASTER', image: require('../TemplateDiploma/split.png')},
+      ]} 
       renderItem={({item}) =>
       
         <View style={styles.container} key={item.id}>

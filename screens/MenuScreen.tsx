@@ -8,12 +8,15 @@ function MenuScreen() {
   const navigation = useNavigation();
 
   useEffect(() => {
-      navigation.setOptions({ headerRight: () => <View style={{padding: 10}}><Icon
-      name={"logout"}
-      size={30}
-      color="rgba(28, 28, 28, 0.8)"
-      onPress={() => navigation.navigate('Login')}
-    /></View>, title: null, headerLeft: null});
+    navigation.setOptions({ headerRight: () => 
+    <View style={{padding: 10, flexDirection: "row"}}>
+      <Icon
+        name={"person"}
+        size={30}
+        color="rgba(28, 28, 28, 0.8)"
+        onPress={() => navigation.navigate('Profile')}
+      />
+    </View>, title: null, headerLeft: null});
   },[]);
 
   const cards = [

@@ -27,7 +27,7 @@ app.get('/api', (req: Request, res: Response) =>res.status(200).send({
 
 app.all('/asanas/:api', asanaManager);
 app.all('/notes/:api', notesManager);
-app.all('/register', registrationManager);
+app.all('/register/:api', registrationManager);
 app.all('/images/:api', imagesManager);
 
 // Throw error when user enters wrong Endpoints

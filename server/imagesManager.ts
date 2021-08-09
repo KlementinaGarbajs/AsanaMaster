@@ -3,18 +3,18 @@ import connection from "../database/connection";
 
 export const imagesManager = (req: Request, res: Response) => {
     const params = req.params;
-        switch (params.api) {
-            case 'all':
-                getImages(req, res);
-                break;
-            case 'upload':
-                saveImage(req, res);
-                break;
-            default:
-                res.send('Api ' + params.api + ' does not exist!');
-                break;
-        }
-    
+
+    switch (params.api) {
+        case 'all':
+            getImages(req, res);
+            break;
+        case 'upload':
+            saveImage(req, res);
+            break;
+        default:
+            res.send('Api ' + params.api + ' does not exist!');
+            break;
+    }
 }
 
 const saveImage = async (req: Request, res: Response) => {
@@ -34,7 +34,7 @@ const saveImage = async (req: Request, res: Response) => {
 
 const getImages = async (req: Request, res: Response) => {
     try {
-        connection.query('SELECT * FROM images WHERE user_id = 6', function (err: any, results: any, fields: any) {
+        connection.query('SELECT * FROM images WHERE user_id = 6', function (err: any, results: any) {
             const image = results
             res.json(image || {})
         });

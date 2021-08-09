@@ -10,7 +10,8 @@ export default class ClientApi {
     static deleteNote = (data: {}) =>  ClientApi.sendRequest('http://localhost:8080/notes/delete', 'DELETE', data);
     static saveImage = (data: {}) =>  ClientApi.sendRequest('http://localhost:8080/images/upload', 'POST', data);
     static getImages = () => ClientApi.sendRequest('http://localhost:8080/images/all');
-    static register = (data: {}) =>  ClientApi.sendRequest('http://localhost:8080/register', 'POST', data);
+    static register = (data: {}) =>  ClientApi.sendRequest('http://localhost:8080/register/register', 'POST', data);
+    static getUser = () => ClientApi.sendRequest('http://localhost:8080/register/user');
 
     static handleErrors = (resp: any) => {
         if (resp.ok) {

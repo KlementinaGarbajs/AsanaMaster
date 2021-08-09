@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Asane}
 Asane.
@@ -10,6 +10,16 @@ Asane.
 Expo.
 \newblock Dosegljivo: \url{https://docs.expo.io/}.
 \newblock [Dostopano: 25. 6. 2021].
+
+\bibitem{Express}
+Express.
+\newblock Dosegljivo: \url{https://expressjs.com/}.
+\newblock [Dostopano: 15. 7. 2021].
+
+\bibitem{Git}
+Git.
+\newblock Dosegljivo: \url{https://git-scm.com/}.
+\newblock [Dostopano: 15. 7. 2021].
 
 \bibitem{oJogi}
 O jogi.
@@ -27,6 +37,18 @@ Susan Hollister.
   Flexibility, and Gain Strength}.
 \newblock Addison-Wesley, 2017.
 
+\bibitem{JS}
+Js.
+\newblock Dosegljivo:
+  \url{https://www.theserverside.com/definition/JavaScript}.
+\newblock [Dostopano: 15. 7. 2021].
+
+\bibitem{MySQL}
+Mysql.
+\newblock Dosegljivo:
+  \url{https://www.digitalocean.com/community/tutorials/what-is-mysql}.
+\newblock [Dostopano: 15. 7. 2021].
+
 \bibitem{npm}
 npm.
 \newblock Dosegljivo: \url{https://docs.npmjs.com/cli/v6/commands/npm}.
@@ -36,6 +58,22 @@ npm.
 Rn.
 \newblock Dosegljivo: \url{https://www.netguru.com/glossary/react-native}.
 \newblock [Dostopano: 25. 6. 2021].
+
+\bibitem{TablePlus}
+Tableplus.
+\newblock Dosegljivo: \url{https://mariadb.com/kb/en/tableplus/}.
+\newblock [Dostopano: 15. 7. 2021].
+
+\bibitem{TS}
+Ts.
+\newblock Dosegljivo: \url{https://www.typescriptlang.org/}.
+\newblock [Dostopano: 15. 7. 2021].
+
+\bibitem{VSC}
+Vsc.
+\newblock Dosegljivo:
+  \url{https://www.educative.io/edpresso/what-is-visual-studio-code}.
+\newblock [Dostopano: 15. 7. 2021].
 
 \bibitem{verywellfit}
 verywellfit.

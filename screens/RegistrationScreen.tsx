@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, ImageBackgr
 import ClientApi from '../api';
 import { useNavigation } from '@react-navigation/native';
 
-const LoginScreen = () => {
+const RegistrationScreen = () => {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
@@ -62,7 +62,7 @@ const LoginScreen = () => {
     );
 }
 
-export default LoginScreen;
+export default RegistrationScreen;
 
     const styles = StyleSheet.create({
         container: {

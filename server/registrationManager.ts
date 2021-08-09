@@ -2,7 +2,19 @@ import {Request, Response} from 'express';
 import connection from "../database/connection";
 
 export const registrationManager = (req: Request, res: Response) => {
-        saveNewUser(req, res);
+    const params = req.params;
+    
+    switch (params.api) {
+        case 'register':
+            saveNewUser(req, res);
+            break;
+        case 'user':
+            getUser(req, res);
+            break;
+        default:
+            res.send('Api ' + params.api + ' does not exist!');
+            break;
+    }
 }
 
 const saveNewUser = async (req: Request, res: Response) => {
@@ -15,4 +27,17 @@ const saveNewUser = async (req: Request, res: Response) => {
         else
             console.log('Error while performing Query.', err);
     });
+}
+
+const getUser = async (req: Request, res: Response) => {
+    try {
+        connection.query('SELECT name FROM users WHERE id = 6', function (err: any, results: any) {
+            const user = results
+            res.json(user);
+        });
+
+    } catch (e) {
+        console.error({method: 'getUser', details: e})
+        res.status(400).send(e);
+    }
 }
