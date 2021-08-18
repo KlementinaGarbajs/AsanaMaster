@@ -11,10 +11,10 @@ function MenuScreen() {
     navigation.setOptions({ headerRight: () => 
     <View style={{padding: 10, flexDirection: "row"}}>
       <Icon
-        name={"person"}
+        name={"logout"}
         size={30}
         color="rgba(28, 28, 28, 0.8)"
-        onPress={() => navigation.navigate('Profile')}
+        onPress={() => navigation.navigate('Login')}
       />
     </View>, title: null, headerLeft: null});
   },[]);

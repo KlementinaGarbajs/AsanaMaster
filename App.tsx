@@ -17,7 +17,6 @@ import InversionsScreen from './screens/InversionsScreen';
 import GoalsMenu from './screens/GoalsMenu';
 import OnBoardingOne from './screens/OnBoarding/OnBoardingOne';
 import OnBoardingTwo from './screens/OnBoarding/OnBoardingTwo';
-import ProfileScreen from './screens/ProfileScreen';
 import { CardStyleInterpolators } from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
@@ -42,7 +41,6 @@ export default function App() {
         <Stack.Screen name="Backbends" component={BackbendsScreen} />
         <Stack.Screen name="Inversions" component={InversionsScreen} />
         <Stack.Screen name="Goals" component={GoalsMenu} />
-        <Stack.Screen name="Profile" component={ProfileScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

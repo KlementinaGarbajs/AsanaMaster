@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, ScrollView, SafeAreaView, FlatList, TouchableOpacity, Image } from 'react-native';
 import { StyleSheet } from 'react-native';
 import ClientApi from '../api';import { LogBox } from 'react-native';
-import { Icon, Avatar } from 'react-native-elements';
+import { Icon } from 'react-native-elements';
+import { images } from '../assets/images/images';
 
 LogBox.ignoreLogs(['VirtualizedLists should never be nested inside plain ScrollViews with the same orientation - use another VirtualizedList-backed container instead.']);
 
@@ -40,28 +41,26 @@ const AsanasSubmenu = ({route}: {route: any}) => {
   },[]);
 
   return (
-        asanas.map((asanas, index) => {
+    <ScrollView>
+        {asanas.map((asanas, index) => {
           if (asanas.level === level) {
             return (
-              <SafeAreaView key={index} >
-                <ScrollView>
-                <FlatList data={[asanas]}
+                <FlatList key={index} data={[asanas]}
                   renderItem={({item}) =>
-                    <View style={styles.container} key={item.id}>
-                      <TouchableOpacity style={{ alignItems:"center" }} onPress={() => navigation.navigate('Asana Details', { paramKey: item })}>
-                        <Image style={styles.asanaImage} source={require('../Asanas/thecrow.png')} />
-                        <Text style={styles.text}>{ item.name }</Text>
-                      </TouchableOpacity>
-                    </View>}
-
+                    {
+                      return <View style={styles.container} key={item.id}>
+                              <TouchableOpacity style={{ alignItems: "center" }} onPress={() => navigation.navigate('Asana Details', { paramKey: item })}>
+                                <Image style={styles.asanaImage} source={(images[item.id])} />
+                                <Text style={styles.text}>{item.name}</Text>
+                              </TouchableOpacity>
+                            </View>;
+                      }}
                   numColumns={2}
-                  keyExtractor={(item, index) => index.toString()}
                 />
-                </ScrollView>
-              </SafeAreaView>
             )
           }
-        })
+        })}
+    </ScrollView>
   );
 }
 
@@ -71,15 +70,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 50,
-    alignItems: 'center',
-    justifyContent: 'center'
   },
 
   asanaImage: {
-    flex: 1,
-    width: 100, 
-    height: 100
-    },
+    width: 120,
+    height: 120
+  },
 
   text: {
     color: "#034947",

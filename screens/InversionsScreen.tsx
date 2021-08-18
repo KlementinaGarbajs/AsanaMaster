@@ -89,8 +89,8 @@ function InversionsScreen() {
             <Image style={styles.logoImage} source={require('../TemplateDiploma/splitprogress2.jpg')} />
           </TouchableOpacity>
           <Modal visible={visible} transparent={true}>
-              <ImageViewer onDoubleClick={() => setVisible(false)} imageUrls={images}/>
-            </Modal>
+            <ImageViewer onDoubleClick={() => setVisible(false)} imageUrls={images}/>
+          </Modal>
         </View>
       </Card>
 

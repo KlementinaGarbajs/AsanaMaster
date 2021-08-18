@@ -13,6 +13,22 @@ const LoginScreen = () => {
     const [isError, setIsError] = useState(false);
     const [message, setMessage] = useState('');
 
+    const checkTextInput = () => {
+      //Check for the Name TextInput
+      if (!email.trim()) {
+        alert('Please Enter Email');
+        return;
+      }
+      //Check for the Email TextInput
+      if (!password.trim()) {
+        alert('Please Enter Password');
+        return;
+      }
+      //Checked Successfully
+      //Do whatever you want
+      navigation.navigate('Menu');
+    };
+
     const onLoggedIn = (token: any) => {
       fetch(`${API_URL}/private`, {
           method: 'GET',
@@ -95,7 +111,7 @@ const LoginScreen = () => {
               placeholderTextColor="#034947"/>
           </View>
 
-          <TouchableOpacity style={styles.loginBtn} onPress={onSubmitHandler}>
+          <TouchableOpacity style={styles.loginBtn} onPress={checkTextInput}>
             <Text style={styles.loginText}>LOGIN</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.signUpBtn} onPress={() => navigation.navigate('Registration')}>
