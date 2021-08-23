@@ -406,11 +406,11 @@ Glavne funkcionalnosti, ki jih ima uporabnik na voljo z aplikacijo AsanaMaster s
   \item \textbf{Prijava}: prijava v mobilno aplikacijo z uporabniškim računom
   \item \textbf{Pozabljeno geslo}: resetiranje pozabljenega gesla s pošiljanjem novega gesla na elektronski naslov uporabnika
   \item \textbf{Ogled videoposnetkov}: ogled videoposnetkov o asanah in programa v mobilni aplikaciji
-  \item \textbf{Označevanje asane}: označevanje naučene asane
   \item \textbf{Ocenjevanje napredka}: ocenjevanje lastnega napredka uporabnika
   \item \textbf{Nalaganje slik}: nalaganje slik napredka uporabnika
   \item \textbf{Ogled slik}: ogled slik napredka uporabnika
   \item \textbf{Kreiranje novega zapiska}: uporabnik lahko kreira nov zapisek
+  \item \textbf{Shranjevanje novega zapiska}: uporabnik lahko shrani novo ustvarjen zapisek
   \item \textbf{Brisanje zapiska}: uporabnik lahko željeni zapisek izbriše
 \end{itemize}
 
@@ -440,21 +440,22 @@ API je v naši aplikaciji posrednik med podatkovno bazo in uporabniki aplikacije
 \end{itemize}
 
 \subsection{Mobilna aplikacija}
-Za razvoj mobilne aplikacije smo uporabili ogrodje Expo z React Native-om. Aplikacija s pošiljanjem zahtevkov HTTP komunicira z APIjem in od njega prejema odgovore, nato pa ustrezno posodobi uporabniški vmesnik.
+Za razvoj mobilne aplikacije smo uporabili ogrodje Expo z React Native-om. Aplikacija s pošiljanjem zahtevkov HTTP komunicira z APIjem in od njega prejema odgovore, nato pa ustrezno posodobi uporabniški vmesnik.\\
 
-Načrtovanje same mobilne aplikacije smo začeli z izdelavo prototipa uporabniškega vmesnika mobilne aplikacije, saj je izdelava dobrega uporabniškega vmesnika pomemben sestavni del oblikovanja uporabniške izkušnje. Pri oblikovanju mobilne aplikacije se je pomembno usmeriti tako na estetiko kot seveda, tudi na funkcionalnost aplikacije. Vmesnik smo poskusili narediti čim bolj pregleden in enostaven za uporabo. Prav s tem namenom so v aplikacijo dodane tudi slike in videoposnetki.
+Načrtovanje same mobilne aplikacije smo začeli z izdelavo prototipa uporabniškega vmesnika mobilne aplikacije, saj je izdelava dobrega uporabniškega vmesnika pomemben sestavni del oblikovanja uporabniške izkušnje. Pri oblikovanju mobilne aplikacije se je pomembno usmeriti tako na estetiko kot seveda, tudi na funkcionalnost aplikacije. Vmesnik smo poskusili narediti čim bolj pregleden in enostaven za uporabo. Prav s tem namenom so v aplikacijo dodane tudi številne slike in videoposnetki.\\
 
 Prototip smo izdelali s pomočjo spletne platforme za izdelavo prototipov Proto.io, (Slika~\ref{protoio}). Izdelani so bili nekateri ključni zasloni aplikacije, glavne funkcionalnosti aplikacije, povezave med njimi in oblikovano glavno ozadje aplikacije na začetnem prijavnem zaslonu, ter ostali gradniki aplikacije.\\
 
-\begin{figure}[htbp]
+Izdelavi prototipa je sledila raziskava tehnologij in primernih orodij za sam razvoj mobilne aplikacije, pri čemersmo primerjali predvsem različna orodja za izdelavo mobilne aplikacije. Primerjali smo integrirano razvojno okolje (angl. integrated development environment, IDE) Android Studio za razvoj aplikacij za operacijski sistem Android, ter razvojno okolje Expo, ki z uporabo React Native platforme in orodij, omogoča razvoj tako spletnih, kot mobilnih aplikacij na operacijskem sistemu Android in iOS. Zaradi možnosti razvoja na obeh operacijskih sistemih ter predhodnih izkušenj, smo prišli do zaključka, da bomo za razvoj aplikacije uporabili Expo.\\
+
+
+\begin{figure}[!htbp]
 \begin{center}
-\includegraphics[scale=.23]{protoio.jpg}
+\includegraphics[scale=.2]{protoio.jpg}
 \end{center}
 \caption{Spletna platforma za ustvarjanje prototipov, Protoio.}
 \label{protoio}
 \end{figure}
-
-Izdelavi prototipa je sledila raziskava tehnologij in primernih orodij za sam razvoj mobilne aplikacije, pri čemersmo primerjali predvsem različna orodja za izdelavo mobilne aplikacije. Primerjali smo integrirano razvojno okolje (angl. integrated development environment, IDE) Android Studio za razvoj aplikacij za operacijski sistem Android, ter razvojno okolje Expo, ki z uporabo React Native platforme in orodij, omogoča razvoj tako spletnih, kot mobilnih aplikacij na operacijskem sistemu Android in iOS. Zaradi možnosti razvoja na obeh operacijskih sistemih ter predhodnih izkušenj, smo prišli do zaključka, da bomo za razvoj aplikacije uporabili Expo.\\
 
 Po začetnem načrtovanju izdelave smo se nato lotili še zbiranja podatkov o jogi in položajih v jogi. Podatki o jogi in položajih so vzeti in prepisani v podatkovno bazo, iz knjige The Top 100 Best Yoga Poses Relieve Stress, Increase Flexibility, and Gain Strength, avtorice Susan Hollister~\cite{yoga}. Vir nekaterih slik je tudi zgoraj omenjena knjiga, nekatere pa smo pridobili preko spletne strani Verywellfit~\cite{verywellfit}. Videoposnetke, ki uporabnikom omogočajo učenje in izboljšanje položajev ter napredovanje, pa smo poiskali na platformi, za deljenje videoposnetkov, Youtube, (Slika~\ref{query}).
 

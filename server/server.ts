@@ -3,6 +3,7 @@ import {asanaManager} from './asanaManager';
 import {notesManager} from './notesManager';
 import { registrationManager } from './registrationManager';
 import { imagesManager } from './imagesManager';
+import { usersManager } from './usersManager';
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -29,6 +30,7 @@ app.all('/asanas/:api', asanaManager);
 app.all('/notes/:api', notesManager);
 app.all('/register/:api', registrationManager);
 app.all('/images/:api', imagesManager);
+app.all('/users/:api', usersManager);
 
 // Throw error when user enters wrong Endpoints
 app.use((req: Request, res: Response) => res.status(404).send({error: 'Oops! Endpoint not found, Please Check that you are entering the right thing!',}));

@@ -31,7 +31,7 @@ const saveNewUser = async (req: Request, res: Response) => {
 
 const getUser = async (req: Request, res: Response) => {
     try {
-        connection.query('SELECT name FROM users WHERE id = 6', function (err: any, results: any) {
+        connection.query('SELECT * FROM users WHERE id = 6', function (err: any, results: any) {
             const user = results
             res.json(user);
         });

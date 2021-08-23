@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import ClientApi from '../api';
 
 const API_URL = 'http://localhost:8080';
 
 const LoginScreen = () => {
     const navigation = useNavigation();
+    const [users, setUsers] = useState<any[]>([]);
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -13,20 +15,48 @@ const LoginScreen = () => {
     const [isError, setIsError] = useState(false);
     const [message, setMessage] = useState('');
 
+    useEffect(() => {
+      ClientApi.getUsers().then((res) => {
+        setUsers(res);
+     });
+    },[users]);
+
+
+
     const checkTextInput = () => {
       //Check for the Name TextInput
       if (!email.trim()) {
         alert('Please Enter Email');
+        setIsError(true);
         return;
       }
+
       //Check for the Email TextInput
       if (!password.trim()) {
         alert('Please Enter Password');
+        setIsError(true);
         return;
       }
+
+      users.some(function(el) {
+        if (el.email !== email) {
+          alert('Wrong email or password');
+          setIsError(true);
+          return;
+        } else if (el.password !== password) {
+          alert('Wrong email or password');
+          setIsError(true);
+          return;
+        } else {
+          setIsError(false);
+        }
+      });
+
       //Checked Successfully
       //Do whatever you want
-      navigation.navigate('Menu');
+      if(isError === false) {
+        navigation.navigate('Menu');
+      }
     };
 
     const onLoggedIn = (token: any) => {

@@ -3,6 +3,7 @@ export default class ClientApi {
     static getAsanas = () => ClientApi.sendRequest('http://localhost:8080/asanas/all');
     static getNotes = () => ClientApi.sendRequest('http://localhost:8080/notes/all');
     static getRatings = () => ClientApi.sendRequest('http://localhost:8080/asanas/ratings');
+    static getUsers = () => ClientApi.sendRequest('http://localhost:8080/users/all');
     static saveNewNote = (data: {}) =>  ClientApi.sendRequest('http://localhost:8080/notes/new', 'POST', data);
     static saveRatingSplits = (data: {}) =>  ClientApi.sendRequest('http://localhost:8080/asanas/ratingsSaveSplits', 'POST', data);
     static saveRatingInversions = (data: {}) =>  ClientApi.sendRequest('http://localhost:8080/asanas/ratingsSaveInversions', 'POST', data);
