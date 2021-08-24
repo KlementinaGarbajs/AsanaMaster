@@ -21,8 +21,6 @@ const LoginScreen = () => {
      });
     },[users]);
 
-
-
     const checkTextInput = () => {
       //Check for the Name TextInput
       if (!email.trim()) {

@@ -8,6 +8,7 @@ const RegistrationScreen = () => {
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const navigation = useNavigation();
+    const [isError, setIsError] = useState(false);
 
     const registration = async() => {
         const values = {
@@ -20,7 +21,31 @@ const RegistrationScreen = () => {
             console.log("Success!");
         });
 
-        navigation.navigate('About Yoga');
+/*
+        //Check for the Email TextInput
+        if (!name.trim()) {
+            alert('Please Enter Name');
+            setIsError(true);
+            return;
+        }
+
+        if (!email.trim()) {
+            alert('Please Enter Email');
+            setIsError(true);
+            return;
+        }
+
+        if (!password.trim()) {
+            alert('Please Enter Password');
+            setIsError(true);
+            return;
+        }
+      */
+        //Checked Successfully
+        //Do whatever you want
+        if(isError === false) {
+            navigation.navigate('About Yoga');
+        };
     }
 
     return (
