@@ -1,9 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import ClientApi from '../api';
 
 const ForgotenPasswordScreen = () => {
     const [email, setEmail] = useState('');
+    const [users, setUsers] = useState<any[]>([]);
+    const [isError, setIsError] = useState(false);
+
+    const password = "newPassword";
+
+    const setNewPassword = async() => {
+        const values = {
+            email: email,
+            password: password,
+        }
+        ClientApi.setPassword(values).then(() => {
+            console.log("Success!");
+        });
+    }
+
+    useEffect(() => {
+        ClientApi.getUsers().then((res) => {
+          setUsers(res);
+       });
+      },[users]);
+
+    const checkTextInput = () => {
+        users.some(function(el) {
+            if (el.email !== email) {
+              alert('Wrong email');
+              setIsError(true);
+              return;
+            }
+          });
+  
+        //Checked Successfully
+        if(isError === false) {
+            console.log("juhu");
+            setNewPassword;
+        }
+    };
+
+    //send email function
 
     return (
         <ImageBackground style={styles.logoImageContainer}
@@ -17,7 +56,7 @@ const ForgotenPasswordScreen = () => {
                     onChangeText={setEmail}
                     placeholderTextColor="#034947"/>
                 </View>
-                <TouchableOpacity style={styles.loginBtn}>
+                <TouchableOpacity style={styles.loginBtn} onPress={checkTextInput}>
                     <Text style={styles.loginText}>Send</Text>
                 </TouchableOpacity>
             </View>

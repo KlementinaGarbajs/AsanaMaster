@@ -68,7 +68,8 @@ function SplitsScreen() {
   const saveImage =  async (url: string) => {
     const values = {
         url: url,
-        user_id: 6
+        user_id: 6,
+        goal: "splits"
     }
 
     ClientApi.saveImage(values).then(() => {
@@ -76,10 +77,12 @@ function SplitsScreen() {
     });
   };
 
-  const images: { url: any; }[] | undefined = [];
+  const images: { url: any, goal: any}[] | undefined = [];
 
   allImages.forEach(element => {
-    images.push({url: element.url});
+    if(element.goal === "splits") {
+      images.push({url: element.url, goal: element.goal});
+    }
   });
 
   return (
@@ -117,11 +120,11 @@ function SplitsScreen() {
 
       <Card containerStyle={styles.card}>
         <ScrollView style={{ flexDirection: "row" }} horizontal={true}>
-          {images.map((item, key) => (
-            <TouchableOpacity key={key} onPress={() => setVisible(true)}>
+          {images.map((item, key) => {
+          if(item.goal === "splits") return (<TouchableOpacity key={key} onPress={() => setVisible(true)}>
               <Image style={styles.logoImage} source={{uri: item.url}} />
             </TouchableOpacity>
-          ))}
+          )})}
         </ScrollView>
         <Modal visible={visible} transparent={true}>
             <ImageViewer onDoubleClick={() => setVisible(false)} imageUrls={images}/>

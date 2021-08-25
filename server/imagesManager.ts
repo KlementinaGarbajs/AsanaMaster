@@ -19,14 +19,12 @@ export const imagesManager = (req: Request, res: Response) => {
 
 const saveImage = async (req: Request, res: Response) => {
     const data = req.body;
-    var post = {url: data.url, user_id: data.user_id};
+    var post = {url: data.url, user_id: data.user_id, goal: data.goal};
 
     connection.query("INSERT INTO images SET ?", post, function(err: any, rows: any) {
         if (!err){
-            console.log("kuku");
             console.log('The solution is: ', rows);
         } else {
-            console.log("lulu");
             console.log('Error while performing Query.', err);
         }
     });

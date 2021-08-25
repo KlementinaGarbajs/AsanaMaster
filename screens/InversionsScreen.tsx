@@ -9,10 +9,14 @@ import YoutubePlayer from 'react-native-youtube-iframe';
 import { ScrollView } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 import ClientApi from '../api';
+import * as ImagePicker from 'expo-image-picker';
 
 function InversionsScreen() {
   const navigation = useNavigation();
   const [rating, setRating] = useState<number>();
+  const [image, setImage] = useState("");
+  const [allImages, setImages] = useState<any[]>([]);
+  let [visible, setVisible] = useState<boolean>(false);
 
   useEffect(() => {
       navigation.setOptions({ headerRight: () => <View style={{padding: 10}}><Icon
@@ -39,13 +43,47 @@ function InversionsScreen() {
       });
   },[rating]);
 
-  let [visible, setVisible] = useState<boolean>(false);
-  const images = [{
-    url: require('../TemplateDiploma/splitprogress1.jpg'),
- 
-  }, {
-    url: require('../TemplateDiploma/splitprogress2.jpg'),
-  }]
+  useEffect(() => {
+    ClientApi.getImages().then((res) => {
+      setImages(res);
+    });
+  },[image]);
+
+  const pickImage = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.All,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
+
+    console.log(result);
+
+    if (!result.cancelled) {
+      setImage(result.uri);
+      saveImage(result.uri);
+    }
+  };
+
+  const saveImage =  async (url: string) => {
+    const values = {
+        url: url,
+        user_id: 6,
+        goal: "inversion"
+    }
+
+    ClientApi.saveImage(values).then(() => {
+      console.log("Saved");
+    });
+  };
+
+  const images: { url: any, goal: any}[] | undefined = [];
+
+  allImages.forEach(element => {
+    if(element.goal === "inversion") {
+      images.push({url: element.url, goal: element.goal});
+    }
+  });
 
   return (
     <ScrollView>
@@ -75,23 +113,23 @@ function InversionsScreen() {
         </ScrollView>
       </Card>
 
-      <TouchableOpacity style={{ flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
+      <TouchableOpacity style={{ flexDirection: "row", alignItems: "center", justifyContent: "center" }} onPress={pickImage}>
         <Text style={styles.title}>Upload your progress photos!</Text>
         <Icon name='camera' size={30} style={{ padding: 5 }} color='rgba(6, 152, 111, 0.8)' />
       </TouchableOpacity>
 
       <Card containerStyle={styles.card}>
-        <View style={{ flexDirection: "row" }}>
-          <TouchableOpacity onPress={() => setVisible(true)}>
-            <Image style={styles.logoImage} source={require('../TemplateDiploma/splitprogress1.jpg')} />
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => setVisible(true)}>
-            <Image style={styles.logoImage} source={require('../TemplateDiploma/splitprogress2.jpg')} />
-          </TouchableOpacity>
-          <Modal visible={visible} transparent={true}>
-            <ImageViewer onDoubleClick={() => setVisible(false)} imageUrls={images}/>
-          </Modal>
-        </View>
+        <ScrollView style={{ flexDirection: "row" }} horizontal={true}>
+          {images.map((item, key) => {
+          if(item.goal === "inversion") return (<TouchableOpacity key={key} onPress={() => setVisible(true)}>
+              <Image style={styles.logoImage} source={{uri: item.url}} />
+            </TouchableOpacity>
+          )})}
+        </ScrollView>
+
+        <Modal visible={visible} transparent={true}>
+          <ImageViewer onDoubleClick={() => setVisible(false)} imageUrls={images}/>
+        </Modal>
       </Card>
 
       <Card title="RATE YOUR PROGRESS" containerStyle={styles.card}>

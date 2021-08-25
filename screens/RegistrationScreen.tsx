@@ -42,7 +42,6 @@ const RegistrationScreen = () => {
         }
       */
         //Checked Successfully
-        //Do whatever you want
         if(isError === false) {
             navigation.navigate('About Yoga');
         };

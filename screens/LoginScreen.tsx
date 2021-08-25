@@ -13,7 +13,6 @@ const LoginScreen = () => {
     const [password, setPassword] = useState('');
 
     const [isError, setIsError] = useState(false);
-    const [message, setMessage] = useState('');
 
     useEffect(() => {
       ClientApi.getUsers().then((res) => {
@@ -51,7 +50,6 @@ const LoginScreen = () => {
       });
 
       //Checked Successfully
-      //Do whatever you want
       if(isError === false) {
         navigation.navigate('Menu');
       }
@@ -68,9 +66,6 @@ const LoginScreen = () => {
       .then(async res => { 
           try {
               const jsonRes = await res.json();
-              if (res.status === 200) {
-                  setMessage(jsonRes.message);
-              }
           } catch (err) {
               console.log(err);
           };
@@ -97,11 +92,9 @@ const LoginScreen = () => {
               const jsonRes = await res.json();
               if (res.status !== 200) {
                   setIsError(true);
-                  setMessage(jsonRes.message);
               } else {
                   onLoggedIn(jsonRes.token);
                   setIsError(false);
-                  setMessage(jsonRes.message);
               }
           } catch (err) {
               console.log(err);
