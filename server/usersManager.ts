@@ -30,11 +30,11 @@ const getUsers = async (req: Request, res: Response) => {
 }
 
 const setPassword = async (req: Request, res: Response) => {
-    let query = "UPDATE users SET password = ? WHERE email = ?";
+    let query = 'UPDATE users SET password = "newPassword" WHERE email = ?';
     const data = req.body;
-    var post = {password: data.password, email: data.email};
+    var post = {email: data.email};
     
-    connection.query(query, post.password, post.email, (err: any, rows: { affectedRows: string; }) => {
+    connection.query(query, post.email, function(err: any, rows: any, fields: any) {
         if (!err)
             console.log('The solution is: ', rows);
         else

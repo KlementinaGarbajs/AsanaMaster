@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 import ClientApi from '../api';
+import { sendEmail } from '../sendEmail';
+import RNSmtpMailer from "react-native-smtp-mailer";
 
 const ForgotenPasswordScreen = () => {
     const [email, setEmail] = useState('');
     const [users, setUsers] = useState<any[]>([]);
     const [isError, setIsError] = useState(false);
 
-    const password = "newPassword";
-
-    const setNewPassword = async() => {
+    const setNewPassword = async (email: string) => {
         const values = {
             email: email,
-            password: password,
         }
         ClientApi.setPassword(values).then(() => {
             console.log("Success!");
@@ -37,12 +35,26 @@ const ForgotenPasswordScreen = () => {
   
         //Checked Successfully
         if(isError === false) {
-            console.log("juhu");
-            setNewPassword;
+            setNewPassword(email);
+
+ 
+    RNSmtpMailer.sendMail({
+        mailhost: "smtp.gmail.com",
+        port: "465",
+        ssl: true, // optional. if false, then TLS is enabled. Its true by default in android. In iOS TLS/SSL is determined automatically, and this field doesn't affect anything
+        username: "usernameEmail",
+        password: "password",
+        fromName: "Asana Master", // optional
+        recipients: email,
+        subject: "New Password",
+        htmlBody: "<h1>header</h1><p>Your new password is: newPassword</p>",
+        attachmentPaths: [],
+        attachmentNames: [],
+    })
+    .then(success => console.log(success))
+    .catch(err => console.log(err));
         }
     };
-
-    //send email function
 
     return (
         <ImageBackground style={styles.logoImageContainer}

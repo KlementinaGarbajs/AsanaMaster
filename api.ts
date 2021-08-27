@@ -34,6 +34,15 @@ export default class ClientApi {
                 .then((resp) => ClientApi.handleErrors(resp));
         }
 
+        if (method === 'PUT') {
+            const parameters = {method: method, headers: new Headers(), body: JSON.stringify(data)};
+            parameters.headers.append('Content-Type', 'application/json');
+            console.log(parameters);
+
+            return fetch(path, parameters)
+                .then((resp) => ClientApi.handleErrors(resp));
+        }
+
         if (method === 'DELETE') {
             const parameters = {method: method, headers: new Headers(), body: JSON.stringify(data)};
             parameters.headers.append('Content-Type', 'application/json');
