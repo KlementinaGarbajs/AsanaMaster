@@ -8,6 +8,7 @@ import { Icon } from 'react-native-elements';
 const NotesMenu = ({route}: {route: any}) => {
   const navigation = useNavigation();
   const [notes, setNotes] = useState<any[]>([]);
+  let componentMounted = true; 
 
   useEffect(() => {
       navigation.setOptions({ headerRight: () => <View style={{padding: 10}}><Icon
@@ -19,9 +20,14 @@ const NotesMenu = ({route}: {route: any}) => {
   },[]);
 
   useEffect(() => {
-    ClientApi.getNotes().then((res) => {
-      setNotes(res);
-   });
+      ClientApi.getNotes().then((res) => {
+        if (componentMounted){ 
+        setNotes(res);
+      }
+    });
+    return () => { 
+      componentMounted = false; 
+    }
   },[notes]);
 
   const deleteNote = (id: any) => async () => {

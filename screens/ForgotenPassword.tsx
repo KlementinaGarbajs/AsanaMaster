@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native';
 import ClientApi from '../api';
-import { sendEmail } from '../sendEmail';
-import RNSmtpMailer from "react-native-smtp-mailer";
+//import { sendEmail } from '../sendEmail';
+//import EmailSender from 'react-native-smtp';
 
 const ForgotenPasswordScreen = () => {
     const [email, setEmail] = useState('');
@@ -37,22 +37,27 @@ const ForgotenPasswordScreen = () => {
         if(isError === false) {
             setNewPassword(email);
 
- 
-    RNSmtpMailer.sendMail({
-        mailhost: "smtp.gmail.com",
-        port: "465",
-        ssl: true, // optional. if false, then TLS is enabled. Its true by default in android. In iOS TLS/SSL is determined automatically, and this field doesn't affect anything
-        username: "usernameEmail",
-        password: "password",
-        fromName: "Asana Master", // optional
-        recipients: email,
-        subject: "New Password",
-        htmlBody: "<h1>header</h1><p>Your new password is: newPassword</p>",
-        attachmentPaths: [],
-        attachmentNames: [],
-    })
-    .then(success => console.log(success))
-    .catch(err => console.log(err));
+            /*
+            EmailSender.config({
+                host: 'smtp.host.io',
+                port: '465', // Optional. Default to 465
+                username: 'username',
+                password: 'password',
+                isAuth: 'true', // Optional. Default to `true`
+                tls: 'true' // Optional. Default to `true`
+              });
+              const attachments: never[] = [];
+               
+              // Now send the mail
+              EmailSender.send(
+                {
+                  from: 'from@email.com',
+                  to: email,
+                  subject: 'The subject',
+                  body: '<h3> Cool Body </h3>'
+                },
+                attachments, // This second parameter is mandatory. You can send an empty array.
+              );*/
         }
     };
 

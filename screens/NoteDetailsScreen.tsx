@@ -5,18 +5,6 @@ import { StyleSheet } from 'react-native';
 import Moment from 'moment';
 import { Icon } from 'react-native-elements';
 
-/*
-<TouchableOpacity style={{ padding: 5 }}>
-    <Icon name='emoji-emotions' size={30} color='rgba(6, 152, 111, 0.8)' />
-</TouchableOpacity>
-<TouchableOpacity style={{ padding: 5 }}>
-    <Icon name='emoji-emotions' size={30} color='rgba(149, 152, 6, 0.8)' />
-</TouchableOpacity>
-<TouchableOpacity style={{ padding: 5 }}>
-    <Icon name='emoji-emotions' size={30} color='rgba(152, 6, 6, 0.8)' />
-</TouchableOpacity>
-*/
-
 const NoteDetailsScreen = ({route}: {route: any}) => {
   const navigation = useNavigation();
 

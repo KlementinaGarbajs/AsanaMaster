@@ -8,8 +8,11 @@ export const registrationManager = (req: Request, res: Response) => {
         case 'register':
             saveNewUser(req, res);
             break;
-        case 'user':
-            getUser(req, res);
+        case 'setUser':
+            setUser(req, res);
+            break;
+        case 'getUser':
+            getID(req, res);
             break;
         default:
             res.send('Api ' + params.api + ' does not exist!');
@@ -29,15 +32,27 @@ const saveNewUser = async (req: Request, res: Response) => {
     });
 }
 
-const getUser = async (req: Request, res: Response) => {
+const setUser = async (req: Request, res: Response) => {
+    const data = req.body;
+    var post = {id: data.id};
+
+    connection.query("INSERT INTO currentUser SET ?", post, function(err: any, rows: any) {
+        if (!err)
+            console.log('The solution is: ', rows);
+        else
+            console.log('Error while performing Query.', err);
+    });
+}
+
+const getID = async (req: Request, res: Response) => {
     try {
-        connection.query('SELECT * FROM users WHERE id = 6', function (err: any, results: any) {
+        connection.query('SELECT * FROM currentUser', function (err: any, results: any) {
             const user = results
             res.json(user);
         });
 
     } catch (e) {
-        console.error({method: 'getUser', details: e})
+        console.error({method: 'getID', details: e})
         res.status(400).send(e);
     }
 }

@@ -11,6 +11,7 @@ const LoginScreen = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [id, setId] = useState();
 
     const [isError, setIsError] = useState(false);
 
@@ -20,15 +21,24 @@ const LoginScreen = () => {
      });
     },[users]);
 
+    const setUser = async() => {
+      const values = {
+        id: id,
+      }
+      ClientApi.setUser(values).then(() => {
+          console.log("Success!");
+      });
+    }
+
     const checkTextInput = () => {
-      //Check for the Name TextInput
+      setIsError(false);
+
       if (!email.trim()) {
         alert('Please Enter Email');
         setIsError(true);
         return;
       }
 
-      //Check for the Email TextInput
       if (!password.trim()) {
         alert('Please Enter Password');
         setIsError(true);
@@ -36,6 +46,10 @@ const LoginScreen = () => {
       }
 
       users.some(function(el) {
+        if(el.email === email){
+          setId(el.id);
+        }
+
         if (el.email !== email) {
           alert('Wrong email or password');
           setIsError(true);
@@ -44,13 +58,12 @@ const LoginScreen = () => {
           alert('Wrong email or password');
           setIsError(true);
           return;
-        } else {
-          setIsError(false);
         }
       });
 
       //Checked Successfully
       if(isError === false) {
+        setUser();
         navigation.navigate('Menu');
       }
     };
@@ -108,43 +121,45 @@ const LoginScreen = () => {
   };
 
   return (
-      <ImageBackground style={styles.logoImageContainer}
-          source={require('../TemplateDiploma/BackGroundSign.png')}
-        >
-        <View style={styles.container}>
-          <Image style={styles.logoImage}
-            source={require('../TemplateDiploma/path35490.png')}
-          />
-          <Text style={styles.logo}>Asana Master</Text>
-          <View style={styles.inputView}>
-            <TextInput
-              style={styles.inputText}
-              placeholder="Email..."
-              onChangeText={setEmail}
-              placeholderTextColor="#034947"/>
-          </View>
-          <View style={styles.inputView}>
-            <TextInput
-              secureTextEntry
-              onChangeText={setPassword}
-              style={styles.inputText}
-              placeholder="Password..."
-              placeholderTextColor="#034947"/>
-          </View>
-
-          <TouchableOpacity style={styles.loginBtn} onPress={checkTextInput}>
-            <Text style={styles.loginText}>LOGIN</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.signUpBtn} onPress={() => navigation.navigate('Registration')}>
-            <Text style={styles.signUpText}>Signup</Text>
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Text style={styles.forgot} onPress={() => navigation.navigate('Forgoten')}>Forgot password?</Text>
-          </TouchableOpacity>
+    <ImageBackground style={styles.logoImageContainer}
+        source={require('../TemplateDiploma/BackGroundSign.png')}
+      >
+      <View style={styles.container}>
+        <Image style={styles.logoImage}
+          source={require('../TemplateDiploma/path35490.png')}
+        />
+        <Text style={styles.logo}>Asana Master</Text>
+        <View style={styles.inputView}>
+          <TextInput
+            style={styles.inputText}
+            placeholder="Email..."
+            onChangeText={setEmail}
+            placeholderTextColor="#034947"/>
         </View>
-      </ImageBackground>
-);
+        <View style={styles.inputView}>
+          <TextInput
+            secureTextEntry
+            onChangeText={setPassword}
+            style={styles.inputText}
+            placeholder="Password..."
+            placeholderTextColor="#034947"/>
+        </View>
+
+        <TouchableOpacity style={styles.loginBtn} onPress={checkTextInput}>
+          <Text style={styles.loginText}>SIGN IN</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.signUpBtn} onPress={() => navigation.navigate('Registration')}>
+          <Text style={styles.signUpText}>SIGN UP</Text>
+        </TouchableOpacity>
+      </View>
+    </ImageBackground>
+  );
 }
+/*
+  <TouchableOpacity>
+    <Text style={styles.forgot} onPress={() => navigation.navigate('Forgoten')}>Forgot password?</Text>
+  </TouchableOpacity>
+*/
 
 export default LoginScreen;
 

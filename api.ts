@@ -13,7 +13,8 @@ export default class ClientApi {
     static saveImage = (data: {}) =>  ClientApi.sendRequest('http://localhost:8080/images/upload', 'POST', data);
     static getImages = () => ClientApi.sendRequest('http://localhost:8080/images/all');
     static register = (data: {}) =>  ClientApi.sendRequest('http://localhost:8080/register/register', 'POST', data);
-    static getUser = () => ClientApi.sendRequest('http://localhost:8080/register/user');
+    static setUser = (data: {}) => ClientApi.sendRequest('http://localhost:8080/register/setUser', 'POST', data);
+    static getID = () => ClientApi.sendRequest('http://localhost:8080/register/getID');
 
     static handleErrors = (resp: any) => {
         if (resp.ok) {

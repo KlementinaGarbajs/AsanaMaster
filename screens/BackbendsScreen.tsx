@@ -13,10 +13,12 @@ import * as ImagePicker from 'expo-image-picker';
 
 function InversionsScreen() {
   const navigation = useNavigation();
-  const [rating, setRating] = useState<number>();
   const [image, setImage] = useState("");
   const [allImages, setImages] = useState<any[]>([]);
   let [visible, setVisible] = useState<boolean>(false);
+
+  const [rating, setRating] = useState();
+  const [ratingCount, setRatingCount] = useState();
 
   useEffect(() => {
       navigation.setOptions({ headerRight: () => <View style={{padding: 10}}><Icon
@@ -29,19 +31,22 @@ function InversionsScreen() {
 
   useEffect(() => {
     ClientApi.getRatings().then((res) => {
-      setRating(res[0].rating);
+      setRating(res[1].rating);
    });
-  },[]);
+  },[rating]);
 
   useEffect(() => {
-      const values = {
-          rating: rating
-      }
+    const values = {
+        rating: ratingCount
+    }
 
+    if (rating != ratingCount) {
       ClientApi.saveRatingBends(values).then(() => {
-          console.log("Saved");
+        setRating(ratingCount);
+        console.log("Saved");
       });
-  },[rating]);
+    };
+  },[ratingCount]);
 
   useEffect(() => {
     ClientApi.getImages().then((res) => {
@@ -136,7 +141,7 @@ function InversionsScreen() {
           selectedColor={"#034947"}
           reviewColor={"rgba(4, 98, 89, 0.5)"}
           defaultRating={rating}
-          onFinishRating={setRating}
+          onFinishRating={rating => setRatingCount(rating)}
           size={16} />
       </Card>
   </View>

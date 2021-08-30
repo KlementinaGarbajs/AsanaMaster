@@ -55,9 +55,9 @@ const getRatings = async (req: Request, res: Response) => {
 const saveRatingSplits = async (req: Request, res: Response) => {
     const data = req.body;
     var post = {rating: data.rating};
-    let query = 'UPDATE goals SET rating = ? WHERE name = "splits"';
+    let query = 'UPDATE `goals` SET `rating` = ? WHERE `name` = "splits"';
 
-    connection.query(query, post.rating, function(err: any, rows: any, fields: any) {
+    connection.query(query, [post.rating], function(err: any, rows: any, fields: any) {
         if (!err)
             console.log('The solution is: ', rows);
         else
@@ -68,9 +68,9 @@ const saveRatingSplits = async (req: Request, res: Response) => {
 const saveRatingInversions = async (req: Request, res: Response) => {
     const data = req.body;
     var post = {rating: data.rating};
-    let query = 'UPDATE goals SET rating = ? WHERE name = "inversions"';
+    let query = 'UPDATE `goals` SET `rating` = ? WHERE `name` = "inversions"';
 
-    connection.query(query, post.rating, function(err: any, rows: any, fields: any) {
+    connection.query(query, [post.rating], function(err: any, rows: any, fields: any) {
         if (!err)
             console.log('The solution is: ', rows);
         else
@@ -81,9 +81,9 @@ const saveRatingInversions = async (req: Request, res: Response) => {
 const saveRatingBends = async (req: Request, res: Response) => {
     const data = req.body;
     var post = {rating: data.rating};
-    let query = 'UPDATE goals SET rating = ? WHERE name = "backbends"';
+    let query = 'UPDATE `goals` SET `rating` = ? WHERE `name` = "backbends"';
 
-    connection.query(query, post.rating, function(err: any, rows: any, fields: any) {
+    connection.query(query, [post.rating], function(err: any, rows: any, fields: any) {
         if (!err)
             console.log('The solution is: ', rows);
         else

@@ -125,7 +125,7 @@ export default RegistrationScreen;
 
     loginBtn: {
         width: "30%",
-        backgroundColor: "#034947",
+        backgroundColor: "#edf4ef",
         borderRadius: 20,
         height: 40,
         alignItems: "center",
@@ -145,7 +145,7 @@ export default RegistrationScreen;
     },
 
     loginText: {
-        color: "#edf4ef"
+        color: "#034947"
     },
 
     signUpText: {

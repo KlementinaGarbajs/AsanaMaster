@@ -13,10 +13,12 @@ import * as ImagePicker from 'expo-image-picker';
 
 function SplitsScreen() {
   const navigation = useNavigation();
-  const [rating, setRating] = useState<number>();
   const [image, setImage] = useState("");
   const [allImages, setImages] = useState<any[]>([]);
   let [visible, setVisible] = useState<boolean>(false);
+
+  const [rating, setRating] = useState();
+  const [ratingCount, setRatingCount] = useState();
 
   useEffect(() => {
       navigation.setOptions({ headerRight: () => <View style={{padding: 10}}><Icon
@@ -31,17 +33,20 @@ function SplitsScreen() {
     ClientApi.getRatings().then((res) => {
       setRating(res[0].rating);
    });
-  },[]);
+  },[rating]);
 
   useEffect(() => {
     const values = {
-        rating: rating
+        rating: ratingCount
     }
 
-    ClientApi.saveRatingSplits(values).then(() => {
+    if (rating != ratingCount) {
+      ClientApi.saveRatingSplits(values).then(() => {
+        setRating(ratingCount);
         console.log("Saved");
-    });
-  },[rating]);
+      });
+    };
+  },[ratingCount]);
 
   useEffect(() => {
     ClientApi.getImages().then((res) => {
@@ -138,7 +143,7 @@ function SplitsScreen() {
           selectedColor={"#034947"}
           reviewColor={"rgba(4, 98, 89, 0.5)"}
           defaultRating={rating}
-          onFinishRating={setRating}
+          onFinishRating={rating => setRatingCount(rating)}
           size={16} />
       </Card>
   </View>

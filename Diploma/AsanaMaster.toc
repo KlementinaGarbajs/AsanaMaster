@@ -27,7 +27,7 @@
 \contentsline {section}{\numberline {4.6}TypeScript}{19}{section.4.6}%
 \contentsline {section}{\numberline {4.7}Visual Studio Code}{20}{section.4.7}%
 \contentsline {section}{\numberline {4.8}MySQL}{20}{section.4.8}%
-\contentsline {section}{\numberline {4.9}TablePlus}{21}{section.4.9}%
+\contentsline {section}{\numberline {4.9}TablePlus}{20}{section.4.9}%
 \contentsline {section}{\numberline {4.10}Git}{21}{section.4.10}%
 \contentsline {chapter}{\numberline {5}Predstavitev aplikacije}{23}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Glavne funkcionalnosti in delovanje aplikacije}{23}{section.5.1}%
