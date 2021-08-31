@@ -35,7 +35,7 @@ function NewNoteScreen() {
     }
 
     useEffect(() => {
-        ClientApi.getAsanas().then((res) => {
+        ClientApi.getID().then((res) => {
           setId(res[0].id);
         });
       },[]);

@@ -17,8 +17,9 @@ function InversionsScreen() {
   const [allImages, setImages] = useState<any[]>([]);
   let [visible, setVisible] = useState<boolean>(false);
 
-  const [rating, setRating] = useState();
-  const [ratingCount, setRatingCount] = useState();
+  const [rating, setRating] = useState(0);
+  const [ratingCount, setRatingCount] = useState(0);
+  let [id, setId] = useState<number>();
 
   useEffect(() => {
       navigation.setOptions({ headerRight: () => <View style={{padding: 10}}><Icon
@@ -31,13 +32,18 @@ function InversionsScreen() {
 
   useEffect(() => {
     ClientApi.getRatings().then((res) => {
-      setRating(res[2].rating);
+      if (res[2] !== undefined) {
+        setRating(res[2].rating);
+      } else {
+        setRating(0);
+      }
    });
   },[rating]);
 
   useEffect(() => {
     const values = {
-        rating: ratingCount
+        rating: ratingCount,
+        user_id: id
     }
 
     if (rating != ratingCount) {
@@ -53,6 +59,12 @@ function InversionsScreen() {
       setImages(res);
     });
   },[image]);
+
+  useEffect(() => {
+    ClientApi.getID().then((res) => {
+      setId(res[0].id);
+    });
+  },[]);
 
   const pickImage = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
