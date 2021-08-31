@@ -74,8 +74,6 @@ function InversionsScreen() {
       quality: 1,
     });
 
-    console.log(result);
-
     if (!result.cancelled) {
       setImage(result.uri);
       saveImage(result.uri);
@@ -85,7 +83,7 @@ function InversionsScreen() {
   const saveImage =  async (url: string) => {
     const values = {
         url: url,
-        user_id: 6,
+        user_id: id,
         goal: "backbend"
     }
 

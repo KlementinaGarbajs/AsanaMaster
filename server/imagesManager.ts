@@ -32,7 +32,7 @@ const saveImage = async (req: Request, res: Response) => {
 
 const getImages = async (req: Request, res: Response) => {
     try {
-        connection.query('SELECT * FROM images WHERE user_id = 6', function (err: any, results: any) {
+        connection.query('SELECT * FROM images JOIN currentUser ON images.user_id = currentUser.id', function (err: any, results: any) {
             const image = results
             res.json(image || {})
         });
