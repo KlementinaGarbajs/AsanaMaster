@@ -11,7 +11,7 @@ export const registrationManager = (req: Request, res: Response) => {
         case 'setUser':
             setUser(req, res);
             break;
-        case 'getUser':
+        case 'getID':
             getID(req, res);
             break;
         default:

@@ -1,5 +1,7 @@
 import {Request, Response} from 'express';
 import connection from "../database/connection";
+import ClientApi from '../api';
+import { useState, useEffect } from 'react';
 
 export const notesManager = (req: Request, res: Response) => {
         const params = req.params;
@@ -22,7 +24,7 @@ export const notesManager = (req: Request, res: Response) => {
 
 const getNotes = async (req: Request, res: Response) => {
     try {
-        connection.query('SELECT * FROM notes', function (err: any, results: any, fields: any) {
+        connection.query('SELECT * FROM notes JOIN currentUser ON notes.user_id = currentUser.id', function (err: any, results: any, fields: any) {
             const note = results
             res.json(note || {})
         });
@@ -35,7 +37,7 @@ const getNotes = async (req: Request, res: Response) => {
 
 const saveNewNote = async (req: Request, res: Response) => {
     const data = req.body;
-    var post = {name: data.name, description: data.description};
+    var post = {name: data.name, description: data.description, user_id: data.user_id};
 
     connection.query("INSERT INTO notes SET ?", post, function(err: any, rows: any, fields: any) {
         if (!err)
@@ -46,7 +48,7 @@ const saveNewNote = async (req: Request, res: Response) => {
 }
 
 const deleteNote = async (req: Request, res: Response) => {
-    let query = "DELETE FROM notes WHERE id = ?";
+    let query = "DELETE FROM notes WHERE note_id = ?";
     const data = req.body;
     var post = {id: data.id};
       

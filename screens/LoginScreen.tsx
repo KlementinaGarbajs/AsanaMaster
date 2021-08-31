@@ -11,9 +11,9 @@ const LoginScreen = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [id, setId] = useState();
 
     const [isError, setIsError] = useState(false);
+    const [id, setId] = useState(6);
 
     useEffect(() => {
       ClientApi.getUsers().then((res) => {
@@ -47,7 +47,10 @@ const LoginScreen = () => {
 
       users.some(function(el) {
         if(el.email === email){
-          setId(el.id);
+          if(el.id !== id) {
+            setId(el.id);
+            setUser();
+          }
         }
 
         if (el.email !== email) {
@@ -63,7 +66,6 @@ const LoginScreen = () => {
 
       //Checked Successfully
       if(isError === false) {
-        setUser();
         navigation.navigate('Menu');
       }
     };

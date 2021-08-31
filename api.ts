@@ -1,7 +1,7 @@
 export default class ClientApi {
 
     static getAsanas = () => ClientApi.sendRequest('http://localhost:8080/asanas/all');
-    static getNotes = () => ClientApi.sendRequest('http://localhost:8080/notes/all');
+    static getNotes = () => ClientApi.sendRequest('http://localhost:8080/notes/all', 'GET');
     static getRatings = () => ClientApi.sendRequest('http://localhost:8080/asanas/ratings');
     static getUsers = () => ClientApi.sendRequest('http://localhost:8080/users/all');
     static setPassword = (data: {}) =>  ClientApi.sendRequest('http://localhost:8080/users/password', 'POST', data);
@@ -29,7 +29,6 @@ export default class ClientApi {
         if (method === 'POST') {
             const parameters = {method: method, headers: new Headers(), body: JSON.stringify(data)};
             parameters.headers.append('Content-Type', 'application/json');
-            console.log(parameters);
 
             return fetch(path, parameters)
                 .then((resp) => ClientApi.handleErrors(resp));

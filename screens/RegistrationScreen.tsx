@@ -9,8 +9,19 @@ const RegistrationScreen = () => {
     const [password, setPassword] = useState('');
     const navigation = useNavigation();
     const [isError, setIsError] = useState(false);
+    const [id, setId] = useState();
 
     const registration = async() => {
+
+        const setUser = async() => {
+            const values = {
+                id: id,
+            }
+            ClientApi.setUser(values).then(() => {
+                console.log("Success!");
+            });
+        }
+            
         const values = {
             name: name,
             email: email,
@@ -43,6 +54,7 @@ const RegistrationScreen = () => {
       */
         //Checked Successfully
         if(isError === false) {
+            setUser();
             navigation.navigate('About Yoga');
         };
     }

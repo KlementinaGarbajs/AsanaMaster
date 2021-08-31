@@ -21,6 +21,7 @@ function NewNoteScreen() {
     
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
+    let [id, setId] = useState<number>();
 
     const setNoteDescription = (event: string) => {
         setDescription(event);
@@ -33,10 +34,19 @@ function NewNoteScreen() {
         navigation.navigate('Notes');
     }
 
+    useEffect(() => {
+        ClientApi.getAsanas().then((res) => {
+          setId(res[0].id);
+        });
+      },[]);
+
     const saveNote = async() => {
+
+        console.log(id, "klementina");
         const values = {
             name: title,
-            description: description
+            description: description,
+            user_id: id
         }
         ClientApi.saveNewNote(values).then(() => {
             console.log("Saved");

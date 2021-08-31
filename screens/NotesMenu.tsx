@@ -22,7 +22,7 @@ const NotesMenu = ({route}: {route: any}) => {
   useEffect(() => {
       ClientApi.getNotes().then((res) => {
         if (componentMounted){ 
-        setNotes(res);
+          setNotes(res);
       }
     });
     return () => { 
@@ -31,6 +31,7 @@ const NotesMenu = ({route}: {route: any}) => {
   },[notes]);
 
   const deleteNote = (id: any) => async () => {
+    console.log(id);
     const values = {
       id: id
     }
@@ -50,7 +51,7 @@ const NotesMenu = ({route}: {route: any}) => {
                               <TouchableOpacity style={{ flexDirection: "column" }} onPress={() => navigation.navigate('Note Details', { paramKey: item })}>
                                   <Text style={styles.text}>{ item.name }</Text>
                               </TouchableOpacity>
-                            <TouchableOpacity style={{ marginLeft: 'auto', paddingRight: 15, paddingTop: 2, flexDirection: 'column' }} onPress={(deleteNote(item.id))}>
+                            <TouchableOpacity style={{ marginLeft: 'auto', paddingRight: 15, paddingTop: 2, flexDirection: 'column' }} onPress={(deleteNote(item.note_id))}>
                             <Icon name={"delete"} size={20} color="#034947"/>
                             </TouchableOpacity>
                         </View>
