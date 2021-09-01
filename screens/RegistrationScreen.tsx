@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, ImageBackground, BackHandler } from 'react-native';
 import ClientApi from '../api';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 
 const RegistrationScreen = () => {
     const [email, setEmail] = useState('');
@@ -9,6 +9,20 @@ const RegistrationScreen = () => {
     const [password, setPassword] = useState('');
     const navigation = useNavigation();
     const [isError, setIsError] = useState(false);
+
+    useFocusEffect(
+        React.useCallback(() => {
+          const onBackPress = () => {
+            navigation.navigate('Login');
+            return true;
+          };
+    
+          BackHandler.addEventListener('hardwareBackPress', onBackPress);
+    
+          return () =>
+            BackHandler.removeEventListener('hardwareBackPress', onBackPress);
+        }, []),
+      );
 
     const registration = async() => {
         const setUser = async() => {

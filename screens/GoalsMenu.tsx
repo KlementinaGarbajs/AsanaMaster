@@ -1,6 +1,6 @@
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import React, { useEffect } from 'react';
-import { Text, TouchableOpacity, ScrollView, Image, View } from 'react-native';
+import { Text, TouchableOpacity, ScrollView, Image, View, BackHandler } from 'react-native';
 import { StyleSheet } from 'react-native';
 import { Icon } from 'react-native-elements';
 
@@ -15,6 +15,20 @@ function GoalsMenu() {
       onPress={() => navigation.navigate('Menu')}
   /></View>, title: "Goals", headerLeft: null});
   },[]);
+
+  useFocusEffect(
+    React.useCallback(() => {
+      const onBackPress = () => {
+        navigation.navigate('Menu');
+        return true;
+      };
+
+      BackHandler.addEventListener('hardwareBackPress', onBackPress);
+
+      return () =>
+        BackHandler.removeEventListener('hardwareBackPress', onBackPress);
+    }, []),
+  );
 
   const progress = [
     { name: 'SPLITS', navigate: 'Splits', image: require('../Asanas/thelowlunge.png') },

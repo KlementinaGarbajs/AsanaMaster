@@ -1,6 +1,6 @@
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import React, { useState, useEffect } from 'react';
-import { View, TextInput, Text } from 'react-native';
+import { View, TextInput, Text, BackHandler } from 'react-native';
 import { StyleSheet } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import ClientApi from '../api';
@@ -39,6 +39,20 @@ function NewNoteScreen() {
           setId(res[0].id);
         });
       },[]);
+
+    useFocusEffect(
+    React.useCallback(() => {
+        const onBackPress = () => {
+        navigation.navigate('Notes');
+        return true;
+        };
+
+        BackHandler.addEventListener('hardwareBackPress', onBackPress);
+
+        return () =>
+        BackHandler.removeEventListener('hardwareBackPress', onBackPress);
+    }, []),
+    );
 
     const saveNote = async() => {
 

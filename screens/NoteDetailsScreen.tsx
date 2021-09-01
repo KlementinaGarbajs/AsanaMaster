@@ -1,6 +1,6 @@
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import React, { useEffect } from 'react';
-import { SafeAreaView, StatusBar, Text, View } from 'react-native';
+import { SafeAreaView, StatusBar, Text, View, BackHandler } from 'react-native';
 import { StyleSheet } from 'react-native';
 import Moment from 'moment';
 import { Icon } from 'react-native-elements';
@@ -20,6 +20,20 @@ const NoteDetailsScreen = ({route}: {route: any}) => {
   useEffect(() => {
     navigation.setOptions({ title: route.params.paramKey.name });
   },[]);
+
+  useFocusEffect(
+    React.useCallback(() => {
+        const onBackPress = () => {
+        navigation.navigate('Notes');
+        return true;
+        };
+
+        BackHandler.addEventListener('hardwareBackPress', onBackPress);
+
+        return () =>
+        BackHandler.removeEventListener('hardwareBackPress', onBackPress);
+    }, []),
+    );
 
   return (
     <SafeAreaView style={{flex: 1}}>

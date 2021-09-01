@@ -1,6 +1,6 @@
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import React, { useEffect } from 'react';
-import { SafeAreaView, StatusBar, View, TouchableOpacity, Text, Image, FlatList } from 'react-native';
+import { SafeAreaView, StatusBar, View, TouchableOpacity, Text, Image, FlatList, BackHandler } from 'react-native';
 import { StyleSheet } from 'react-native';
 import { Icon } from 'react-native-elements';
 
@@ -15,6 +15,20 @@ function AsanasMenuScreen() {
       onPress={() => navigation.navigate('Menu')}
   /></View>, title: "Asanas", headerLeft: null});
   },[]);
+
+  useFocusEffect(
+    React.useCallback(() => {
+      const onBackPress = () => {
+        navigation.navigate('Menu');
+        return true;
+      };
+
+      BackHandler.addEventListener('hardwareBackPress', onBackPress);
+
+      return () =>
+        BackHandler.removeEventListener('hardwareBackPress', onBackPress);
+    }, []),
+  );
 
   return (
     <SafeAreaView style={{flex: 1}}>

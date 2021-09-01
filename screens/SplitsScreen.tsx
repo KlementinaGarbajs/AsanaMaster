@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, TouchableOpacity, Modal, Image, FlatList} from 'react-native';
+import { Text, View, TouchableOpacity, Modal, Image, FlatList, BackHandler} from 'react-native';
 import { StyleSheet } from 'react-native';
 import { AirbnbRating } from 'react-native-ratings';
 import Card from "../components/Card";
@@ -7,7 +7,7 @@ import { Icon } from 'react-native-elements';
 import ImageViewer from 'react-native-image-zoom-viewer';
 import YoutubePlayer from 'react-native-youtube-iframe';
 import { ScrollView } from 'react-native-gesture-handler';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import ClientApi from '../api';
 import * as ImagePicker from 'expo-image-picker';
 
@@ -65,6 +65,20 @@ function SplitsScreen() {
       setId(res[0].id);
     });
   },[]);
+
+  useFocusEffect(
+    React.useCallback(() => {
+      const onBackPress = () => {
+        navigation.navigate('Goals');
+        return true;
+      };
+
+      BackHandler.addEventListener('hardwareBackPress', onBackPress);
+
+      return () =>
+        BackHandler.removeEventListener('hardwareBackPress', onBackPress);
+    }, []),
+  );
 
   const pickImage = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({

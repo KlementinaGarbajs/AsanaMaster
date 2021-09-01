@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, ImageBackground, BackHandler } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import ClientApi from '../api';
 
@@ -47,10 +47,7 @@ const LoginScreen = () => {
 
       users.some(function(el) {
         if(el.email === email){
-          if(el.id !== id) {
             setId(el.id);
-            setUser();
-          }
         }
 
         if (el.email !== email) {
@@ -66,9 +63,16 @@ const LoginScreen = () => {
 
       //Checked Successfully
       if(isError === false) {
+        setUser();
         navigation.navigate('Menu');
       }
     };
+
+    useEffect(() => {
+      BackHandler.addEventListener('hardwareBackPress', () => true)
+      return () =>
+        BackHandler.removeEventListener('hardwareBackPress', () => true)
+    }, [])
 
     const onLoggedIn = (token: any) => {
       fetch(`${API_URL}/private`, {

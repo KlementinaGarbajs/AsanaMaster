@@ -1,6 +1,6 @@
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
-import { View, Text, ScrollView, SafeAreaView, FlatList, TouchableOpacity, Image } from 'react-native';
+import { View, Text, ScrollView, SafeAreaView, FlatList, TouchableOpacity, Image, BackHandler } from 'react-native';
 import { StyleSheet } from 'react-native';
 import ClientApi from '../api';import { LogBox } from 'react-native';
 import { Icon } from 'react-native-elements';
@@ -20,6 +20,20 @@ const AsanasSubmenu = ({route}: {route: any}) => {
       setAsanas(res);
     });
   },[]);
+
+  useFocusEffect(
+    React.useCallback(() => {
+      const onBackPress = () => {
+        navigation.navigate('Asanas');
+        return true;
+      };
+
+      BackHandler.addEventListener('hardwareBackPress', onBackPress);
+
+      return () =>
+        BackHandler.removeEventListener('hardwareBackPress', onBackPress);
+    }, []),
+  );
 
   useEffect(() => {
       navigation.setOptions({ headerRight: () => <View style={{padding: 10}}><Icon

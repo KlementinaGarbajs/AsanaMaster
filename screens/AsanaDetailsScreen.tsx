@@ -1,6 +1,6 @@
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import React, { useState, useEffect } from 'react';
-import { SafeAreaView, StatusBar, Text, View, Image } from 'react-native';
+import { SafeAreaView, StatusBar, Text, View, Image, BackHandler } from 'react-native';
 import { StyleSheet } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import YoutubePlayer from 'react-native-youtube-iframe';
@@ -16,6 +16,20 @@ const AsanaDetailsScreen = ({route}: {route: any}) => {
 
         setHowTo(howToArray);
     },[]);
+
+    useFocusEffect(
+        React.useCallback(() => {
+          const onBackPress = () => {
+            navigation.navigate('Asanas Submenu');
+            return true;
+          };
+    
+          BackHandler.addEventListener('hardwareBackPress', onBackPress);
+    
+          return () =>
+            BackHandler.removeEventListener('hardwareBackPress', onBackPress);
+        }, []),
+      );
 
     useEffect(() => {
         navigation.setOptions({ headerRight: () => <View style={{padding: 10}}><Icon

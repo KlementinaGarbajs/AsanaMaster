@@ -1,6 +1,6 @@
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
-import { View, Text, ScrollView, FlatList, TouchableOpacity } from 'react-native';
+import { View, Text, ScrollView, FlatList, TouchableOpacity, BackHandler } from 'react-native';
 import { StyleSheet } from 'react-native';
 import ClientApi from '../api';
 import { Icon } from 'react-native-elements';
@@ -29,6 +29,20 @@ const NotesMenu = ({route}: {route: any}) => {
       componentMounted = false; 
     }
   },[notes]);
+
+  useFocusEffect(
+    React.useCallback(() => {
+        const onBackPress = () => {
+        navigation.navigate('Menu');
+        return true;
+        };
+
+        BackHandler.addEventListener('hardwareBackPress', onBackPress);
+
+        return () =>
+        BackHandler.removeEventListener('hardwareBackPress', onBackPress);
+    }, []),
+    );
 
   const deleteNote = (id: any) => async () => {
     console.log(id);

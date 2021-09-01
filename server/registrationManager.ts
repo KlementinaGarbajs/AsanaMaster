@@ -36,7 +36,7 @@ const setUser = async (req: Request, res: Response) => {
     const data = req.body;
     var post = {id: data.id};
 
-    connection.query("UPDATE `currentUser` SET `id` = ?", post.id, function(err: any, rows: any) {
+    connection.query("UPDATE `currentUser` SET `id` = ?", [post.id], function(err: any, rows: any) {
         if (!err)
             console.log('The solution is: ', rows);
         else
