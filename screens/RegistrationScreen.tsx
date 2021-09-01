@@ -9,25 +9,25 @@ const RegistrationScreen = () => {
     const [password, setPassword] = useState('');
     const navigation = useNavigation();
     const [isError, setIsError] = useState(false);
-    const [id, setId] = useState();
 
     const registration = async() => {
-
         const setUser = async() => {
             const values = {
-                id: id,
+              id: 100,
             }
             ClientApi.setUser(values).then(() => {
                 console.log("Success!");
             });
-        }
-            
+          }
+
         const values = {
+            id: 100,
             name: name,
             email: email,
             password: password,
-            first_login: true
+            first_login: true,
         }
+
         ClientApi.register(values).then(() => {
             console.log("Success!");
         });
