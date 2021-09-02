@@ -46,7 +46,7 @@ const RegistrationScreen = () => {
             console.log("Success!");
         });
 
-/*
+
         //Check for the Email TextInput
         if (!name.trim()) {
             alert('Please Enter Name');
@@ -65,7 +65,7 @@ const RegistrationScreen = () => {
             setIsError(true);
             return;
         }
-      */
+      
         //Checked Successfully
         if(isError === false) {
             setUser();

@@ -21,6 +21,8 @@ function InversionsScreen() {
   const [ratingCount, setRatingCount] = useState(0);
   let [id, setId] = useState<number>();
 
+  let componentMounted = true; 
+
   useEffect(() => {
       navigation.setOptions({ headerRight: () => <View style={{padding: 10}}><Icon
       name={"home"}
@@ -32,12 +34,17 @@ function InversionsScreen() {
 
   useEffect(() => {
     ClientApi.getRatings().then((res) => {
-      if (res[1] !== undefined) {
-        setRating(res[1].rating);
-      } else {
-        setRating(0);
+      if (componentMounted){ 
+        if (res[1] !== undefined) {
+          setRating(res[1].rating);
+        } else {
+          setRating(0);
+        }
       }
    });
+   return () => { 
+     componentMounted = false; 
+   }
   },[rating]);
 
   useEffect(() => {
@@ -56,8 +63,13 @@ function InversionsScreen() {
 
   useEffect(() => {
     ClientApi.getImages().then((res) => {
-      setImages(res);
+      if (componentMounted){ 
+        setImages(res);
+      };
     });
+    return () => { 
+      componentMounted = false; 
+    }
   },[image]);
 
   useEffect(() => {

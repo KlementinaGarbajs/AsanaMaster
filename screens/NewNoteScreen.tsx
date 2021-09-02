@@ -55,8 +55,6 @@ function NewNoteScreen() {
     );
 
     const saveNote = async() => {
-
-        console.log(id, "klementina");
         const values = {
             name: title,
             description: description,

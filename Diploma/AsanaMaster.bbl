@@ -14,12 +14,12 @@ Expo.
 \bibitem{Express}
 Express.
 \newblock Dosegljivo: \url{https://expressjs.com/}.
-\newblock [Dostopano: 15. 7. 2021].
+\newblock [Dostopano: 21. 7. 2021].
 
 \bibitem{Git}
 Git.
 \newblock Dosegljivo: \url{https://git-scm.com/}.
-\newblock [Dostopano: 15. 7. 2021].
+\newblock [Dostopano: 15. 8. 2021].
 
 \bibitem{oJogi}
 O jogi.
@@ -41,13 +41,13 @@ Susan Hollister.
 Js.
 \newblock Dosegljivo:
   \url{https://www.theserverside.com/definition/JavaScript}.
-\newblock [Dostopano: 15. 7. 2021].
+\newblock [Dostopano: 21. 7. 2021].
 
 \bibitem{MySQL}
 Mysql.
 \newblock Dosegljivo:
   \url{https://www.digitalocean.com/community/tutorials/what-is-mysql}.
-\newblock [Dostopano: 15. 7. 2021].
+\newblock [Dostopano: 15. 8. 2021].
 
 \bibitem{npm}
 npm.
@@ -59,15 +59,21 @@ Rn.
 \newblock Dosegljivo: \url{https://www.netguru.com/glossary/react-native}.
 \newblock [Dostopano: 25. 6. 2021].
 
+\bibitem{SQL}
+Sql.
+\newblock Dosegljivo:
+  \url{http://colos.fri.uni-lj.si/eri/RACUNALNISTVO/PODAT_PLAT_RAZ_PO/sql.html}.
+\newblock [Dostopano: 25. 8. 2021].
+
 \bibitem{TablePlus}
 Tableplus.
 \newblock Dosegljivo: \url{https://mariadb.com/kb/en/tableplus/}.
-\newblock [Dostopano: 15. 7. 2021].
+\newblock [Dostopano: 20. 7. 2021].
 
 \bibitem{TS}
 Ts.
 \newblock Dosegljivo: \url{https://www.typescriptlang.org/}.
-\newblock [Dostopano: 15. 7. 2021].
+\newblock [Dostopano: 20. 7. 2021].
 
 \bibitem{VSC}
 Vsc.

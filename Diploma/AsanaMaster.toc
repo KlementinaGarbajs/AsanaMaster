@@ -20,15 +20,9 @@
 \contentsline {subsection}{\numberline {3.3.3}Mobilna aplikacija}{14}{subsection.3.3.3}%
 \contentsline {chapter}{\numberline {4}Uporabljena tehnologija in orodja}{17}{chapter.4}%
 \contentsline {section}{\numberline {4.1}npm}{17}{section.4.1}%
-\contentsline {section}{\numberline {4.2}React Native}{18}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Expo}{18}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Express}{19}{section.4.4}%
-\contentsline {section}{\numberline {4.5}JavaScript}{19}{section.4.5}%
-\contentsline {section}{\numberline {4.6}TypeScript}{19}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Visual Studio Code}{20}{section.4.7}%
-\contentsline {section}{\numberline {4.8}MySQL}{20}{section.4.8}%
-\contentsline {section}{\numberline {4.9}TablePlus}{20}{section.4.9}%
-\contentsline {section}{\numberline {4.10}Git}{21}{section.4.10}%
+\contentsline {section}{\numberline {4.2}Ogrodja}{18}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Programski jeziki}{19}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Programi}{20}{section.4.4}%
 \contentsline {chapter}{\numberline {5}Predstavitev aplikacije}{23}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Glavne funkcionalnosti in delovanje aplikacije}{23}{section.5.1}%
 \contentsline {chapter}{\numberline {6}Sklepne ugotovitve}{31}{chapter.6}%

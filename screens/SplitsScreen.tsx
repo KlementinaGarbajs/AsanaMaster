@@ -21,6 +21,8 @@ function SplitsScreen() {
   const [ratingCount, setRatingCount] = useState(0);
   let [id, setId] = useState<number>();
 
+  let componentMounted = true; 
+
   useEffect(() => {
       navigation.setOptions({ headerRight: () => <View style={{padding: 10}}><Icon
       name={"home"}
@@ -32,12 +34,17 @@ function SplitsScreen() {
 
   useEffect(() => {
     ClientApi.getRatings().then((res) => {
-      if (res[0] !== undefined) {
-        setRating(res[0].rating);
-      } else {
-        setRating(0);
+      if (componentMounted){ 
+        if (res[0] !== undefined) {
+          setRating(res[0].rating);
+        } else {
+          setRating(0);
+        }
       }
    });
+   return () => { 
+     componentMounted = false; 
+   }
   },[rating]);
 
   useEffect(() => {
@@ -56,8 +63,13 @@ function SplitsScreen() {
 
   useEffect(() => {
     ClientApi.getImages().then((res) => {
-      setImages(res);
+      if (componentMounted){ 
+        setImages(res);
+      };
     });
+    return () => { 
+      componentMounted = false; 
+    }
   },[image]);
 
   useEffect(() => {
