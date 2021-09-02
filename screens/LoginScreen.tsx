@@ -13,7 +13,7 @@ const LoginScreen = () => {
     const [password, setPassword] = useState('');
 
     const [isError, setIsError] = useState(false);
-    const [id, setId] = useState(6);
+    const [id, setId] = useState(100);
 
     useEffect(() => {
       ClientApi.getUsers().then((res) => {

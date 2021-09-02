@@ -1,23 +1,28 @@
 \BOOKMARK [0][-]{chapter*.2}{Povzetek}{}% 1
 \BOOKMARK [0][-]{chapter*.3}{Abstract}{}% 2
 \BOOKMARK [0][-]{chapter.1}{Uvod}{}% 3
-\BOOKMARK [1][-]{section.1.1}{Pregled sorodnih aplikacij}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.2}{Struktura diplome}{chapter.1}% 5
-\BOOKMARK [0][-]{chapter.2}{Joga}{}% 6
-\BOOKMARK [1][-]{section.2.1}{O jogi}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.2}{Zgodovina joge}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.3}{Asane in njihov pomen}{chapter.2}% 9
-\BOOKMARK [0][-]{chapter.3}{Opis aplikacije in nacrtovanje}{}% 10
+\BOOKMARK [1][-]{section.1.1}{Struktura diplome}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{Pregled podrocja}{}% 5
+\BOOKMARK [1][-]{section.2.1}{Joga}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{Zgodovina joge}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.3}{Asane in njihov pomen}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.4}{Sorodne aplikacije}{chapter.2}% 9
+\BOOKMARK [0][-]{chapter.3}{Nacrtovanje aplikacije}{}% 10
 \BOOKMARK [1][-]{section.3.1}{Ideja in cilji aplijacije}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.2}{Funkcionalnosti aplikacije}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.3}{Nacrtovanje aplikacije in zbiranje podatkov}{chapter.3}% 13
-\BOOKMARK [0][-]{chapter.4}{Uporabljena tehnologija in orodja}{}% 14
-\BOOKMARK [1][-]{section.4.1}{npm}{chapter.4}% 15
-\BOOKMARK [1][-]{section.4.2}{Ogrodja}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.3}{Programski jeziki}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.4}{Programi}{chapter.4}% 18
-\BOOKMARK [0][-]{chapter.5}{Predstavitev aplikacije}{}% 19
-\BOOKMARK [1][-]{section.5.1}{Glavne funkcionalnosti in delovanje aplikacije}{chapter.5}% 20
-\BOOKMARK [0][-]{chapter.6}{Sklepne ugotovitve}{}% 21
-\BOOKMARK [1][-]{section.6.1}{Ideje za nadaljni razvoj}{chapter.6}% 22
-\BOOKMARK [0][-]{section.6.1}{Literatura}{}% 23
+\BOOKMARK [1][-]{section.3.2}{UREDI!}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.3}{Funkcionalnosti aplikacije}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.4}{Zbiranje podatkov}{chapter.3}% 14
+\BOOKMARK [0][-]{chapter.4}{Razvoj mobilne aplikacije}{}% 15
+\BOOKMARK [1][-]{section.4.1}{Podatkovna baza}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.2}{Uporabljena tehnologija in orodja}{chapter.4}% 17
+\BOOKMARK [1][-]{section.4.3}{npm}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.4}{Ogrodja}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.5}{Programski jeziki}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.6}{Programi}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.7}{REST API}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.8}{Mobilna aplikacija}{chapter.4}% 23
+\BOOKMARK [0][-]{chapter.5}{Predstavitev aplikacije}{}% 24
+\BOOKMARK [1][-]{section.5.1}{Glavne funkcionalnosti in delovanje aplikacije}{chapter.5}% 25
+\BOOKMARK [0][-]{chapter.6}{Sklepne ugotovitve}{}% 26
+\BOOKMARK [1][-]{section.6.1}{Ideje za nadaljni razvoj}{chapter.6}% 27
+\BOOKMARK [0][-]{section.6.1}{Literatura}{}% 28
