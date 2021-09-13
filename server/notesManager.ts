@@ -16,6 +16,9 @@ export const notesManager = (req: Request, res: Response) => {
             case 'delete':
                 deleteNote(req, res);
                 break;
+            case 'splits':
+                getNotesSplits(req, res);
+                break;
             default:
                 res.send('Api ' + params.api + ' does not exist!');
                 break;
@@ -31,6 +34,19 @@ const getNotes = async (req: Request, res: Response) => {
 
     } catch (e) {
         console.error({method: 'getNotes', details: e})
+        res.status(400).send(e);
+    }
+}
+
+const getNotesSplits = async (req: Request, res: Response) => {
+    try {
+        connection.query('SELECT * FROM notes JOIN currentUser ON notes.user_id = currentUser.id WHERE sort = "splits"', function (err: any, results: any, fields: any) {
+            const note = results
+            res.json(note || {})
+        });
+
+    } catch (e) {
+        console.error({method: 'getNotesSplits', details: e})
         res.status(400).send(e);
     }
 }

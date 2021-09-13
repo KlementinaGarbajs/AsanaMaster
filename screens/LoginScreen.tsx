@@ -44,7 +44,7 @@ const LoginScreen = () => {
         setIsError(true);
         return;
       }
-
+/*
       users.some(function(el) {
         if(el.email === email){
             setId(el.id);
@@ -60,7 +60,7 @@ const LoginScreen = () => {
           return;
         }
       });
-
+*/
       //Checked Successfully
       if(isError === false) {
         setUser();

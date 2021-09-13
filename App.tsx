@@ -11,6 +11,7 @@ import NotesMenu from './screens/NotesMenu';
 import NoteDetailsScreen from './screens/NoteDetailsScreen';
 import AsanaDetailsScreen from './screens/AsanaDetailsScreen';
 import NewNoteScreen from './screens/NewNoteScreen';
+import NewNoteGoals from './screens/NewNoteGoals';
 import SplitsScreen from './screens/SplitsScreen';
 import BackbendsScreen from './screens/BackbendsScreen';
 import InversionsScreen from './screens/InversionsScreen';
@@ -37,6 +38,7 @@ export default function App() {
         <Stack.Screen name="Notes" component={NotesMenu} />
         <Stack.Screen name="Note Details" component={NoteDetailsScreen} />
         <Stack.Screen name="New Note" options={{headerShown: false}} component={NewNoteScreen} />
+        <Stack.Screen name="New Note Goals" options={{headerShown: false}} component={NewNoteGoals} />
         <Stack.Screen name="Splits" component={SplitsScreen} />
         <Stack.Screen name="Backbends" component={BackbendsScreen} />
         <Stack.Screen name="Inversions" component={InversionsScreen} />

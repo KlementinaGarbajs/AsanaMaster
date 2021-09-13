@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, TouchableOpacity, Modal, Image, FlatList, BackHandler} from 'react-native';
+import { Text, View, TouchableOpacity, Modal, Image, FlatList, BackHandler, CheckBox} from 'react-native';
 import { StyleSheet } from 'react-native';
 import { AirbnbRating } from 'react-native-ratings';
 import Card from "../components/Card";
@@ -20,6 +20,8 @@ function SplitsScreen() {
   const [rating, setRating] = useState(0);
   const [ratingCount, setRatingCount] = useState(0);
   let [id, setId] = useState<number>();
+  const [isSelected, setSelection] = useState(false);
+  const [notes, setNotes] = useState<any[]>([]);
 
   let componentMounted = true; 
 
@@ -78,6 +80,17 @@ function SplitsScreen() {
     });
   },[]);
 
+  useEffect(() => {
+    ClientApi.getNotesSplits().then((res) => {
+      if (componentMounted){ 
+        setNotes(res);
+        }
+      });
+      return () => { 
+        componentMounted = false; 
+      }  
+    },[notes]);
+
   useFocusEffect(
     React.useCallback(() => {
       const onBackPress = () => {
@@ -130,11 +143,12 @@ function SplitsScreen() {
     <ScrollView>
     <View style={styles.container}>
       <Card title="Start your journey" containerStyle={styles.card}>
-        <ScrollView style={{ height: 350 }}>
+        <ScrollView style={{ height: 300 }}>
           <FlatList data={[
                           {id: 1, link: "7__5szNyObA"},
-                          {id: 2, link: "tSYtyL4aLzI"},
-                          /*{id: 3, link: "snso8Drg_PQ"},
+                          /*{id: 2, link: "tSYtyL4aLzI"},
+                          {id: 3, link: "snso8Drg_PQ"},
+                          
                           {id: 4, link: "BJKk3Jd"},
                           {id: 5, link: "9TiVGK24DeY"},
                           {id: 6, link: "Pf4KTaEs"},
@@ -142,10 +156,22 @@ function SplitsScreen() {
                       ]} 
           renderItem={({item}) =>
           <View style={{paddingHorizontal: 10 }}>
-            <Text style={styles.logo}>DAY {item.id}</Text>
+            <View style={{ flexDirection: "row", alignItems: "center", paddingTop: 10}}>
+              <Text style={styles.logo}>DAY {item.id}</Text>
+
+              <CheckBox
+                value={isSelected}
+                onValueChange={setSelection}
+                style={{ marginLeft: 10 }}
+              />
+            <TouchableOpacity style={{ flexDirection: "row", alignItems: "center", justifyContent: "center" }} onPress={() => navigation.navigate('New Note Goals')}>
+              <Icon name='notes' size={30} style={{ padding: 10 }} color='rgba(6, 152, 111, 0.8)' />
+            </TouchableOpacity>
+            </View>
+  
             <YoutubePlayer
-                height={150}
-                width={260}
+                height={120}
+                width={240}
                 videoId={item.link}
             />
           </View>}
@@ -168,11 +194,31 @@ function SplitsScreen() {
           )})}
         </ScrollView>
         <Modal visible={visible} transparent={true}>
-            <ImageViewer onDoubleClick={() => setVisible(false)} imageUrls={images}/>
-          </Modal>
+          <ImageViewer onDoubleClick={() => setVisible(false)} imageUrls={images}/>
+        </Modal>
       </Card>
 
-      <Card title="RATE YOUR PROGRESS" containerStyle={styles.card}>
+      <Card title="Progress notes" containerStyle={styles.card}>
+      {notes.map((notes, index) => {
+        return (
+          <View key={index}>
+            <FlatList nestedScrollEnabled={true} data={[notes]}
+              renderItem={({item}) =>
+                <View style={styles.container} key={item.id}>
+                  <TouchableOpacity style={{ flexDirection: "column" }} onPress={() => navigation.navigate('Note Details', { paramKey: item })}>
+                      <Text style={styles.text}>{ item.name }</Text>
+                  </TouchableOpacity>
+                </View>
+                }
+              numColumns={2} 
+              keyExtractor={(item, index) => index.toString()}
+            />
+          </View>
+        )
+      })}
+      </Card>
+
+      <Card title="Rate your progress" containerStyle={styles.card}>
         <AirbnbRating 
           count={10}
           reviews={["Terrible", "Bad", "Meh", "OK", "Good", "Very Good", "Wow", "Amazing", "Unbelievable", "Done!"]}
@@ -191,14 +237,14 @@ export default SplitsScreen;
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 20,
+    marginTop: 10,
     justifyContent: 'center',
     alignContent: 'center'
   },
 
   logo: {
-    marginTop: 10,
     paddingVertical: 10,
+    fontWeight: "bold",
     fontSize: 20,
     color: "#034947",
   },
@@ -224,7 +270,7 @@ const styles = StyleSheet.create({
 
   card: {
     alignSelf: "center",
-    width: "80%",
-    marginBottom: 20
+    width: "90%",
+    marginBottom: 10
   }
 });

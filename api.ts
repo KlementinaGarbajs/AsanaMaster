@@ -2,6 +2,7 @@ export default class ClientApi {
 
     static getAsanas = () => ClientApi.sendRequest('http://localhost:8080/asanas/all');
     static getNotes = () => ClientApi.sendRequest('http://localhost:8080/notes/all', 'GET');
+    static getNotesSplits = () => ClientApi.sendRequest('http://localhost:8080/notes/splits', 'GET');
     static getRatings = () => ClientApi.sendRequest('http://localhost:8080/asanas/ratings');
     static getUsers = () => ClientApi.sendRequest('http://localhost:8080/users/all');
     static setPassword = (data: {}) =>  ClientApi.sendRequest('http://localhost:8080/users/password', 'POST', data);

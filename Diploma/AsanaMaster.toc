@@ -5,7 +5,6 @@
 \contentsline {chapter}{Abstract}{}{chapter*.3}%
 \babel@toc {slovene}{}
 \contentsline {chapter}{\numberline {1}Uvod}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Struktura diplome}{2}{section.1.1}%
 \contentsline {chapter}{\numberline {2}Pregled podro\IeC {\v c}ja}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Joga}{3}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Zgodovina joge}{4}{section.2.2}%
@@ -13,9 +12,10 @@
 \contentsline {section}{\numberline {2.4}Sorodne aplikacije}{7}{section.2.4}%
 \contentsline {chapter}{\numberline {3}Na\IeC {\v c}rtovanje aplikacije}{9}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Ideja in cilji aplijacije}{9}{section.3.1}%
-\contentsline {section}{\numberline {3.2}UREDI!}{10}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Funkcionalnosti aplikacije}{10}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Zbiranje podatkov}{11}{section.3.4}%
+\contentsline {section}{\numberline {3.2}Struktura mobilne aplikacije}{9}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Arhitektura aplikacije}{10}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Funkcionalnosti aplikacije}{11}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Zbiranje podatkov}{12}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Razvoj mobilne aplikacije}{13}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Podatkovna baza}{13}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Uporabljena tehnologija in orodja}{13}{section.4.2}%
