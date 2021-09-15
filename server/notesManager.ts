@@ -53,7 +53,7 @@ const getNotesSplits = async (req: Request, res: Response) => {
 
 const saveNewNote = async (req: Request, res: Response) => {
     const data = req.body;
-    var post = {name: data.name, description: data.description, user_id: data.user_id};
+    var post = {name: data.name, description: data.description, user_id: data.user_id, sort: data.sort, day_name: data.day_name};
 
     connection.query("INSERT INTO notes SET ?", post, function(err: any, rows: any, fields: any) {
         if (!err)

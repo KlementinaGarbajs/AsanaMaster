@@ -7,7 +7,7 @@ import ClientApi from '../api';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Icon } from 'react-native-elements';
 
-function NewNoteScreen() {
+function NewNoteScreen( params: any) {
     const navigation = useNavigation();
 
     useEffect(() => {
@@ -58,7 +58,9 @@ function NewNoteScreen() {
         const values = {
             name: title,
             description: description,
-            user_id: id
+            user_id: id,
+            sort: params.route.params.goal,
+            day_name: params.route.params.day_name
         }
         ClientApi.saveNewNote(values).then(() => {
             console.log("Saved");
