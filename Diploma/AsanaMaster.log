@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.6.24)  10 SEP 2021 09:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.6.24)  26 SEP 2021 20:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -465,7 +465,7 @@ l.219 \clearemptydoublepage
  (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.26 ...numberline {4.7}REST API}{18}{section.4.7}
+l.26 ...numberline {4.7}REST API}{19}{section.4.7}
                                                   % [7
 
 ])
@@ -620,199 +620,220 @@ Overfull \hbox (11.09479pt too wide) in paragraph at lines 410--411
 
 [11 <./arhitektura.png>] [12]
 Poglavje 4.
-<query.jpg, id=283, 713.66624pt x 115.43124pt>
-File: query.jpg Graphic file (type jpg)
-<use query.jpg>
-Package pdftex.def Info: query.jpg  used on input line 463.
-(pdftex.def)             Requested size: 392.51764pt x 63.48737pt.
 
-Overfull \hbox (2.51764pt too wide) in paragraph at lines 463--464
- [] 
+Underfull \hbox (badness 10000) in paragraph at lines 459--461
+
+ []
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.462 \item \textbf
+                   {Entitete in njihovi atributi}:
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 462
+[][]
+ []
+
+
+Overfull \hbox (18.9438pt too wide) in paragraph at lines 465--466
+[]\OT1/cmr/m/n/12 Asanas: id (pri-marni klju^^Tc), name, de-scrip-tion, image, 
+type, name[]sanskrit,
  []
 
 [13
 
- <./query.jpg>]
+]
+<diagram.png, id=288, 1011.78pt x 686.565pt>
+File: diagram.png Graphic file (type png)
+<use diagram.png>
+Package pdftex.def Info: diagram.png  used on input line 475.
+(pdftex.def)             Requested size: 404.70483pt x 274.62112pt.
 
-LaTeX Warning: Reference `reactDevTools' on page 14 undefined on input line 483
+Overfull \hbox (14.70483pt too wide) in paragraph at lines 475--476
+ [] 
+ []
+
+[14 <./diagram.png>]
+
+LaTeX Warning: Reference `reactDevTools' on page 15 undefined on input line 494
 .
 
-[14]
-<expodeveloper.png, id=300, 1683.28876pt x 847.165pt>
+[15]
+<expodeveloper.png, id=304, 1683.28876pt x 847.165pt>
 File: expodeveloper.png Graphic file (type png)
 <use expodeveloper.png>
-Package pdftex.def Info: expodeveloper.png  used on input line 488.
+Package pdftex.def Info: expodeveloper.png  used on input line 499.
 (pdftex.def)             Requested size: 390.0pt x 196.2787pt.
-
-Underfull \vbox (badness 4291) has occurred while \output is active []
-
- [15 <./expodeveloper.png>]
-Overfull \hbox (4.92645pt too wide) in paragraph at lines 501--503
+ [16 <./expodeveloper.png>]
+Overfull \hbox (4.92645pt too wide) in paragraph at lines 512--514
 \OT1/cmr/m/n/12 pred-meta, za-go-ta-vljajo bolj^^Tso do-ku-men-ta-cijo in omogo
 ^^Tcajo Type-Scriptu,
  []
 
-
-Underfull \vbox (badness 3439) has occurred while \output is active []
-
- [16]
-Overfull \hbox (5.74034pt too wide) in paragraph at lines 511--512
+[17]
+Overfull \hbox (5.74034pt too wide) in paragraph at lines 522--523
 \OT1/cmr/m/n/12 (ki ga se-sta-vljajo ope-ra-cij-ski sis-tem, ki te-me-lji na Li
 -nuxu, sple-tni stre^^Tznik
  []
 
-<server.jpg, id=324, 1186.4325pt x 710.655pt>
+<server.jpg, id=329, 1186.4325pt x 710.655pt>
 File: server.jpg Graphic file (type jpg)
 <use server.jpg>
-Package pdftex.def Info: server.jpg  used on input line 524.
+Package pdftex.def Info: server.jpg  used on input line 535.
 (pdftex.def)             Requested size: 391.52394pt x 234.51688pt.
 
-Overfull \hbox (1.52394pt too wide) in paragraph at lines 524--525
+Overfull \hbox (1.52394pt too wide) in paragraph at lines 535--536
  [] 
  []
 
-
-Underfull \vbox (badness 2237) has occurred while \output is active []
-
- [17]
-Underfull \hbox (badness 10000) in paragraph at lines 539--540
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 550--551
 
  []
 
-[18 <./server.jpg>]
-Overfull \hbox (1.85843pt too wide) in paragraph at lines 541--543
+[19 <./server.jpg>]
+Overfull \hbox (1.85843pt too wide) in paragraph at lines 552--554
 \OT1/cmr/m/n/12 rabni^^Tskega vme-snika mo-bilne apli-ka-cije, saj je iz-de-lav
 a do-brega upo-rabni^^Tskega
  []
 
-<protoio.png, id=341, 1686.3pt x 1053.9375pt>
+<protoio.png, id=345, 1686.3pt x 1053.9375pt>
 File: protoio.png Graphic file (type png)
 <use protoio.png>
-Package pdftex.def Info: protoio.png  used on input line 546.
+Package pdftex.def Info: protoio.png  used on input line 557.
 (pdftex.def)             Requested size: 387.84085pt x 242.40053pt.
-[19] [20 <./protoio.png>]
+[20] [21 <./protoio.png>] [22
+
+]
 Poglavje 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 560--561
+Underfull \hbox (badness 10000) in paragraph at lines 571--572
 
  []
 
-<prijava.jpg, id=353, 1082.0425pt x 2270.4825pt>
+<prijava.jpg, id=361, 1082.0425pt x 2270.4825pt>
 File: prijava.jpg Graphic file (type jpg)
 <use prijava.jpg>
-Package pdftex.def Info: prijava.jpg  used on input line 565.
+Package pdftex.def Info: prijava.jpg  used on input line 576.
 (pdftex.def)             Requested size: 136.50238pt x 286.40797pt.
-<registracija.jpg, id=354, 1081.03876pt x 2272.49pt>
+<registracija.jpg, id=362, 1081.03876pt x 2272.49pt>
 File: registracija.jpg Graphic file (type jpg)
 <use registracija.jpg>
-Package pdftex.def Info: registracija.jpg  used on input line 569.
+Package pdftex.def Info: registracija.jpg  used on input line 580.
 (pdftex.def)             Requested size: 136.50238pt x 286.93861pt.
-<pozdrav1.jpg, id=355, 1078.0275pt x 2266.4675pt>
+<pozdrav1.jpg, id=363, 1078.0275pt x 2266.4675pt>
 File: pozdrav1.jpg Graphic file (type jpg)
 <use pozdrav1.jpg>
-Package pdftex.def Info: pozdrav1.jpg  used on input line 574.
+Package pdftex.def Info: pozdrav1.jpg  used on input line 585.
 (pdftex.def)             Requested size: 136.50238pt x 286.97359pt.
-<pozdrav2.jpg, id=356, 1079.03125pt x 2260.445pt>
+<pozdrav2.jpg, id=364, 1079.03125pt x 2260.445pt>
 File: pozdrav2.jpg Graphic file (type jpg)
 <use pozdrav2.jpg>
-Package pdftex.def Info: pozdrav2.jpg  used on input line 578.
+Package pdftex.def Info: pozdrav2.jpg  used on input line 589.
 (pdftex.def)             Requested size: 136.50238pt x 285.9351pt.
 
-LaTeX Warning: Float too large for page by 64.79562pt on input line 581.
+LaTeX Warning: Float too large for page by 64.79562pt on input line 592.
 
 
-Overfull \hbox (0.31818pt too wide) in paragraph at lines 583--584
+Overfull \hbox (0.31818pt too wide) in paragraph at lines 594--595
 []\OT1/cmr/m/n/12 Podmeni Asa-nas je raz-de-ljen na tri do-da-tne pod-strani, k
 i dolo^^Tcajo razli^^Tcne
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 583--584
+Underfull \hbox (badness 10000) in paragraph at lines 594--595
 
  []
 
-[21
-
-] [22 <./prijava.jpg> <./registracija.jpg> <./pozdrav1.jpg> <./pozdrav2.jpg>]
-<podmeniasanas.jpg, id=369, 406.51875pt x 903.375pt>
+[23] [24 <./prijava.jpg> <./registracija.jpg> <./pozdrav1.jpg> <./pozdrav2.jpg>
+]
+<podmeniasanas.jpg, id=378, 406.51875pt x 903.375pt>
 File: podmeniasanas.jpg Graphic file (type jpg)
 <use podmeniasanas.jpg>
-Package pdftex.def Info: podmeniasanas.jpg  used on input line 588.
+Package pdftex.def Info: podmeniasanas.jpg  used on input line 599.
 (pdftex.def)             Requested size: 118.94714pt x 264.31538pt.
-<asana.jpg, id=370, 1079.03125pt x 2299.59125pt>
+<asana.jpg, id=379, 1079.03125pt x 2299.59125pt>
 File: asana.jpg Graphic file (type jpg)
 <use asana.jpg>
-Package pdftex.def Info: asana.jpg  used on input line 591.
+Package pdftex.def Info: asana.jpg  used on input line 602.
 (pdftex.def)             Requested size: 124.80286pt x 265.9738pt.
-<videoasana.jpg, id=371, 404.51125pt x 858.20625pt>
+<videoasana.jpg, id=380, 404.51125pt x 858.20625pt>
 File: videoasana.jpg Graphic file (type jpg)
 <use videoasana.jpg>
-Package pdftex.def Info: videoasana.jpg  used on input line 594.
+Package pdftex.def Info: videoasana.jpg  used on input line 605.
 (pdftex.def)             Requested size: 124.80286pt x 264.77095pt.
-<izborslik.jpg, id=373, 508.90125pt x 1129.21875pt>
+<izborslik.jpg, id=382, 508.90125pt x 1129.21875pt>
 File: izborslik.jpg Graphic file (type jpg)
 <use izborslik.jpg>
-Package pdftex.def Info: izborslik.jpg  used on input line 605.
+Package pdftex.def Info: izborslik.jpg  used on input line 616.
 (pdftex.def)             Requested size: 136.50238pt x 302.89441pt.
-<obrezslike.jpg, id=374, 508.90125pt x 1129.21875pt>
+<obrezslike.jpg, id=383, 508.90125pt x 1129.21875pt>
 File: obrezslike.jpg Graphic file (type jpg)
 <use obrezslike.jpg>
-Package pdftex.def Info: obrezslike.jpg  used on input line 608.
+Package pdftex.def Info: obrezslike.jpg  used on input line 619.
 (pdftex.def)             Requested size: 136.50238pt x 302.89441pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 614--615
+Underfull \hbox (badness 10000) in paragraph at lines 625--626
 
  []
 
-<splitsscreen.jpg, id=376, 508.90125pt x 1129.21875pt>
+<splitsscreen.jpg, id=385, 508.90125pt x 1129.21875pt>
 File: splitsscreen.jpg Graphic file (type jpg)
 <use splitsscreen.jpg>
-Package pdftex.def Info: splitsscreen.jpg  used on input line 619.
+Package pdftex.def Info: splitsscreen.jpg  used on input line 630.
 (pdftex.def)             Requested size: 155.99762pt x 346.14288pt.
-<pregledslike.jpg, id=377, 508.90125pt x 1129.21875pt>
+<pregledslike.jpg, id=386, 508.90125pt x 1129.21875pt>
 File: pregledslike.jpg Graphic file (type jpg)
 <use pregledslike.jpg>
-Package pdftex.def Info: pregledslike.jpg  used on input line 622.
+Package pdftex.def Info: pregledslike.jpg  used on input line 633.
 (pdftex.def)             Requested size: 155.99762pt x 346.14288pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23]
-<prazenzapisek.jpg, id=387, 508.90125pt x 1129.21875pt>
+ [25]
+<prazenzapisek.jpg, id=395, 508.90125pt x 1129.21875pt>
 File: prazenzapisek.jpg Graphic file (type jpg)
 <use prazenzapisek.jpg>
-Package pdftex.def Info: prazenzapisek.jpg  used on input line 635.
+Package pdftex.def Info: prazenzapisek.jpg  used on input line 646.
 (pdftex.def)             Requested size: 155.99762pt x 346.14288pt.
-<ustvarjanjezapiska.jpg, id=388, 508.90125pt x 1129.21875pt>
+<ustvarjanjezapiska.jpg, id=396, 508.90125pt x 1129.21875pt>
 File: ustvarjanjezapiska.jpg Graphic file (type jpg)
 <use ustvarjanjezapiska.jpg>
-Package pdftex.def Info: ustvarjanjezapiska.jpg  used on input line 638.
+Package pdftex.def Info: ustvarjanjezapiska.jpg  used on input line 649.
 (pdftex.def)             Requested size: 155.99762pt x 346.14288pt.
 
 Underfull \vbox (badness 4013) has occurred while \output is active []
 
- [24 <./podmeniasanas.jpg> <./asana.jpg> <./videoasana.jpg>]
-<seznamzapiskov.jpg, id=395, 508.90125pt x 1129.21875pt>
+ [26 <./podmeniasanas.jpg> <./asana.jpg> <./videoasana.jpg>]
+<seznamzapiskov.jpg, id=403, 508.90125pt x 1129.21875pt>
 File: seznamzapiskov.jpg Graphic file (type jpg)
 <use seznamzapiskov.jpg>
-Package pdftex.def Info: seznamzapiskov.jpg  used on input line 652.
+Package pdftex.def Info: seznamzapiskov.jpg  used on input line 663.
 (pdftex.def)             Requested size: 155.99762pt x 346.14288pt.
-<pregledzapiska.jpg, id=396, 508.90125pt x 1129.21875pt>
+<pregledzapiska.jpg, id=404, 508.90125pt x 1129.21875pt>
 File: pregledzapiska.jpg Graphic file (type jpg)
 <use pregledzapiska.jpg>
-Package pdftex.def Info: pregledzapiska.jpg  used on input line 655.
+Package pdftex.def Info: pregledzapiska.jpg  used on input line 666.
 (pdftex.def)             Requested size: 155.99762pt x 346.14288pt.
- [25 <./izborslik.jpg> <./obrezslike.jpg>] [26 <./splitsscreen.jpg> <./pregleds
-like.jpg>] [27 <./prazenzapisek.jpg> <./ustvarjanjezapiska.jpg>] [28 <./seznamz
+ [27 <./izborslik.jpg> <./obrezslike.jpg>] [28 <./splitsscreen.jpg> <./pregleds
+like.jpg>] [29 <./prazenzapisek.jpg> <./ustvarjanjezapiska.jpg>] [30 <./seznamz
 apiskov.jpg> <./pregledzapiska.jpg>]
 Poglavje 6.
 
 Underfull \vbox (badness 2689) has occurred while \output is active []
 
- [29
+ [31
 
 ]
-[30] (./AsanaMaster.bbl
+[32] (./AsanaMaster.bbl
 Underfull \hbox (badness 3724) in paragraph at lines 41--45
 []\OT1/cmr/m/n/12 Js.  Do-se-gljivo: []$\OT1/cmtt/m/n/12 https : / / www . thes
 erverside . com / definition /
@@ -824,7 +845,7 @@ Underfull \hbox (badness 1590) in paragraph at lines 47--51
 igitalocean . com / community /
  []
 
-[31
+[33
 
 
 ]
@@ -846,25 +867,25 @@ Underfull \hbox (badness 1342) in paragraph at lines 95--99
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 686.
- [32]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 686.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 697.
+ [34]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 697.
  (./AsanaMaster.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 686.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 686.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 697.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 697.
 Package rerunfilecheck Info: File `AsanaMaster.out' has not changed.
 (rerunfilecheck)             Checksum: DF3E26F3574A82B380F316631DB2A733;1700.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 686.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 697.
  ) 
 Here is how much of TeX's memory you used:
- 8881 strings out of 480608
- 127252 string characters out of 5903630
- 404378 words of memory out of 5000000
- 24460 multiletter control sequences out of 15000+600000
+ 8884 strings out of 480608
+ 127295 string characters out of 5903630
+ 404365 words of memory out of 5000000
+ 24461 multiletter control sequences out of 15000+600000
  541878 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,12n,45p,1259b,583s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -878,10 +899,10 @@ r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr
 local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/lo
 cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/loc
 al/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on AsanaMaster.pdf (46 pages, 4346826 bytes).
+Output written on AsanaMaster.pdf (48 pages, 4430103 bytes).
 PDF statistics:
- 516 PDF objects out of 1000 (max. 8388607)
- 426 compressed objects within 5 object streams
- 103 named destinations out of 1000 (max. 500000)
+ 524 PDF objects out of 1000 (max. 8388607)
+ 432 compressed objects within 5 object streams
+ 105 named destinations out of 1000 (max. 500000)
  334 words of extra memory for PDF output out of 10000 (max. 10000000)
 

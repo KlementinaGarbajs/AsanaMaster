@@ -58,7 +58,8 @@ function NewNoteScreen() {
         const values = {
             name: title,
             description: description,
-            user_id: id
+            user_id: id,
+            sort: "random"
         }
         ClientApi.saveNewNote(values).then(() => {
             console.log("Saved");

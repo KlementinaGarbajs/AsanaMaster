@@ -456,16 +456,27 @@ Podatki o jogi in položajih so vzeti in prepisani v podatkovno bazo, iz knjige 
 \chapter{Razvoj mobilne aplikacije}
 
 \section{Podatkovna baza}
-Podatkovna baza je zbirka povezanih podatkov. Prednosti uporabe podatkovne baze so možnost shranjevanja večjih količin podatkov, hitrejši prenos podatkov in hitrejša obdelava podatkov. Za podatkovno bazo je uporabljen MySQL Server, za upravjanje le-te pa program TablePlus. Podatkovna baza je sestavljena iz petih tabel: \textit{Users}, \textit{Asanas}, \textit{Goals}, \textit{Images}, \textit{Notes} in je povezana z APIjem, ki nad njimi izvaja različne operacije, (Slika~\ref{query}).
+Podatkovna baza je zbirka povezanih podatkov. Prednosti uporabe podatkovne baze so možnost shranjevanja večjih količin podatkov, hitrejši prenos podatkov in hitrejša obdelava podatkov, (Slika~\ref{baza}).
+Pri podatkovnem modeliranju se izvaja abstrakcija in poenostavitev nekega segmenta realnega sveta. Na osnovi modela se potem izdela podatkovna baza. Podatkovni model je povezana zbirka konceptov namenjenih opisovanju podatkov in opravljanju s podatki, ki opredeljuje sintakso in semantiko stavkov formalnega jezika. Za predstavljeno podatkovno bazo je bil uporabljen entitetno relacijski podatkovni model, ki je sestavljen iz entitet, atributov in relacij. Entiteta je v podatkovni bazi predstavljena z množico atributov. Atribut je podatkovni element, s katerim opišemo lastnost entitete. Za definiranje povezav med dvema ali več entitetami so uporabljene relacije, ki lahko pripradajo različnim entitetnim množicam. Spodaj je predstavljen fizični model s tabelami in njihovimi relacijami. Podatkovna baza je sestavljena iz petih tabel: \textit{Users}, \textit{Asanas}, \textit{Goals}, \textit{Images}, \textit{Notes}. \\
+
+\item \textbf{Entitete in njihovi atributi}:
+  \begin{itemize}
+  \item Users: id (primarni ključ), name, email, password, first{\_}login
+  \item Asanas: id (primarni ključ), name, description, image, type, name{\_}sanskrit, level, how{\_}to, video{\_}id
+  \item Goals: id (primarni ključ), user{\_}id (tuji ključ), name (tuji ključ), rating
+  \item Images: id (primarni ključ), url, user{\_}id (tuji ključ), goal (tuji ključ)
+  \item Notes: id (primarni ključ), user{\_}id (tuji ključ), sort (tuji ključ), name, description, updated{\_}at, created{\_}at, day{\_}name
+\end{itemize}
+
+V tabeli Images so slike shranjene lokalno na disku, v bazi pa se nahaja le referenca na datoteko (atribut url). 
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[scale=.55]{query.jpg}
+\includegraphics[scale=0.4]{diagram.png}
 \end{center}
-\caption{Primer poizvedbe za kreiranje tabele asanas.}
-\label{query}
+\caption{Fizični model podatkovne baze.}
+\label{baza}
 \end{figure}
-
 
 \section{Uporabljena tehnologija in orodja}
 

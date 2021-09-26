@@ -54,26 +54,52 @@ const NotesMenu = ({route}: {route: any}) => {
     });
   }
 
+  const goals=[
+    {
+      title: 'splits',
+    },
+    {
+      title: 'backbends',
+    },
+    {
+      title: 'inversions',
+    },
+    {
+      title: 'random',
+    },
+  ]
+
   return (
     <ScrollView contentContainerStyle={[{flex: 1, flexDirection: 'column'}]}>
-      {notes.map((notes, index) => {
+      {goals.map((goals, index) => {
         return (
-          <View key={index}>
-            <FlatList nestedScrollEnabled={true} data={[notes]}
-              renderItem={({item}) =>
-                <View style={styles.container} key={item.id}>
-                  <TouchableOpacity style={{ flexDirection: "column" }} onPress={() => navigation.navigate('Note Details', { paramKey: item })}>
-                      <Text style={styles.text}>{ item.name }</Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity style={{ marginLeft: 'auto', paddingRight: 15, paddingTop: 2, flexDirection: 'column' }} onPress={(deleteNote(item.note_id))}>
-                  <Icon name={"delete"} size={20} color="#034947"/>
-                  </TouchableOpacity>
-                </View>
-                }
-              numColumns={2} 
-              keyExtractor={(item, index) => index.toString()}
-            />
-            <View style={styles.separator} />
+          <View style={{ marginBottom: 20, padding: 10 }}>
+            <Text style={[styles.text, {textTransform: 'uppercase'}]}>
+              {goals.title}
+            </Text>
+            {notes.map((notes, index) => {
+              if(notes.sort === goals.title) {
+                return (
+                  <View key={index}>
+                    <FlatList nestedScrollEnabled={true} data={[notes]}
+                      renderItem={({item}) =>
+                        <View style={styles.container} key={item.id}>
+                          <TouchableOpacity style={{ flexDirection: "column" }} onPress={() => navigation.navigate('Note Details', { paramKey: item })}>
+                            <Text style={styles.text}>{item.day_name}    { item.name }</Text>
+                          </TouchableOpacity>
+                          <TouchableOpacity style={{ marginLeft: 'auto', paddingRight: 15, paddingTop: 2, flexDirection: 'column' }} onPress={(deleteNote(item.note_id))}>
+                          <Icon name={"delete"} size={20} color="#034947"/>
+                          </TouchableOpacity>
+                        </View>
+                        }
+                      numColumns={2} 
+                      keyExtractor={(item, index) => index.toString()}
+                    />
+                    <View style={styles.shortseparator} />
+                  </View>
+                )
+              }
+            })}
           </View>
         )
       })}
@@ -109,8 +135,11 @@ const styles = StyleSheet.create({
     height: 50,
   },
 
-  separator: {
+  shortseparator: {
+    justifyContent: "center",
+    alignSelf: "center",
     borderWidth: 0.5,
+    width: "85%",
     borderColor: "rgba(4, 98, 89, 0.5)",
   },
 

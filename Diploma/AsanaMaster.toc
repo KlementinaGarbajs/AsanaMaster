@@ -18,15 +18,15 @@
 \contentsline {section}{\numberline {3.5}Zbiranje podatkov}{12}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Razvoj mobilne aplikacije}{13}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Podatkovna baza}{13}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Uporabljena tehnologija in orodja}{13}{section.4.2}%
-\contentsline {section}{\numberline {4.3}npm}{14}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Ogrodja}{14}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Programski jeziki}{16}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Programi}{17}{section.4.6}%
-\contentsline {section}{\numberline {4.7}REST API}{18}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Mobilna aplikacija}{19}{section.4.8}%
-\contentsline {chapter}{\numberline {5}Predstavitev aplikacije}{21}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Glavne funkcionalnosti in delovanje aplikacije}{21}{section.5.1}%
-\contentsline {chapter}{\numberline {6}Sklepne ugotovitve}{29}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Ideje za nadaljni razvoj}{30}{section.6.1}%
-\contentsline {chapter}{Literatura}{31}{section.6.1}%
+\contentsline {section}{\numberline {4.2}Uporabljena tehnologija in orodja}{15}{section.4.2}%
+\contentsline {section}{\numberline {4.3}npm}{15}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Ogrodja}{15}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Programski jeziki}{17}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Programi}{18}{section.4.6}%
+\contentsline {section}{\numberline {4.7}REST API}{19}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Mobilna aplikacija}{20}{section.4.8}%
+\contentsline {chapter}{\numberline {5}Predstavitev aplikacije}{23}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Glavne funkcionalnosti in delovanje aplikacije}{23}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Sklepne ugotovitve}{31}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Ideje za nadaljni razvoj}{32}{section.6.1}%
+\contentsline {chapter}{Literatura}{33}{section.6.1}%
