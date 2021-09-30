@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{arhitektura}
+arhitektura.
+\newblock Dosegljivo:
+  \url{http://colos.fri.uni-lj.si/ERI/RACUNALNISTVO/PODATKOVNE_BAZE/trinivojska_arhitektura.html}.
+\newblock [Dostopano: 25. 9. 2021].
+
 \bibitem{Asane}
 Asane.
 \newblock Dosegljivo:
@@ -54,6 +60,11 @@ npm.
 \newblock Dosegljivo: \url{https://docs.npmjs.com/cli/v6/commands/npm}.
 \newblock [Dostopano: 25. 6. 2021].
 
+\bibitem{prirocnik}
+Nataša Petavs.
+\newblock {\em Priročnik za usposabljanje za naziv učitelja joge}.
+\newblock 2021.
+
 \bibitem{RN}
 Rn.
 \newblock Dosegljivo: \url{https://www.netguru.com/glossary/react-native}.
@@ -90,6 +101,11 @@ Vsc.
 verywellfit.
 \newblock Dosegljivo: \url{https://www.verywellfit.com}.
 \newblock [Dostopano: 5. 6. 2021].
+
+\bibitem{WireframePro}
+Wireframepro.
+\newblock Dosegljivo: \url{https://www.mockflow.com/apps/wireframepro/}.
+\newblock [Dostopano: 25. 9. 2021].
 
 \bibitem{yoga108}
 yoga108.

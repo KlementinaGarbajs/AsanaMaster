@@ -7,22 +7,20 @@
 \BOOKMARK [1][-]{section.2.3}{Asane in njihov pomen}{chapter.2}% 7
 \BOOKMARK [1][-]{section.2.4}{Sorodne aplikacije}{chapter.2}% 8
 \BOOKMARK [0][-]{chapter.3}{Nacrtovanje aplikacije}{}% 9
-\BOOKMARK [1][-]{section.3.1}{Ideja in cilji aplijacije}{chapter.3}% 10
-\BOOKMARK [1][-]{section.3.2}{Struktura mobilne aplikacije}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.3}{Arhitektura aplikacije}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.4}{Funkcionalnosti aplikacije}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.5}{Zbiranje podatkov}{chapter.3}% 14
-\BOOKMARK [0][-]{chapter.4}{Razvoj mobilne aplikacije}{}% 15
-\BOOKMARK [1][-]{section.4.1}{Podatkovna baza}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.2}{Uporabljena tehnologija in orodja}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.3}{npm}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.4}{Ogrodja}{chapter.4}% 19
-\BOOKMARK [1][-]{section.4.5}{Programski jeziki}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.6}{Programi}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.7}{REST API}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.8}{Mobilna aplikacija}{chapter.4}% 23
-\BOOKMARK [0][-]{chapter.5}{Predstavitev aplikacije}{}% 24
-\BOOKMARK [1][-]{section.5.1}{Glavne funkcionalnosti in delovanje aplikacije}{chapter.5}% 25
-\BOOKMARK [0][-]{chapter.6}{Sklepne ugotovitve}{}% 26
-\BOOKMARK [1][-]{section.6.1}{Ideje za nadaljni razvoj}{chapter.6}% 27
-\BOOKMARK [0][-]{section.6.1}{Literatura}{}% 28
+\BOOKMARK [1][-]{section.3.1}{Struktura mobilne aplikacije}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.2}{Arhitektura aplikacije}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.3}{Funkcionalnosti aplikacije}{chapter.3}% 12
+\BOOKMARK [0][-]{chapter.4}{Razvoj mobilne aplikacije}{}% 13
+\BOOKMARK [1][-]{section.4.1}{Uporabljena tehnologija in orodja}{chapter.4}% 14
+\BOOKMARK [1][-]{section.4.2}{Ogrodja}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.3}{Orodja}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.4}{Programski jeziki}{chapter.4}% 17
+\BOOKMARK [1][-]{section.4.5}{Programi}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.6}{Podatkovni nivo}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.7}{Logicni nivo}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.8}{Uporabni\235ki nivo}{chapter.4}% 21
+\BOOKMARK [0][-]{chapter.5}{Predstavitev aplikacije}{}% 22
+\BOOKMARK [1][-]{section.5.1}{Funkcionalnosti in delovanje aplikacije}{chapter.5}% 23
+\BOOKMARK [0][-]{chapter.6}{Sklepne ugotovitve}{}% 24
+\BOOKMARK [1][-]{section.6.1}{Ideje za nadaljni razvoj}{chapter.6}% 25
+\BOOKMARK [0][-]{section.6.1}{Literatura}{}% 26

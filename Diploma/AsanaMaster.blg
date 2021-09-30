@@ -3,44 +3,46 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: AsanaMaster.aux
 The style file: plain.bst
 Database file #1: literatura.bib
-You've used 18 entries,
+Warning--empty publisher in prirocnik
+You've used 21 entries,
             2118 wiz_defined-function locations,
-            563 strings with 5566 characters,
-and the built_in function-call counts, 3078 in all, are:
-= -- 308
-> -- 24
+            573 strings with 5872 characters,
+and the built_in function-call counts, 3628 in all, are:
+= -- 360
+> -- 33
 < -- 0
-+ -- 21
-- -- 2
-* -- 78
-:= -- 372
-add.period$ -- 54
-call.type$ -- 18
-change.case$ -- 71
++ -- 26
+- -- 4
+* -- 96
+:= -- 447
+add.period$ -- 63
+call.type$ -- 21
+change.case$ -- 82
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 131
-empty$ -- 414
-format.name$ -- 2
-if$ -- 761
+cite$ -- 22
+duplicate$ -- 157
+empty$ -- 482
+format.name$ -- 4
+if$ -- 890
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 2
-newline$ -- 93
-num.names$ -- 2
-pop$ -- 161
+int.to.str$ -- 21
+missing$ -- 4
+newline$ -- 108
+num.names$ -- 4
+pop$ -- 188
 preamble$ -- 1
-purify$ -- 54
+purify$ -- 63
 quote$ -- 0
-skip$ -- 107
+skip$ -- 125
 stack$ -- 0
-substring$ -- 91
-swap$ -- 18
+substring$ -- 106
+swap$ -- 21
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 70
-warning$ -- 0
-while$ -- 2
-width$ -- 20
-write$ -- 165
+type$ -- 80
+warning$ -- 1
+while$ -- 4
+width$ -- 23
+write$ -- 192
+(There was 1 warning)

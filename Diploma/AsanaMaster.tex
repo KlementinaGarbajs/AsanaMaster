@@ -25,12 +25,12 @@
 %	DIPLOMA INFO
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\ttitle}{Mobilna aplikacija Asana Master}
-\newcommand{\ttitleEn}{Mobile app Asana Master}
+\newcommand{\ttitleEn}{Asana Master mobile application}
 \newcommand{\tsubject}{\ttitle}
 \newcommand{\tsubjectEn}{\ttitleEn}
 \newcommand{\tauthor}{Klementina Garbajs}
-\newcommand{\tkeywords}{Joga, Mobilna aplikacija}
-\newcommand{\tkeywordsEn}{Yoga, Mobile app}
+\newcommand{\tkeywords}{Joga, mobilna aplikacija, Expo, React Native}
+\newcommand{\tkeywordsEn}{Yoga, mobile app, Expo, React Native}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -201,7 +201,7 @@ Fakulteta za računalništvo in informatiko izdaja naslednjo nalogo:
 
 Tematika naloge:
 \end{tabbing}
-Besedilo teme diplomskega dela študent prepiše iz študijskega informacijskega sistema, kamor ga je vnesel mentor. V nekaj stavkih bo opisal, kaj pričakuje od kandidatovega diplomskega dela. Kaj so cilji, kakšne metode uporabiti, morda bo zapisal tudi ključno literaturo.
+V diplomskem delu zasnujte mobilno aplikacijo za osebno vadbo joge. Omogoča naj ogled in izvajanje položajev, spremljanje napredka zastavljenih ciljev z beleženjem posameznih aktivnosti in občutkov ter shranjevanjem zapiskov in posnetkov. Predlagano rešitev implementirajte v ogrodju Expo z React Native in v okviru izbranega mobilnega operacijskega sistema Android predstavite njeno uporabo ter podajte nadaljnje možnosti razvoja.
 \vspace{15mm}
 
 \vspace{2cm}
@@ -256,7 +256,7 @@ Na tem mestu zapišite, komu se zahvaljujete za izdelavo diplomske naloge. Pazit
 
 %\noindent\textbf{Povzetek:} 
 \noindent 
-Za diplomsko delo smo se odločili razviti mobilno aplikacijo Asana Master, ki bi v neki celoti zaobjela potovanje posameznika po njegovi poti Joge. Asane oz. položaji imajo v Jogi velik pomen, zato je pomembno, da je izvajanje le teh pravilno in v skladu z zmožnostmi posameznika. Prav z namenom učenja pravilne izvedbe položajev, spremljanjem napredka in sledenja lastnim občutkom praktikantov, smo razvili android mobilno aplikacijo, ki je primerna tako za začetne kot nadaljevalne praktikante, saj so Asane razdeljene na različne stopnje, prav tako pa si praktikant lahko sam določi svoje cilje, katerim lahko sledi, objavi sliko napredka in ustvarja zapiske oz. dnevnik občutkov.
+Asane oz. položaji imajo v jogi velik pomen, zato je pomembno, da je izvajanje le teh pravilno in v skladu z zmožnostmi posameznika. Prav z namenom učenja pravilne izvedbe položajev, spremljanjem napredka in sledenja lastnim občutkom, smo razvili mobilno aplikacijo za Android, ki je primerna tako za začetne kot nadaljevalne praktikante, saj so Asane razdeljene na različne stopnje, prav tako pa si praktikant lahko sam določi svoje cilje, katerim lahko sledi, objavi sliko napredka in ustvarja zapiske oz. dnevnik občutkov. Aplikacija je razvita z uporabo ogrodja React Native in odprtokodno platformo Expo.
 
 \bigskip
 
@@ -293,41 +293,35 @@ For dissertation, we decided to develop the Asana Master mobile application, whi
 \pagestyle{fancy}
 
 \chapter{Uvod}
-Joga je za nekoga lahko le oblika sprostitve, način napajanja z energijo, vadba za boljše počutje, za tiste, ki se z jogo ukvarjajo bolj intenzivno, pa je joga predvsem izjemno, do potankosti izdelano in premišljeno urjenje osebnosti, ki lahko človeku omogoči, da dozori. Joga je pot k sebi. Nima pa joga le pozitivnih učinkov na um, temveč seveda tudi na telo. 
-Z leti postane naše telo manj gibčno, utrujeno, bolj občutljivo in nagnjeno k poškodbam, kar pa lahko učinkovito odpravimo z vadbo joge, saj telo postane prožnejše, bolj gibljivo in močnejše. Joga so telesni položaji ali asane preko katerih začutimo in spoznavamo svoje telo, ga nadzorujemo in izboljšujemo, vendar praksa asan ne sme biti brezglava in pretirana, zato je poznavanje joga položajev in pravilne izvedbe le-teh zelo pomembno. 
-In kaj je asana? Sanskrtski izraz asana pomeni poza ali položaj telesa. Asana je psiho-somatska jogiska vaja za telo in um, saj z njo vplivamo tako na počutje telesa, kot tudi uma. Pozorni moramo biti tako na pravilen položaj telesa, kot tudi na naše dihanje. 
+Joga je za veliko ljudi le oblika sprostitve, način napajanja z energijo, vadba za boljše počutje. Za tiste, ki se z njo ukvarjajo bolj intenzivno, pa je predvsem izjemno, do potankosti izdelano in premišljeno urjenje osebnosti, ki lahko človeku omogoči, da dozori. Joga je pot k sebi. Nima pa joga le pozitivnih učinkov na um, temveč tudi na telo. 
+Z leti postane naše telo manj gibčno, utrujeno, bolj občutljivo in nagnjeno k poškodbam, kar pa lahko učinkovito odpravimo z vadbo joge, saj telo postane prožnejše, bolj gibljivo in močnejše. Joga so telesni položaji ali asane preko katerih začutimo in spoznavamo svoje telo, ga nadzorujemo in izboljšujemo, vendar praksa asan ne sme biti brezglava in pretirana, zato je poznavanje položajev in pravilne izvedbe le-teh zelo pomembno. 
+In kaj je asana? Sanskrtski izraz asana pomeni poza ali položaj telesa. Asana je psiho-somatska vaja za telo in um, saj z njo vplivamo tako na počutje telesa, kot tudi uma. Pozorni moramo biti tako na pravilen položaj telesa, kot tudi na naše dihanje. 
 
-Prav z namenom pravilnega izvajanja položajev in enostavnim spremljanjem napredka, smo se za diplomsko nalogo odločili razviti mobilno aplikacijo, ki bi bodočim joga učiteljem in tudi vsem ostalim praktikantom joge omogočala lažje in bolj zabavno obliko učenja, ter dodatno motivacijo za napredek. V Android mobilni aplikaciji Asana Master, ima uporabnik  možnost učenja o različnih položajih v jogi, možnost spremljanja programa za izboljšanje gibljivosti, inverzij, itd., prav tako pa ima možnost ob tem še spremljati svoj lasten napredek, si podati samooceno o lastnem napredku in izraziti svoje občutke preko zapiskov.
+Prav z namenom pravilnega izvajanja položajev in enostavnim spremljanjem napredka, smo se za diplomsko nalogo odločili razviti Android mobilno aplikacijo Asana Master, ki bi bodočim joga učiteljem in tudi vsem ostalim omogočala lažje in bolj zabavno obliko učenja, ter dodatno motivacijo za napredek. Uporabnik ima  možnost učenja o različnih položajih v jogi, možnost spremljanja programa za izboljšanje gibljivosti, inverzij, itd., prav tako pa ima možnost ob tem še spremljati svoj lasten napredek, si podati samooceno o lastnem napredku in izraziti svoje občutke preko zapiskov.
 
-Aplikacija je razvita z uporabo ogrodja React Native in odprtokodno platformo Expo. Za pisanje kode so bili uporabljeni jeziki, Java Script, TypeScript in SQL. Aplikacija teče na Expovem lokalnem strežniku, za povezavo do baze podatkov pa skrbi strežnik Express. Podatki so shranjeni v bazi MySql, ki teče preko lokalnega MySQL strežnika.
+Aplikacija je razvita z uporabo ogrodja React Native in odprtokodno platformo Expo. Za pisanje kode so bili uporabljeni jeziki, Java Script, TypeScript in SQL. Aplikacija teče na Expovem lokalnem strežniku, za povezavo do baze podatkov pa skrbi strežnik Express. Podatki so shranjeni v bazi, ki je nameščena na lokalnem strežniku MySQL.
 
 
 \chapter{Pregled področja}
 \label{ch0}
 
 \section{Joga}
-Joga združuje načine zavedanja, zaznavanja, doživljanja, soočanja, spoznavanja in delovanja, preko katerih je človek zmožen bivati neodvisno od lastne pogojenosti~\cite{oJogi}. V jogijskih spisih je ta zmožnost bivanja opisana kot stanje odrešitve, saj je preko nje človek odrešen trpljenja kateremu je podvržen kot človeško bitje bivajoče v tem svetu. Joga namreč izhaja iz spoznanja, da trpljenje ni neločljivo povezano s človeškim bitjem oziroma ni neizogibno vsebovano v svetu v katerem živi. Trpljenje je šele učinek nezmožnosti delovati na določen način. \\ 
-
-Beseda joga izhaja iz korena besede yuj, kar pomeni povezovati. Joga povezuje snovnost in duhovnost, telo in duha. Medsebojno sodelovanje telesa in duha povezuje v usklajeno, dopolnjujoče se gibanje. Če želi človek povezati svoje telo in duha na omenjeni način, se mora biti najprej zmožen razvezati oziroma oddaljiti od lastnih določujočih pogojev.\\ 
+"Joga združuje načine zavedanja, zaznavanja, doživljanja, soočanja, spoznavanja in delovanja, preko katerih je človek zmožen bivati neodvisno od lastne pogojenosti" ~\cite{oJogi}.
+Beseda joga izhaja iz korena besede yuj, ki pomeni združiti, povezati. Nakazuje na to, da se s tehnikami joge osvobodimo vezi in omogočimo združitev duše z absolutnim zavedanjem. Skozi čas se je razvila vrsta raznih praks in zvrsti joge. Nekatere izmed praks imajo s klasično jogo vedno manj skupnega, saj je po tradiciji učenje joge zahtevalo preučevanje tekstov ter pridobivanje znanja s pomočjo guruja, dan danes pa je več poudarka na izvajanju položajev in na splošnem fizičnem aspektu joge. Obstaja več različnih poti joge, ki se med seboj dopolnjujejo. Posameznik izbere pot, ki je najbližja njegovemu trenutnemu stanju zavedanja. Glavne poti so štiri: Karma joga (pot nesebičnega delovanja za dobro drugih in sveta), Jnana joga (pot modrosti in intelektualnega raziskovanja), Bhakti joga (pot predanosti in ljubezni do izbranega ideala) in Raja joga (kraljevska pot joge, ki jo sestavlja osem krakov, skozi katere se poda posameznik na poti do samorealizacije). Poleg naštetih poti obstajajo še nekatere druge, med njimi je tudi Hatha joga, katero najpogosteje srečamo na zahodu, saj daje povzornost predvsem izvajanju asan in pranajame.\\ 
 
 \section{Zgodovina joge}
-Kot posebna metoda preseganja človeške pogojenosti, je omenjena že v starodavnih vedskih spisih katerih nastanke zgodovinarji umeščajo na območje današnja Indije. Preden se je namreč razširila kot uveljavljena praksa so kot prevladujoči načini samo-preseganja služili predvsem obredni rituali žrtvovanja. Preko ritualov žrtvovanja, ki so vsebovali elemente smrti in ponovnega rojstva, so si ljudje poskušali zagotoviti moč nadzora nad lastno minljivostjo. 
+Zibelka joge naj bi bila indska civilizacija, nekje v letih od 2600 do 1900 pr. n. št., ko je joga kot posebna metoda preseganja človeške pogojenosti, omenjena v vedskih spisih, ki so nastali na območju današnje Indije ~\cite{prirocnik}. Preden se je joga uveljavila kot osebna praksa, so kot prevladujoči načini samo-preseganja služili obredni rituali žrtvovanja. Preko teh ritualov so si ljudje skušali zagotoviti moč nadzora nad lastno minljivostjo. S prihodom nomadskih plemen na območje indske civilizacije pa so obredni rituali začeli izgubljati svojo vlogo in začelo se je vedsko obdobje, ki je trajalo nekje od leta 1700 do 1100 pr. n. št. V tem času se je znanje o jogi prenašalo preko ustnega izročila, šele na začetku 2. tisočletja n. š. pa je bilo znanje zapisano v Vede. Vede veljajo za ene najstarejših besedil sveta in predstavljajo osrednje bistvo duhovnosti, hinduizma in temelje joge.
 
-V obdobju prvih upanišadskih spisov so obredni rituali začeli izgubljati svoj vlogo prevladujočega načina samo-preseganja. Zmožnost odrešitve je prenehala obstajati kot poseben privilegij pogojen s poznavanjem ritualnih praks, saj se je iz rituala, kot sredstva odrešitve, pozornost preusmerila na osebo in način njenega bivanja. Modreci ršiji - avtorji upanišadskih spisov - so namreč v svojih nazorih poudarjali, da je odrešitev zmožen doseči prav vsak z načinom svojega bivanja in delovanja.
+S koncem Vedskega obdobja teče začetek Asketskih praks, ki so izvor jogijskih praks. Asketi so popolnoma zavračili avtoriteto Ved in pomembnost ritualov. To odobje je trajalo od 6. do 3. stol. pr. n. št., za tem pa je sledilo obdobje Upanišad. Zmožnost odrešitve je v tem času prenehala obstajati kot privilegij pogoej s spoznavanjem ritualnih praks, saj se je pozornost preusmerila na osebi in njen način bivanja. Rishiji - modreci in avtorji upanišadskih spisov so začeli poudarjati, da je odrešitev zmožen doseči vsak z načinom svojega bivanja in delovanja.  To bivanje in delovanje so opisali v "samkhyah", iz katerih izhaja tudi teoretični princip joge. Ta temelji na predpostavki, da je človeško trpljenje posledia nepoznavanja sebe in vzrokov svojih dejanj. Zaradi neznanja se Sebstvo identificira s fizičnim telesom. Rešitev je možna šele, ko se Sebstvo osvobodi teh napačnih poistovetenj in materialnih vezi. S tem, ko je možen bivati onstran fizičnega in psihičnega izkustva, lahko spoznava in spreminja pogoje bivanja in vzroke svojega delovanja. 
 
-To bivanje in delovanje so opisali v filozofskih nazorih samkhye iz katerih izhaja tudi filozofija joge. Filozofija samkhye temelji na predpostavki, da je človeško trpljenje posledica nepoznavanja samega sebe in vzrokov svojih dejanj. Sprememba načina bivanja, ki bi onemogočila trpljenje je pogojena spoznanjem in udejanjanjem samega sebe. To spoznanje ni razumsko spoznanje, saj spoznavajoči ne ustvarja spoznanja, ki bi bilo ločeno od njega, ampak je spoznanje oziroma se (sam sebi) razodeva kot spoznanje.
+Filozofija joge je prevzela osnovne predpostavke "samkhye", le da odrešitve ne povezuje toliko s spoznanjem, kolikor z načinom delovanja. Človek je zmožen preseči lastno pogojenost in bivati neodvisno od materialnega sveta (za katerega se je predpostavljajo, da vsebuje tako fizično kot psihično realnost) prav z določenim načinom doživljanja in delovanja v materialnem svetu. Omenjen način doživljanja in delovanja je v filozofiji joge opisan kot jogijska praksa.
 
-Spoznanje samega sebe se razodeva na nivoju skupne zavesti. Tu se jaz zaveda samega sebe neodvisno od fizičnega in psihičnega doživljanja. S tem, ko je zmožen kot pričujoča zavest bivati onstran fizičnega in psihičnega izkustva, lahko spoznava in spreminja pogoje lastnega bivanja in vzroke svojega delovanja.
+Prvo sistematično zbirko jogijskih praks, ki so se izvajale na območju današnje Indije je izdelal Patanjali v svojih Yoga-sutrah, prvem samostojnem besedilu o jogi, v katerih avtor opredeli osmeročleno pot joge~\cite{ZgodovinaJoge}. Besedilo je eno glavnih jogijskih besedil na katerega se lahko opre novodoben praktikant joge. V njih Patanjali predstavi skupek navodil, ki jih mora praktikant izvajati istočasno in v celoti, če želi napredovati po poti joge. Vrednote etike in morale praktikant skrbno in počasi integrira v svoje življenje.
 
-Filozofija joge je prevzela osnovne predpostavke samkhye, le da odrešitve ne povezuje toliko s spoznanjem, kolikor z načinom delovanja. Človek je zmožen preseči lastno pogojenost in bivati neodvisno od materialnega sveta (za katerega se je predpostavljajo, da vsebuje tako fizično kot psihično realnost) prav z določenim načinom doživljanja in delovanja v materialnem svetu.
-
-Omenjen način doživljanja in delovanja je v filozofiji joge opisan kot jogijska praksa. \\ 
-Prvo sistematično zbirko jogijskih praks, ki so se izvajale na območju današnje Indije je izdelal Patanjali v svojih Yoga-sutrah (njegovo življenje zgodovinarji umeščajo v obdobje od 2. stol. pr. n. št - 5. st. n. št.~\cite{ZgodovinaJoge}). V njih izpostavlja, kako praksa joge ne omogoča zgolj duhovne neodvisnosti od pogojev materialnega sveta, ampak tudi zmožnost njihovega spreminjanja. S pomočjo prakse joge, ki vključuje tako fizično, psihično kot duhovno komponento, smo zmožni spreminjati svojo nezavedno pogojenost in iz nje izhajajočo zmožnost delovanja.
-
-Tradicionalno jogo sestavlja osem temeljnih vej (ash – osem, anga – veja), ki jih je prvič sistematično opisal Patanjali v svojih Yoga-sutrah:
+Tradicionalno jogo sestavlja osem temeljnih vej Raja joge (ash – osem, anga – veja) in obsegajo vse vidike telesnega, čustvenega in mentalnega življenja. Osem vej je sistematično opisanih v Yoga-sutrah:
 
 \begin{enumerate}
-	\item \textbf{Yama ali etične zmožnosti} 
+	\item \textbf{Yama ali etične zmožnosti}: navodila kako naj jogi deluje v odnosu do sveta s poudarkom na samodisciplino in vzdržnost.
 		\begin{itemize}
 			\item nenasilje (ahimsa) – nezmožnost škodovati sebi in drugim
 			\item resnicoljubnost (satya) – usklajenost govora z dejanji
@@ -336,21 +330,22 @@ Tradicionalno jogo sestavlja osem temeljnih vej (ash – osem, anga – veja), k
 			\item onemogočenje pohlepa (aparigraha) oziroma težnje po prilaščanju tega česar ne potrebujemo
 		\end{itemize}
 	
-	\item \textbf{Niyama ali discipline}
+	\item \textbf{Niyama ali discipline}: navodila kako naj jogi deluje do sebe
 		\begin{itemize}
-			\item čiščenje telesa in duha (sauca)
-			\item zmožnost izkusiti zadovoljstvo neodvisno od zunanjih dejavnikov (samtosa)
-			\item askeza (tapas)
+			\item čistost telesa in duha (sauca)
+			\item notranje zadovoljstvo ali zmožnost izkusiti zadovoljstvo neodvisno od zunanjih dejavnikov (santosha)
+			\item razvoj samodispline (tapas)
 			\item odsotnost besed (kastha mauna)
 			\item odsotnost gest in kretenj (akara mauna)
-			\item študij načinov samo-preseganja
+			\item samo-preučevanje (svadhyaya)
+			\item predanost božanskemu (ishvara pranidana)
 		\end{itemize}
 
 	\item \textbf{Asana ali telesni položaji}
-	\item \textbf{Pranayama ali dihalne tehnike}
+	\item \textbf{Pranayama ali tehnike nadzora energije}
 	\item \textbf{Pratyahara ali neodvisnost čutil od zaznavanja zunanjih dejavnikov}
-	\item \textbf{Dharana ali zbranost in zmožnost nadzorovanega usmerjanja pozornosti}
-	\item \textbf{Dhyana ali meditacija}
+	\item \textbf{Dharana ali zbranost in zmožnost nadzorovanega usmerjanja pozornosti na en predmet}
+	\item \textbf{Dhyana ali meditacija oz. podaljšana koncentracija}
 	\item \textbf{Samadhi ali stanje skupne zavesti}
 \end{enumerate}
 
@@ -358,11 +353,13 @@ Tradicionalno jogo sestavlja osem temeljnih vej (ash – osem, anga – veja), k
 \section{Asane in njihov pomen}
 Beseda asana pomeni stabilen in udoben položaj. Največkrat pa jo v slovenščini enačimo s terminom vaja ali položaj.
 
-V hatha jogi so asane ena osnovnih tehnik telesnega gibanja~\cite{Asane}. Asane dajejo telesu gibljivost in pravilno držo, ki omogoča optimalno energetsko in telesno stabilnost, usmerjene so v živčni sistem, predvsem v hrbtenico, ki je po jogijski anatomiji osnovna energetska os našega bivanja.
+Praktikant želi najti optimalno naravnavo znotraj asane glede na posebnosti in sposobnosti svojega telesa. Svojo zaznavo najprej osredotoči na občutenje položaja posameznega dela telesa, ko najde varen položaj, pa v njem išče udobje in stabilnost ter poskuša zmanjšati telesni napor, da bi lahko sčasoma njegova pozornost prešla od fizične zaznave.
 
-Začetniki v hatha jogi so se morali najprej naučiti, kako pravilno stati, sedeti in ležati. Zato se jogijska praksa tudi bistveno razlikuje od vseh drugih vadb, saj zahteva poleg natančnega, pravilnega izvajanja asan tudi pozornost, usmerjenost uma v to, kar počnemo. V asani smo, kot pove že sanskrtsko ime "as" oz. biti, tukaj in zdaj.
+V hatha jogi so asane ena osnovnih tehnik telesnega gibanja~\cite{Asane}. Asane dajejo telesu gibljivost in pravilno držo, ki je temelj pravilne izvedbe jogijskih položajev. Z njo med vadbo preprečimo morebitne mišične ali skeletne poškodbe in krepimo mišice stabilizatorje trupa. Za boljše življenje in učinkovito prakso brez bolečin, se moramo naučiti zavestnega nadzora telesne drže in zavedanja poravnave telesa v vsakem položaju.
 
-Asan je nešteto, nekateri viri navajajo številko od 70 do 80 tisoč. Poimenovali so jih po živalih, rastlinah, mineralih in  božanstvih. Bilo naj bi jih toliko, kolikor je oblik življenja na zemlji. Večina asan vsebuje hatha princip, ki pomeni princip moči. Zelo pomembno je, da asane izvajamo primerno svojim telesnim sposobnostim in pravilno, kar pomeni postopnost učenja in poslušanje svojega telesa. Nikoli ne izvajamo asan preko svojih zmožnosti, ampak le do praga bolečine. 
+Jogijska praksa od praktikantov ne zahteva le pravilnega izvajanja asan temveč tudi pozornost in usmerjenost uma v to, kar počnemo. V asani smo, kot pove že sanskrtsko ime "as" oz. biti, tukaj in zdaj.
+
+Nekateri viri navajajo, da naj bi bilo asan nekje med 70 in 80 tisoč. Poimenovali so jih po živalih, rastlinah, mineralih in  božanstvih. Večina asan vsebuje hatha princip, ki pomeni princip moči. Zelo pomembno je, da asane izvajamo primerno svojim telesnim sposobnostim in pravilno, kar pomeni postopnost učenja in poslušanje svojega telesa. Nikoli ne izvajamo asan preko svojih zmožnosti, ampak le do praga bolečine. 
 
 Izvedba asane naj bi bila stabilna in hkrati selektivno sproščena. Dihanje je sproščeno, enakomerno, pozornost je usmerjena v počutje telesa, opazujemo sporočila telesa, umirimo um in zadržujemo položaj toliko časa, dokler čutimo asano v vseh navedenih lastnostih. 
 
@@ -372,26 +369,24 @@ Z rednim in discipliniranim izvajanjem asan se prožnost telesa izredno poveča.
 Bistvo izvajanja asane ni nujno v popolni izvedbi. Bistvo asane je v popolnem medsebojnem zavedanju duše in telesa.
 
 \section{Sorodne aplikacije}
-Pri pregledu sorodnih aplikacij smo prišli do ugotovitev, da podobne slovenske aplikacije na trgu ni, saj je slovenski trg žal premajhen.
+Pri pregledu sorodnih aplikacij smo ugotovili, da na trgu obstaja nekaj rešitev za izvajanje joge v angleškem jeziku in nekaj slovenskih prevodov.
 
-Ena izmed boljših aplikacij, ki jo trenutno uporabljamo tudi sami, je aplikacija Track Yoga, kjer ima uporabnik možnost pregleda nad različnimi asanami, prikazanimi tudi z videoposnetki, prav tako pa ima na voljo različno dolge posnetke vodene prakse oz. možnost sledenja programu, npr. programu za izboljšanje fleksibilnosti, zmanjševanju stresa, meditacija itd,... V aplikaciji ima vsak uporabnik tudi svoj profil, kjer spremlja koliko programov in vodenih vadb je že opravil, itd.~\cite{trackyoga}.
+Ena izmed boljših aplikacij, ki jo trenutno uporabljamo, je aplikacija Track Yoga ~\cite{trackyoga}, kjer ima uporabnik možnost pregleda nad različnimi asanami, prikazanimi tudi z videoposnetki, prav tako pa ima na voljo različno dolge posnetke vodene prakse oz. možnost sledenja programu, npr. programu za izboljšanje fleksibilnosti, zmanjševanju stresa, meditacija in drugo. V aplikaciji ima vsak uporabnik tudi svoj profil, kjer spremlja koliko programov in vodenih vadb je že opravil.
 
-Aplikacija je torej na nek način podobna naši, vendar pa nima možnosti delanja zapiskov in ne omogoča spremljanja lastnega napredka, kot je objavljanje slik, podajanje samoocene in interaktivno sledenje programu, kar uporabnika še bolj motivira.
+Ena izmed aplikacij, ki so osredotočene bolj na učenje posameznika o asanah, pa je aplikacija Yoga 108~\cite{yoga108}. V aplikaciji uporabniku ponujajo pregled nad različnimi asanami, njihovimi izgovorjavami in angleškimi prevodi, vendar pa ne ponujajo podrobnega opisa asane, njenih prednosti in prikaza pravilne izvedbe z videoposnetkom.
 
-Ena izmed aplikacij, ki so osredotočene bolj na učenje posameznika o asanah, pa je aplikacija Yoga 108~\cite{yoga108}. V aplikaciji uporabniku ponujajo pregled nad različnimi asanami, njihovimi izgovorjavami in angleškimi prevodi, vendar pa ne ponujajo podrobnega opisa asane, njenih prednosti in prikaza pravilne izvedbe z videoposnetkom. 
-Prav tako, kot že prej omenjena aplikacija, tudi ta ne omogoča delanja zapiskov in spremljanja napredka.
-
-Obstaja seveda tudi veliko drugih aplikacij, ki pa so vse bolj ali manj osredotočene le na to, da uporabnika vodijo pri vadbi joge in ponujajo različne programe z videoposnetki, katerim potem posameznik sledi in prakticira jogo, a lahko uporabnik te aplikacije le pasivno uporablja.
-
+Obstaja seveda tudi veliko drugih aplikacij, ki pa so vse bolj ali manj osredotočene le na to, da uporabnika vodijo pri vadbi joge in ponujajo različne programe z videoposnetki, katerim potem posameznik sledi in prakticira jogo, a lahko uporabnik te aplikacije le pasivno uporablja. Zgoraj naštete aplikacije nimajo možnosti delanja zapiskov in ne omogočajo spremljanja lastnega napredka, kot je objavljanje slik, podajanje samoocene in interaktivno sledenje programu, kar uporabnika še bolj motivira.
 
 \chapter{Načrtovanje aplikacije}
 \label{ch1}
 
-\section{Ideja in cilji aplijacije}
-Razvoj mobilnih aplikacij ne bi smel biti več tako osredotočen le na eno glavno funkcionalnost, saj počasi prihaja čas, ko smo ljudje vedno bolj zasičeni z različnimi podatki, aplikacijami in načini shranjevanja, zato se bomo vedno bolj nagibali k aplikacijam, ki omogočajo več večjih funkcionalnosti v enem. Z namenom, da ima uporabnik, vse kar potrebuje za sledenje lastnemu napredku, na enem mestu, smo začeli načrtovati mobilno aplikacijo, ki bi to tudi omogočala.
+Razvoj mobilnih aplikacij ne bi smel biti več tako osredotočen le na eno glavno funkcionalnost, saj počasi prihaja čas, ko smo ljudje vedno bolj zasičeni z različnimi podatki, aplikacijami in načini shranjevanja. Vedno bolj se bomo nagibali k aplikacijam, ki omogočajo večje število funkcionalnosti v enem. Z namenom, da ima uporabnik, vse kar potrebuje za sledenje lastnemu napredku, na enem mestu, smo se odločili za izdelavo mobilne aplikacije, ki bi to tudi omogočala.
 
 \section{Struktura mobilne aplikacije}
-Načrtovanje same mobilne aplikacije se je začelo z izdelavo načrta strukture mobilne aplikacije,  katerega osnovni namen je začrtati osnovno postavitev vsebine (struktura, elementi na strani), še preden sledi oblikovanje, (Slika~\ref{wireframe}). Struktura ne vsebuje podrobnosti oblikovanja – barv, tipografij, slik. Lahko se skicira zelo na hitro na listu papirja, ali pa se pripravi v digitalni obliki s pomočjo različnih programov oz. aplikacij. Za izdelavo orisa strukture je bila uporabljena spletna platforma WireframePro, ki je vodilno orodje za oblikovanje načrtov uporabniškega vmesnika za spletna mesta in mobilne aplikacije. Vključuje že pripravljene komponente uporabniškega vmesnika za iOS, Android, splet, Bootstrap, WatchOS,... in ima tudi obsežno knjižnico predlog, ki uporabnikom olajša izdelavo načrtov.\\
+Načrtovanje mobilne aplikacije se je začelo z izdelavo načrta strukture mobilne aplikacije,  katerega osnovni namen je začrtati osnovno postavitev vsebine (struktura, elementi na strani), še preden sledi oblikovanje, (Slika~\ref{wireframe}). V načrtu smo zasnovali zaslon za Prijavo in Registracijo, strukturo glavnega menija ter različnih podmenijev, ki se odprejo s klikom na element v glavnem meniju. Glavni strukturi podmenijev sta na sliki prikazani s puščicami iz tretje skice (desno in navzdol). Skice desno predstavljajo strukturo podmenija Asanas in Goals, skice spodaj pa strukturo podmenija Notes.
+
+Struktura ne vsebuje podrobnosti oblikovanja – barv, tipografij, slik. Lahko se skicira zelo na hitro na listu papirja, ali pa se pripravi v digitalni obliki s pomočjo različnih programov oz. aplikacij. Za izdelavo orisa strukture je bila uporabljena spletna platforma WireframePro~\cite{WireframePro}, ki je vodilno orodje za oblikovanje načrtov uporabniškega vmesnika za spletna mesta in mobilne aplikacije. Vključuje že pripravljene komponente uporabniškega vmesnika za iOS, Android, splet, Bootstrap, WatchOS,... in ima tudi obsežno knjižnico predlog, ki uporabnikom olajša izdelavo načrtov.\\
+
 
 \begin{figure}[htbp]
 \begin{center}
@@ -403,7 +398,7 @@ Načrtovanje same mobilne aplikacije se je začelo z izdelavo načrta strukture 
 
 
 \section{Arhitektura aplikacije}
-Arhitektura aplikacije je sestavljena iz treh glavnih nivojev: predstavitvenega nivoja oz. Android mobilne aplikacije, logičnega nivoja oz. REST API-ja in podatkovnega nivoja oz. podatkovne baze, (Slika~\ref{arh}). V predstavitvenem nivoju se nahaja grafični vmesnik, ki zahteva podatke iz logičnega nivoja. V logičnem nivoju se nahaja zaledni sistem, ki procesira zahtevke iz predstavitvenega nivoja in komunicira s podatkovno bazo na podatkovnem nivoju. Prednosti take arhitekture sta bolj enostavno enostavno ponovno uporabljanje dela aplikacije in integriteta podatkov. Slabost pa je povečana kompleksnost dela.
+Arhitektura aplikacije je sestavljena iz treh glavnih nivojev: predstavitvenega nivoja, logičnega nivoja in podatkovnega nivoja, (Slika~\ref{arh}). V predstavitvenem nivoju se nahaja grafični vmesnik oz. Android mobilna aplikacija, ki zahteva podatke iz logičnega nivoja. V logičnem nivoju se nahaja zaledni sistem (REST API), ki procesira zahtevke iz predstavitvenega nivoja in komunicira s podatkovno bazo na podatkovnem nivoju. Prednosti take arhitekture sta bolj enostavno enostavno ponovno uporabljanje dela aplikacije in integriteta podatkov~\cite{arhitektura}. Slabost pa je povečana kompleksnost dela.\\
 
 \begin{figure}[htbp]
 \begin{center}
@@ -413,12 +408,11 @@ Arhitektura aplikacije je sestavljena iz treh glavnih nivojev: predstavitvenega 
 \label{arh}
 \end{figure}
 
-
 \section{Funkcionalnosti aplikacije}
-Glavne funkcionalnosti, ki jih ima uporabnik na voljo z aplikacijo AsanaMaster razdeljene po posameznih pod straneh v aplikaciji:
+Glavne funkcionalnosti, ki jih ima uporabnik na voljo v aplikaciji Asana Master, so razdeljene in opisane po posameznih podmenijih v aplikaciji:
 
  \begin{itemize}
- \item \textbf{Prijava}:
+ \item \textbf{Prijava in registracija}:
  \begin{itemize}
    \item Registracija: kreiranje novega uporabniškega računa
   \item Prijava: prijava v mobilno aplikacijo z uporabniškim računom
@@ -427,17 +421,21 @@ Glavne funkcionalnosti, ki jih ima uporabnik na voljo z aplikacijo AsanaMaster r
  \item \textbf{Asane}:
   \begin{itemize}
   \item Ogled položajev/asan: ogled položajev oziroma asan
-  \item Ogled videoposnetkov: ogled videoposnetkov o asanah in programa v mobilni aplikaciji  
+  \item Ogled videoposnetkov: ogled videoposnetkov položajec v mobilni aplikaciji  
    \end{itemize}
-
+    Podatki o asanah in jogi so vzeti in prepisani v podatkovno bazo, iz knjige The Top 100 Best Yoga Poses Relieve Stress, Increase Flexibility, and Gain Strength, avtorice Susan Hollister~\cite{yoga}. Vir nekaterih slik je tudi zgoraj omenjena knjiga, nekatere pa so bile pridobljene preko spletne strani Verywellfit~\cite{verywellfit}. Vir videoposnetkov je portal Youtube. Posnetek se predvaja neposredno v sami aplikaciji, brez dodatnega odpiranja videoposnetka izven mobilne aplikacije. Za to funkcionalnost je uporabljena React Native knjižnica react-native-youtube-iframe. Knjižnica omogoča predvajanje posnetka skozi celoten ekran mobilne naprave, s klikom na naslov posnetka pa uporabnika preusmeri na vir videoposnetka na Youtubu, kjer si ga lahko ogleda izven aplikacije.
    
 \item \textbf{Goals}:
   \begin{itemize}
   \item Ocenjevanje napredka: ocenjevanje lastnega napredka uporabnika
   \item Nalaganje slik: nalaganje slik napredka uporabnika
   \item Urejanje slik: urejanje slik uporabnika
-  \item Ogled slik: ogled slik napredka uporabnika aplikaciji
+  \item Ogled slik: ogled slik napredka uporabnika 
+  \item Ogled videoposnetkov programa v mobilni aplikaciji
 \end{itemize}
+Za nalaganje slik je uporabljena Expova knjižnica expo-image-picker, ki omogoča dostop do uporabniškega vmesnika sistema za izbiranje slik in videoposnetkov iz knjižnjice telefona ali fotografiranje s fotoaparatom. Knjižnica omogoča tudi obračanje, obrezovanje in zrcaljenje slike. 
+Za ogled naloženih slik pa je uporabljena React Native knižnjica react-native-image-zoom-viewer, ki omogoča jasen in enostaven pregled slik, z dodatno možnostjo povečave slike.
+Za podajanje ocene napredka je uporabljena knjižnica react-native-ratings, ki omogoča enostavno podajanje ocen v obliki zvezdic.
    
 \item \textbf{Notes}:
   \begin{itemize}
@@ -446,68 +444,34 @@ Glavne funkcionalnosti, ki jih ima uporabnik na voljo z aplikacijo AsanaMaster r
   \item Brisanje zapiska: uporabnik lahko željeni zapisek izbriše
   \item Ogled zapiskov: uporabnik si lahko ogleda ustvarjene zapiske
 \end{itemize}
+Zapiski so razdeljeni v kategorije ciljev, ter razvrščeni po dnevih. Zapiski, ki so dodani preko gumba za dodajanje zapiskov v podmeniju Notes, se shranijo pod kategorijo Random, saj niso vezani na nobenega izmed ciljev.
 
 \end{itemize}
-
-\section{Zbiranje podatkov}
-Podatki o jogi in položajih so vzeti in prepisani v podatkovno bazo, iz knjige The Top 100 Best Yoga Poses Relieve Stress, Increase Flexibility, and Gain Strength, avtorice Susan Hollister~\cite{yoga}. Vir nekaterih slik je tudi zgoraj omenjena knjiga, nekatere pa so bile pridobljene preko spletne strani Verywellfit~\cite{verywellfit}. Videoposnetki, ki uporabnikom omogočajo učenje in izboljšanje položajev ter napredovanje, so bili poiskani na platformi, za deljenje videoposnetkov, Youtube.
-
 
 \chapter{Razvoj mobilne aplikacije}
-
-\section{Podatkovna baza}
-Podatkovna baza je zbirka povezanih podatkov. Prednosti uporabe podatkovne baze so možnost shranjevanja večjih količin podatkov, hitrejši prenos podatkov in hitrejša obdelava podatkov, (Slika~\ref{baza}).
-Pri podatkovnem modeliranju se izvaja abstrakcija in poenostavitev nekega segmenta realnega sveta. Na osnovi modela se potem izdela podatkovna baza. Podatkovni model je povezana zbirka konceptov namenjenih opisovanju podatkov in opravljanju s podatki, ki opredeljuje sintakso in semantiko stavkov formalnega jezika. Za predstavljeno podatkovno bazo je bil uporabljen entitetno relacijski podatkovni model, ki je sestavljen iz entitet, atributov in relacij. Entiteta je v podatkovni bazi predstavljena z množico atributov. Atribut je podatkovni element, s katerim opišemo lastnost entitete. Za definiranje povezav med dvema ali več entitetami so uporabljene relacije, ki lahko pripradajo različnim entitetnim množicam. Spodaj je predstavljen fizični model s tabelami in njihovimi relacijami. Podatkovna baza je sestavljena iz petih tabel: \textit{Users}, \textit{Asanas}, \textit{Goals}, \textit{Images}, \textit{Notes}. \\
-
-\item \textbf{Entitete in njihovi atributi}:
-  \begin{itemize}
-  \item Users: id (primarni ključ), name, email, password, first{\_}login
-  \item Asanas: id (primarni ključ), name, description, image, type, name{\_}sanskrit, level, how{\_}to, video{\_}id
-  \item Goals: id (primarni ključ), user{\_}id (tuji ključ), name (tuji ključ), rating
-  \item Images: id (primarni ključ), url, user{\_}id (tuji ključ), goal (tuji ključ)
-  \item Notes: id (primarni ključ), user{\_}id (tuji ključ), sort (tuji ključ), name, description, updated{\_}at, created{\_}at, day{\_}name
-\end{itemize}
-
-V tabeli Images so slike shranjene lokalno na disku, v bazi pa se nahaja le referenca na datoteko (atribut url). 
-
-\begin{figure}[htbp]
-\begin{center}
-\includegraphics[scale=0.4]{diagram.png}
-\end{center}
-\caption{Fizični model podatkovne baze.}
-\label{baza}
-\end{figure}
-
 \section{Uporabljena tehnologija in orodja}
 
 Mobilna aplikacija je razvita z uporabo ogrodja React Native in ogrodja Expo, kar omogoča izdelavo mobilnih aplikacij tako za operacijski sistem Android kot iOS. Za pisanje kode so uporabljeni jeziki TypeScript, JavaScript in SQL, koda pa je napisana v programu Visual Studio Code. Za shranjevanje podatkov, je uporabljena relacijska podatkovna baza MySql, ki je povezana z lokalnim strežnikom. Podatki so shranjeni v programu TablePlus, ki omogoča enostaven vnos ter urejanje podatkov. Za prikaz podatkov iz podatkovne baze v uporabniški vmesnik skrbi Expressov API server.
 Testiranje aplikacije poteka preko Expovega orodja za testiranje Expo Developer Tools. Vse spremembe v kodi, ter zgodovina spremenjenih verzij aplikacije so shranjene v programu Git.
-
-\section{npm}
-Npm je upravitelj paketov za platformo Node JavaScript. Namešča module, tako da jih vozlišče lahko najde, in inteligentno obvladuje konflikte med odvisnostmi~\cite{npm}.  Izjemno prilagodljiv je za podporo najrazličnejšim primerom uporabe. Najpogosteje se uporablja za objavljanje, odkrivanje, nameščanje in razvoj vozliščnih programov.
 
 \section{Ogrodja}
  \begin{itemize}
   \item \textbf{React Native}: React Native je JavaScript ogrodje za pisanje izvornih mobilnih aplikacij za operacijska sistema iOS in Android. Temelji na Reactu, Facebookovi JavaScript knjižnici za gradnjo uporabniških vmesnikov, a namesto na brskalnik cilja na mobilne platforme~\cite{RN}. 
 React Native, je Facebook prvič izdal kot odprtokodni projekt leta 2015. V samo nekaj letih je postal ena najboljših rešitev za mobilni razvoj. React Native razvoj se uporablja za pogon nekaterih vodilnih svetovnih mobilnih aplikacij, vključno z Instagramom, Facebookom in Skypeom.
   
-  \item \textbf{Expo}: Expo je ogrodje, ki se uporablja za izdelavo React Native aplikacij. Gre za nabor orodij in storitev, zgrajenih okoli React Native-a in izvornih platform, ki nam pomagajo razvijati, graditi, uvajati in hitro iterirati v iOS, Android in spletne aplikacije iz iste kodne baze JavaScript / TypeScript~\cite{EXPO}. Z uporabo Expo-ta ne potrebujemo znanja o izvorni iOS ali Android kodi, kar pomeni, da tudi uporaba orodij kot sta Xcode ali Android Studio, ni potrebna. Njegov cilj je omogočiti hiter razvoj, ne da bi morali veliko časa porabiti za vzpostavljanje razvojnega okolja. Expo ne zahteva nastavitve IDE-jev, specifičnih za platforme, kot je to v primeru React Native CLI, in ke zato celoten postopek namestitve veliko bolj enostaven. Expo prav tako ponuja okolje za testiranje Expo Developer Tools, ki omogoča enostavno testiranje aplikacij, tako na spletnem vmesniku, mobilnem simulatorju, kot tudi na mobilni napravi, (Slika~\ref{reactDevTools}).
-  
-\begin{figure}[ht]
-\centering
-  \begin{minipage}[b]{1\textwidth}
-    \includegraphics[width=\textwidth]{expodeveloper.png}\centering
-  \end{minipage}
-    \caption{Expo Developer Tools testno okolje na spletnem vmesniku.}
-    \label{expo}
-\end{figure}
+  \item \textbf{Expo}: Expo je ogrodje, ki se uporablja za izdelavo React Native aplikacij. Gre za nabor orodij in storitev, zgrajenih okoli React Native-a in izvornih platform, ki nam pomagajo razvijati, graditi, uvajati in hitro iterirati v iOS, Android in spletne aplikacije iz iste kodne baze JavaScript / TypeScript~\cite{EXPO}. Z uporabo Expo-ta ne potrebujemo znanja o izvorni iOS ali Android kodi, kar pomeni, da tudi uporaba orodij kot sta Xcode ali Android Studio, ni potrebna. Njegov cilj je omogočiti hiter razvoj, ne da bi morali veliko časa porabiti za vzpostavljanje razvojnega okolja. Expo ne zahteva nastavitve IDE-jev, specifičnih za platforme, kot je to v primeru React Native CLI, in ke zato celoten postopek namestitve veliko bolj enostaven. Expo prav tako ponuja okolje za testiranje Expo Developer Tools, ki omogoča enostavno testiranje aplikacij, tako na spletnem vmesniku, mobilnem simulatorju, kot tudi na mobilni napravi.
   
 \item \textbf{Express}: Express je minimalno in prilagodljivo ogrodje spletnih aplikacij Node.js, ki ponuja robusten nabor funkcij tako za spletne, kot mobilne aplikacije~\cite{Express}. Z neštetimi metodami pripomočkov HTTP in vmesno programsko opremo, ki jih imamo na voljo, je omogočeno enostavno in hitro ustvarjanje robustnega API -ja.
 \end{itemize}
 
+\section{Orodja}
+ \begin{itemize}
+  \item \textbf{npm}: Npm je privzeti upravitelj paketov za izvajalno okolje JavaScript Node.js Namešča module, tako da jih vozlišče lahko najde, in inteligentno obvladuje konflikte med odvisnostmi~\cite{npm}. Sestavljen je iz odjemalca ukazne vrstice, imenovanega tudi npm in spletne baze javnih in plačljivih zasebnih paketov, imenovane register npm. Izjemno prilagodljiv je za podporo najrazličnejšim primerom uporabe. Najpogosteje se uporablja za objavljanje, odkrivanje, nameščanje in razvoj vozliščnih programov.
+  \end{itemize}
+
 \section{Programski jeziki}
  \begin{itemize}
-  \item \textbf{Java Script}: JavaScript (krajše tudi JS) je skriptni programski jezik, katerega je razvil Netscape, da bi bil v pomoč programerjem pri izdelavi spletnih strani. Večina tistih, ki pozna vsaj nekaj osnov programiranja, ko zasliši ime JavaScript, hitro poveže s programskim jezikom Java, s katerim imata kar nekaj skupnih lastnosti~\cite{JS}. Na splošno velja, da so skriptni jeziki enostavnejši in hitrejši v primerjavi s kodo v bolj kompleksnih programskih jezikih kot C in C++. Pri skriptnih jezikih v splošnem obdelava kode traja dalje kot pri zbirnih jezikih, vendar pa so veliko bolj uporabni pri krajših programih zaradi njihove enostavnosti. Uporabnost JavaScript-a pride najbolj do izraza pri razvoju dinamičnih spletnih strani in dodajanju interaktivnosti na želeno stran.
+  \item \textbf{Java Script}: JavaScript (krajše tudi JS) je skriptni programski jezik, katerega je razvil Netscape, da bi bil v pomoč programerjem pri izdelavi spletnih strani. Večina tistih, ki pozna vsaj nekaj osnov programiranja, ko zasliši ime JavaScript, hitro poveže s programskim jezikom Java, s katerim imata kar nekaj skupnih lastnosti~\cite{JS}. Pri skriptnih jezikih v splošnem obdelava kode traja dalje kot pri zbirnih jezikih, vendar pa so veliko bolj uporabni pri krajših programih zaradi njihove enostavnosti. Uporabnost JavaScript-a pride najbolj do izraza pri razvoju dinamičnih spletnih strani in dodajanju interaktivnosti na želeno stran.
   
   \item \textbf{TypeScript}: TypeScript je odprtokodni jezik, ki temelji na JavaScriptu, enem izmed najbolj uporabljenih jezikov na svetu, z dodajanjem statičnih definicij tipa~\cite{TS}. Tipi nam ponujajo način za opis oblike predmeta, zagotavljajo boljšo dokumentacijo in omogočajo TypeScriptu, da preveri, ali koda deluje pravilno.
 Vsa veljavna koda napisana v jeziku JavaScript je tudi koda TypeScript. TypeScript se prek prevajalnika TypeScript ali Babel pretvori v JavaScript. JavaScript koda je čista in preprosta in se izvaja kjerkoli, kjer deluje JavaScript: v brskalniku, na Node.JS ali v aplikacijah.
@@ -526,9 +490,31 @@ Vsa veljavna koda napisana v jeziku JavaScript je tudi koda TypeScript. TypeScri
 \item \textbf{Git}: Git je brezplačen in odprtokodni porazdeljeni sistem za nadzor različic, zasnovan za hitro in učinkovito obdelavo vsega, od majhnih do zelo velikih projektov~\cite{Git}.
 \end{itemize}
 
+\section{Podatkovni nivo}
+Podatkovna baza je zbirka povezanih podatkov. Prednosti uporabe podatkovne baze so možnost shranjevanja večjih količin podatkov, hitrejši prenos podatkov in hitrejša obdelava podatkov, (Slika~\ref{baza}).
+Pri podatkovnem modeliranju se izvaja abstrakcija in poenostavitev nekega segmenta realnega sveta. Na osnovi modela se potem izdela podatkovna baza. Podatkovni model je povezana zbirka konceptov namenjenih opisovanju podatkov in opravljanju s podatki, ki opredeljuje sintakso in semantiko stavkov formalnega jezika. Za predstavljeno podatkovno bazo je bil uporabljen entitetno relacijski podatkovni model, ki je sestavljen iz entitet, atributov in relacij. Entiteta je v podatkovni bazi predstavljena z množico atributov. Atribut je podatkovni element, s katerim opišemo lastnost entitete. Za definiranje povezav med dvema ali več entitetami so uporabljene relacije, ki lahko pripradajo različnim entitetnim množicam. Spodaj je predstavljen fizični model s tabelami in njihovimi relacijami. Podatkovna baza je sestavljena iz petih tabel: \textit{Users}, \textit{Asanas}, \textit{Goals}, \textit{Images}, \textit{Notes}.\\
 
-\section{REST API}
-Za razvoj REST APIja je bilo uporabljeno ogrodje Express. 
+\textbf{Entitete in njihovi atributi}
+  \begin{itemize}
+  \item Users: id (primarni ključ), name, email, password, first{\_}login.
+  \item Asanas: id (primarni ključ), name, description, image, type, name{\_}sanskrit, level, how{\_}to, video{\_}id.\\
+  V tabeli Asanas imamo pri vsakem položaju shranjeno njegovo stopnjo težavnosti (atribut level), kar nam omogoča enostavno sortiranje v omenjene težavnosti.
+  \item Goals: id (primarni ključ), user{\_}id (tuji ključ), name (tuji ključ), rating.
+  \item Images: id (primarni ključ), url, user{\_}id (tuji ključ), goal (tuji ključ).
+  V tabeli Images so slike shranjene lokalno na disku, v bazi pa se nahaja le referenca na datoteko (atribut url). 
+  \item Notes: id (primarni ključ), user{\_}id (tuji ključ), sort (tuji ključ), name, description, updated{\_}at, created{\_}at, day{\_}name.
+\end{itemize}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[scale=0.38]{diagram.png}
+\end{center}
+\caption{Fizični model podatkovne baze.}
+\label{baza}
+\end{figure}
+
+\section{Logični nivo}
+Logični nivo predstavlja REST API. Za njegov ravoj je bilo uporabljeno ogrodje Express.
 
 \begin{figure}[htbp]
 \begin{center}
@@ -546,13 +532,12 @@ API je v aplikaciji posrednik med podatkovno bazo in uporabniki aplikacije. Spre
   \item \textbf{DELETE}: za brisanje vnosov v podatkovni bazi
 \end{itemize}
 
-\section{Mobilna aplikacija}
-Za razvoj mobilne aplikacije je bilo uporabljeno ogrodje Expo z React Native-om. Aplikacija s pošiljanjem zahtevkov HTTP komunicira z APIjem in od njega prejema odgovore, nato pa ustrezno posodobi uporabniški vmesnik.\\
-
-Izdelava same mobilne aplikacije se je začela z izdelavo prototipa uporabniškega vmesnika mobilne aplikacije, saj je izdelava dobrega uporabniškega vmesnika pomemben sestavni del oblikovanja uporabniške izkušnje. Pri oblikovanju mobilne aplikacije se je pomembno usmeriti tako na estetiko kot seveda, tudi na funkcionalnost aplikacije. Vmesnik je narejen na bolj pregleden način, da je tako bolj enostaven za uporabo. Prav s tem namenom so v aplikacijo dodane tudi številne slike in videoposnetki.
+\section{Uporabniški nivo}
+Uporabniški nivo predstavlja Android mobilna aplikacija. Za njen razvoj je bilo uporabljeno ogrodje Expo z React Native-om. Aplikacija s pošiljanjem zahtevkov HTTP komunicira z APIjem in od njega prejema odgovore, nato pa ustrezno posodobi uporabniški vmesnik.
+Izdelava same mobilne aplikacije se je začela z izdelavo prototipa uporabniškega vmesnika mobilne aplikacije, saj je izdelava dobrega uporabniškega vmesnika pomemben sestavni del oblikovanja uporabniške izkušnje. Vmesnik je narejen na bolj pregleden način, da je tako bolj enostaven za uporabo. Prav s tem namenom so v aplikacijo dodane tudi številne slike in videoposnetki.
 Prototip je bil izdelan s pomočjo spletne platforme za izdelavo prototipov Proto.io, (Slika~\ref{protoio}). Izdelani so bili nekateri ključni zasloni aplikacije, glavne funkcionalnosti aplikacije, povezave med njimi, oblikovano glavno ozadje aplikacije na začetnem prijavnem zaslonu ter zaslonu za registracijo in oblikovan glavni meni aplikacije.
 
-\begin{figure}[!htbp]
+\begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=.23]{protoio.png}
 \end{center}
@@ -567,107 +552,186 @@ Po začetnem načrtovanju prototipa aplikacije je sledilo še zbiranje podatkov 
 
 \chapter{Predstavitev aplikacije}
 \label{ch3}
-\section{Glavne funkcionalnosti in delovanje aplikacije}
-Ob zagonu mobilne aplikacije je uporabnik najprej preusmerjen na stran za prijavo, (Slika~\ref{prijava}). Uporabnik, ki že ima uporabniško ime in geslo, se lahko s klikom na Sign in enostavno prijavi v aplikacijo z že obstoječimi podatki. V kolikor uporabnik še ni registriran, mora najprej opraviti registracijo, s klikom na gumb Sign up, kar ga preusmeri na stran za registracijo. Za uspešno registracijo mora vnesti svoje ime, svoj elektronski naslov in geslo, ki ga bo uporabljal za prijavo. Ob registraciji uporabnika se v podatkovno bazo shrani nov uporabnik z vnesenimi podatki in sproži se prijava uporabnika. V kolikor je uporabnik že registriran, a je pozabil svoje geslo, si lahko preko klika na gumb Forgot password?, na svoj elektronski naslov, pošlje povezavo za ponastavitev gesla. Po uspešni prijavi preko enega izmed zgoraj omenjenih načinov je uporabnik preusmerjen v glavni meni aplikacije. Ob prvi prijavi, uporabnika ob vstopu v aplikacijo pozdravi kratek uvod v aplikacijo, kjer se seznani s pojmom joga in s kratkim opisom bistva aplikacije. Po začetnem uvodu v aplikacijo, je uporabnik nato preusmerjen v glavni meni, ki je razdeljen na 3 večje podmenije: Asanas, Goals in Notes.\\
-
-\begin{figure}[!tbp]
+\section{Funkcionalnosti in delovanje aplikacije}
+Za zagon aplikacije je potrebno najprej vzpostaviti povezavo s strežnikom z ukazom "npm run server", nato pa se z ukazom "npm web build" zažene testno okolje Expo Developer Tools. V testnem okolju se nahaja možnost testiranja mobilne aplikacije na Android emulatorju, lahko pa se aplikacija testira preko mobilne naprave s skeniranjem QR kode, (Slika~\ref{reactDevTools}).
+  
+\begin{figure}[ht]
 \centering
-  \begin{minipage}[b]{0.35\textwidth}
-    \includegraphics[width=\textwidth]{prijava.jpg}\centering
-    \label{prijava}
+  \begin{minipage}[b]{1\textwidth}
+    \includegraphics[width=\textwidth]{expodeveloper.png}\centering
   \end{minipage}
-  \begin{minipage}[b]{0.35\textwidth}
-    \includegraphics[width=\textwidth]{registracija.jpg}\centering
-  \end{minipage}
-    \caption{Obrazec za prijavo (levo) in registracijo (desno)}
-
-  \begin{minipage}[b]{0.35\textwidth}
-    \includegraphics[width=\textwidth]{pozdrav1.jpg}\centering
-    \label{pozdrav}
-  \end{minipage}
-  \begin{minipage}[b]{0.35\textwidth}
-    \includegraphics[width=\textwidth]{pozdrav2.jpg}\centering
-  \end{minipage}
-    \caption{Prva in druga stran začetnega pozdrava uporabnika, ob prvi prijavi v aplikacijo.}
+    \caption{Expo Developer Tools testno okolje na spletnem vmesniku.}
+    \label{reactDevTools}
 \end{figure}
 
-Podmeni Asanas je razdeljen na tri dodatne podstrani, ki določajo različne težavnosti položajev, to so Begginer, Intermediate in Master. V bazi podatkov imamo pri vsakem položaju shranjeno še njegovo stopnjo težavnosti, kar nam omogoča enostavno sortiranje v omenjene težavnosti. S klikom na eno izmed težavnosti se nam odpre seznam z imeni in slikami položajev. S klikom na določen položaj, se nam odpre stran z angleškim imenom, sanskrit imenom, sliko, opisom izvedbe in videoposnetkom položaja, (Slika~\ref{asana}). Uporabnik ima možnost ogleda videopostneka položaja, s klikom na videoposnetek, (Slika~\ref{asana}). Vir videoposnetka je portal Youtube, posnetek pa se predvaja neposredno v sami aplikaciji, brez dodatnega odpiranja videoposnetka izven mobilne aplikacije. Za to funkcionalnost je uporabljena React Native knjižnica react-native-youtube-iframe. Knjižnica omogoča predvajanje posnetka skozi celoten ekran mobilne naprave, s klikom na naslov posnetka pa uporabnika preusmeri na vir videoposnetka na Youtubu.\\
+Ob zagonu mobilne aplikacije je uporabnik najprej preusmerjen na stran za prijavo, (Slika~\ref{prijava}, levo). Uporabnik, ki že ima uporabniško ime in geslo, se lahko s klikom na Sign in enostavno prijavi v aplikacijo z že obstoječimi podatki. V kolikor uporabnik še ni registriran, mora najprej opraviti registracijo, s klikom na gumb Sign up, kar ga preusmeri na stran za registracijo, (Slika~\ref{prijava}, desno). Za uspešno registracijo mora vnesti svoje ime, svoj elektronski naslov in geslo, ki ga bo uporabljal za prijavo. Ob registraciji uporabnika se v podatkovno bazo shrani nov uporabnik z vnesenimi podatki in sproži se prijava uporabnika.
 
 \begin{figure}[ht]
 \centering
-\begin{minipage}[b]{0.305\textwidth}
-    \includegraphics[width=\textwidth]{podmeniasanas.jpg}\centering
+  \begin{minipage}[b]{0.43\textwidth}
+    \includegraphics[width=\textwidth]{prijava.jpg}\centering
+    \label{prijava}
+  \end{minipage}
+  \begin{minipage}[b]{0.43\textwidth}
+    \includegraphics[width=\textwidth]{registracija.jpg}\centering
+  \end{minipage}
+    \caption{Obrazec za prijavo (levo) in registracijo (desno)}
+\end{figure}
+
+Ob prvi prijavi, uporabnika ob vstopu v aplikacijo pozdravi kratek uvod v aplikacijo, (Slika~\ref{pozdrav}). Pozdrav je predstavljen na dveh straneh, med katerima se lahko uporabnik poljubno premika. Na prvi strani se uporabnik seznani s pojmom joga in na drugi strani s kratkim opisom aplikacije.
+
+\begin{figure}[ht]
+\centering
+  \begin{minipage}[b]{0.43\textwidth}
+    \includegraphics[width=\textwidth]{pozdrav1.jpg}\centering
+    \label{pozdrav}
+  \end{minipage}
+  \begin{minipage}[b]{0.43\textwidth}
+    \includegraphics[width=\textwidth]{pozdrav2.jpg}\centering
+  \end{minipage}
+    \caption{Prva in druga stran začetnega pozdrava, ob prvi prijavi uporabnika.  }
+\end{figure}
+
+Po začetnem uvodu v aplikacijo ali po n-ti prijavi v aplikacijo, je uporabnik nato preusmerjen v glavni meni, (Slika~\ref{menu}). V glavnem meniju se uporabnik lahko premika levo in desno in izbira med tremi podmeniji. Podmeniji, ki so na voljo, so: "Asanas", "Goals" in "Notes". V glavnem meniju se zgoraj desno nahaja tudi gumb za odjavo.
+
+\begin{figure}[!ht]
+\centering
+  \begin{minipage}[b]{0.325\textwidth}
+    \includegraphics[width=\textwidth]{menu1.jpg}\centering
+    \label{menu}
+  \end{minipage}
+  \begin{minipage}[b]{0.325\textwidth}
+    \includegraphics[width=\textwidth]{menu2.jpg}\centering
+  \end{minipage}
+  \begin{minipage}[b]{0.325\textwidth}
+    \includegraphics[width=\textwidth]{menu3.jpg}\centering
+  \end{minipage}
+    \caption{Glavni meni s tremi možnostmi izbire podmenija (\textit{Asanas}, \textit{Goals}, \textit{Notes}).}
+\end{figure} 
+
+Podmeni \textit{Asanas} je razdeljen na tri dodatne podmenije, ki določajo različne kategorije težavnosti položajev. Kategorije težavnosti so: \textit{Begginer}, \textit{Intermediate}, in \textit{Master}, (Slika~\ref{asana}). \\
+S klikom na eno izmed naštetih težavnosti se uporabniku odpre dodaten podmeni, kjer se nahaja seznam z imeni in slikami položajev določene težavnosti. S klikom na enega izmed položajev, se odpre stran z angleškim imenom, sanskrit imenom, sliko, pozitivnimi učinki položaja, razdelek \textit{How to} z opisom izvedbe po korakih in videoposnetkom položaja za ogled same izvedbe, (Slika~\ref{asana2}). Uporabnik ima možnost ogleda videoposnetka položaja, s klikom na videoposnetek. Videoposnetek se predvaja neposredno v aplikaciji, kjer ima uporabnik tudi možnost povečave videa skozi celoten ekran mobilne naprave, s klikom na naslov posnetka pa si ga uporabnik lahko ogleda tudi izven aplikacije na platformi Youtube.\\
+
+\begin{figure}[!htbp]
+\centering
+\begin{minipage}[b]{0.32\textwidth}
+    \includegraphics[width=\textwidth]{asanas.jpg}\centering
   \end{minipage}
   \begin{minipage}[b]{0.32\textwidth}
-    \includegraphics[width=\textwidth]{asana.jpg}\centering
+    \includegraphics[width=\textwidth]{beginnerasanas.jpg}\centering
+  \end{minipage}
+    \caption{Podmeni s težavnostmi položajev (levo) in seznam položajev v podmeniju \textit{Begginer} (desno)}
+    \label{asana}
+    \begin{minipage}[b]{0.32\textwidth}
+    \includegraphics[width=\textwidth]{crowposeasana.jpg}\centering
   \end{minipage}
   \begin{minipage}[b]{0.32\textwidth}
     \includegraphics[width=\textwidth]{videoasana.jpg}\centering
   \end{minipage}
-    \caption{Stran s prikazom podatkov o asani (levo) in ogled videoposnetka (desno)}
-    \label{asana}
+  \label{asana2}
+  \caption{Stran s podrobnostmi položaja (desno) in predvajanje videa v aplikaciji (desno)}
 \end{figure}
 
-Podmeni Goals se prav tako razdeli na tri dodatne podstrani, ki predstavljajo tri kategorije, v katerih se lahko uporabnik izboljša in spremlja svoj napredek. Tri kategorije so: Splits, Backbends in Inversions. Ko si uporabnik izbere eno izmed kategorij, se odpre starn s sedem dnevnim programom različnih videoposnetkov, ki jim uporabnik lahko sledi za lasten napredek. Prav tako kot pri položajih, smo tudi tukaj naredili tako, da uporabnik predvaja in odpre videoposnetek neposredno v aplikaciji, brez odpiranja novega okna izven aplikacije. Pod programom sledi še možnost dodajanja slik, s katerimi uporabnik lažje sledi napredku. Za nalaganje slik je  uporabljena Expova knjižnica expo-image-picker, ki omogoča dostop do uporabniškega vmesnika sistema za izbiranje slik in videoposnetkov iz knjižnjice telefona ali fotografiranje s fotoaparatom, (Slika~\ref{slike}). Knjižnica omogoča tudi obračanje, obrezovanje in zrcaljenje slike, kar je vidno zgoraj v desnem kotu.
+Podmeni \textit{Goals} se prav tako razdeli na tri dodatne podstrani, ki predstavljajo tri kategorije, v katerih se lahko uporabnik izboljša in spremlja svoj napredek. Kategorije so: \textit{Splits}, \textit{Backbends} in \textit{Inversions}. Ko si uporabnik izbere eno izmed kategorij, se odpre stran s sedem dnevnim programom različnih videoposnetkov, ki jim uporabnik lahko sledi za lasten napredek, (Slika~\ref{goals}).
 
 \begin{figure}[ht]
 \centering
-  \begin{minipage}[b]{0.35\textwidth}
-    \includegraphics[width=\textwidth]{izborslik.jpg}\centering
+  \begin{minipage}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{goals.jpg}\centering
   \end{minipage}
-  \begin{minipage}[b]{0.35\textwidth}
-    \includegraphics[width=\textwidth]{obrezslike.jpg}\centering
+  \begin{minipage}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{splits.jpg}\centering
   \end{minipage}
-    \caption{Prikaz menija slik na mobilni napraviza izbor slike (levo) in okno za urejanje izbrane slike (desno)}
+    \caption{Podmeni \textit{Goals} (levo) in podmeni \textit{Splits} (desno).}
+    \label{goals}
+\end{figure}
+
+Tako kot pri položajih, se tudi tukaj videoposnetek predvaja in odpre neposredno v aplikaciji, brez odpiranja novega okna izven aplikacije. Poleg dneva programa se nahaja ikona za dodajanje zapiska, (Slika~\ref{ikonanotes}). S klikom na ikono lahko uporabnik lahko zapisek vezan na dan v programu, zapisek pa se potem pojavi v razdelku \textit{Progress notes}.
+
+\begin{figure}[htbp]
+\centering
+  \begin{minipage}[b]{0.55\textwidth}
+    \includegraphics[width=\textwidth]{ikonanotes.jpg}\centering
+  \end{minipage}
+  \begin{minipage}[b]{0.42\textwidth}
+    \includegraphics[width=\textwidth]{fullnotes.jpg}\centering
+  \end{minipage}
+    \caption{Ikona poleg dneva v programu (levo) in razdelek Progress notes v katerem se nahaja seznam zapiskov po dnevih (desno). \\ }
+    \label{ikonanotes}
+\end{figure}
+
+Pod programom se nahaja možnost dodajanja slik, s katerimi uporabnik lažje sledi napredku, (Slika~\ref{slike}). S klikom na ikono fotoaparata se odpre knjižnica s slikami in videoposnetki na mobilni napravi. 
+
+\begin{figure}[ht]
+\centering
+  \begin{minipage}[b]{0.56\textwidth}
+    \includegraphics[width=\textwidth]{emptyphoto.jpg}\centering
+  \end{minipage}
+  \begin{minipage}[b]{0.42\textwidth}
+    \includegraphics[width=\textwidth]{slike.jpg}\centering
+  \end{minipage}
+    \caption{Razdelek za dodajanje slik (levo) in prikaz naloženih slik v istem razdelku (desno). \\}
     \label{slike}
 \end{figure}
 
-Za ogled naloženih slik pa je uporabljena React Native knižnjica react-native-image-zoom-viewer, ki omogoča jasen in enostaven pregled slik, z dodatno možnostjo povečave slike, (Slika~\ref{pregled}).\\
+Po izboru slike se uporabniku odpre vmesnik za urejanje slike. V vmesniku uporabnik lahko sliko obrača, zrcali ali obreže, (Slika~\ref{crop}). Po končanem urejanju se s klikom na \textit{CROP} slika naloži v mobilno aplikacijo, kjer je vidna v razdelku s slikami. Za ogled slik uporabnik enostavno klikne na sliko, ki se odpre v pregledovalniku slik, med slikami pa se uporabnik premika z drsanjem v levo ali desno.
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
 \centering
-  \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth]{splitsscreen.jpg}\centering
+  \begin{minipage}[b]{0.32\textwidth}
+    \includegraphics[width=\textwidth]{galerija.jpg}\centering
+    \label{menu}
   \end{minipage}
-  \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth]{pregledslike.jpg}\centering
+  \begin{minipage}[b]{0.32\textwidth}
+    \includegraphics[width=\textwidth]{photocrop.jpg}\centering
   \end{minipage}
-    \caption{Stran splits v podmeniju Goals (levo) in okno za ogled naložene slike (desno)}
-    \label{pregled}
+  \begin{minipage}[b]{0.32\textwidth}
+    \includegraphics[width=\textwidth]{pregledslik.jpg}\centering
+  \end{minipage}
+    \caption{Knjižnica slik na napravi (levo), urejevalnik izbrane slike (sredina) in pregledovalnik slik (desno). \\ }
 \end{figure}
 
-Uporabnik ima poleg zgoraj naštetih funkcionalnosti še možnost podajanja samoocene, da lahko lažje spremlja svoj lasten napredek in kje na poti do cilja se nahaja.
+Uporabnik si lahko pred, med ali po programu poda samooceno, s katero lahko lažje spremlja svoj lasten napredek in kakšen rezultat je dosegel, (Slika~\ref{progress}). S klikom na določeno število zvezdic se le-te obarvajo in izpiše se opis ocene.
 
-Podmeni Notes ima seznam zapiskov, ki jih je uporabnik ustvaril, ter spodaj desno gumb za dodajanje novega zapiska. S klikom na gumb za dodajanje zapiska, se uporabniku odpre forma za vnos naslova zapiska in okno za vnos vsebine zapiska. Pod oknom za vsebino se nahajata še 2 gumba, levo gumb Back, ki uporabnika vrne v seznam zapiskov in desno gumb Save, ki omogoča shranitev zapiska, (Slika~\ref{zapiski1}). 
-
-\begin{figure}[ht]
+\begin{figure}[!ht]
 \centering
-  \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth]{prazenzapisek.jpg}\centering
+  \begin{minipage}[b]{0.46\textwidth}
+    \includegraphics[width=\textwidth]{emptyprogress.jpg}\centering
   \end{minipage}
-  \begin{minipage}[b]{0.4\textwidth}
+  \begin{minipage}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{fullprogress.jpg}\centering
+  \end{minipage}
+    \caption{Prazen razdelek za podajanje ocene napredka (levo) in podana ocena (desno).}
+    \label{progress}
+\end{figure}
+
+Podmeni \textit{Notes} ima seznam zapiskov, ki jih je uporabnik ustvaril, ter spodaj desno gumb za dodajanje novega zapiska, (Slika~\ref{zapiski1}). Vsak zapisek v seznamu je razvrščen v ustrezno kategorijo in prikazan z imenom na levi strani vrstice, na desni strani vrstice pa se nahaja ikona koša za smeti, s klikom na katerega lahko uporabnik izbriše zapisek. S klikom na gumb za dodajanje zapiska, se uporabniku odpre forma za vnos naslova zapiska in okno za vnos vsebine zapiska. Pod oknom za vsebino se nahajata še dva gumba, levo gumb \textit{Back}, ki uporabnika vrne v seznam zapiskov in desno gumb \textit{Save}, ki omogoča shranitev zapiska.
+
+\begin{figure}[!htbp]
+\centering
+  \begin{minipage}[b]{0.41\textwidth}
+    \includegraphics[width=\textwidth]{random.jpg}\centering
+  \end{minipage}
+  \begin{minipage}[b]{0.41\textwidth}
     \includegraphics[width=\textwidth]{ustvarjanjezapiska.jpg}\centering
   \end{minipage}
-    \caption{Prazna forma za stvarjanje zapiska (levo) in forma z vneseno vsebino zapiska (desno)}
+    \caption{seznam zapiskov (levo) in forma z vneseno vsebino zapiska (desno).}
     \label{zapiski1}
 \end{figure}
 
-Po shranitvi zapiska je uporabnik samodejno preusmerjen nazaj na seznam zapiskov. Vsak zapisek v seznamu je prikazan z imenom na levi strani vrstice, na desni strani vrstice pa se nahaja ikona koša za smeti, s klikom na katerega lahko uporabnik izbriše zapisek.
+Po shranitvi zapiska je uporabnik samodejno preusmerjen nazaj na seznam zapiskov. 
 S klikom na izbrani zapisek se odpre stran z naslovom zapiska, datumom, kdaj je bil zapisek ustvarjen in zapisano besedilo uporabnika, (Slika~\ref{zapiski2}).
 
-V glavnem meniju se desno v glavi nahaja gumb za odjavo, v vsakem podmeniju pa se desno v glavi nahaja gumb Home, ki omogoča hitrejšo vrnitev v glavni meni. 
-
-\begin{figure}[ht]
+\begin{figure}[!ht]
 \centering
-  \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth]{seznamzapiskov.jpg}\centering
+  \begin{minipage}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{ogledzapiska.jpg}\centering
   \end{minipage}
-  \begin{minipage}[b]{0.4\textwidth}
-    \includegraphics[width=\textwidth]{pregledzapiska.jpg}\centering
-  \end{minipage}
-    \caption{Prikaz strani s seznamom zapiskov (levo) in prikaz strani z ogledom podrobnosti zapiska (desno)}
+    \caption{Prikaz strani z ogledom podrobnosti zapiska (desno).}
     \label{zapiski2}
 \end{figure}
+
+Za odjavo iz aplikacije lahko uporabnik v vsakem od podmenijev klikne gumb  \textit{Home}  (ikona hiške zgoraj desno), ki ga preusmeri v glavni meni, kjer se na istem mestu nahaja gumb za odjavo.
 
 \chapter{Sklepne ugotovitve}
 \label{stroka}

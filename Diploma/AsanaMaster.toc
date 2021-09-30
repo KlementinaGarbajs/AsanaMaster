@@ -9,24 +9,22 @@
 \contentsline {section}{\numberline {2.1}Joga}{3}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Zgodovina joge}{4}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Asane in njihov pomen}{6}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Sorodne aplikacije}{7}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Sorodne aplikacije}{8}{section.2.4}%
 \contentsline {chapter}{\numberline {3}Na\IeC {\v c}rtovanje aplikacije}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Ideja in cilji aplijacije}{9}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Struktura mobilne aplikacije}{9}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Arhitektura aplikacije}{10}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Funkcionalnosti aplikacije}{11}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Zbiranje podatkov}{12}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Razvoj mobilne aplikacije}{13}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Podatkovna baza}{13}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Uporabljena tehnologija in orodja}{15}{section.4.2}%
-\contentsline {section}{\numberline {4.3}npm}{15}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Ogrodja}{15}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Programski jeziki}{17}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Programi}{18}{section.4.6}%
-\contentsline {section}{\numberline {4.7}REST API}{19}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Mobilna aplikacija}{20}{section.4.8}%
-\contentsline {chapter}{\numberline {5}Predstavitev aplikacije}{23}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Glavne funkcionalnosti in delovanje aplikacije}{23}{section.5.1}%
-\contentsline {chapter}{\numberline {6}Sklepne ugotovitve}{31}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Ideje za nadaljni razvoj}{32}{section.6.1}%
-\contentsline {chapter}{Literatura}{33}{section.6.1}%
+\contentsline {section}{\numberline {3.1}Struktura mobilne aplikacije}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Arhitektura aplikacije}{10}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Funkcionalnosti aplikacije}{11}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Razvoj mobilne aplikacije}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Uporabljena tehnologija in orodja}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Ogrodja}{15}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Orodja}{16}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Programski jeziki}{17}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Programi}{18}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Podatkovni nivo}{19}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Logi\IeC {\v c}ni nivo}{20}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Uporabni\IeC {\v s}ki nivo}{21}{section.4.8}%
+\contentsline {chapter}{\numberline {5}Predstavitev aplikacije}{25}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Funkcionalnosti in delovanje aplikacije}{25}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Sklepne ugotovitve}{35}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Ideje za nadaljni razvoj}{36}{section.6.1}%
+\contentsline {chapter}{Literatura}{37}{section.6.1}%

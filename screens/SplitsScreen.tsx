@@ -143,7 +143,7 @@ function SplitsScreen() {
     <ScrollView>
     <View style={styles.container}>
       <Card title="Start your journey" containerStyle={styles.card}>
-        <ScrollView style={{ height: 300 }}>
+        <ScrollView style={{ height: 320 }}>
           <FlatList data={[
                           {id: "DAY 1", link: "7__5szNyObA"},
                           {id: "DAY 2", link: "tSYtyL4aLzI"},
@@ -158,12 +158,6 @@ function SplitsScreen() {
           <View style={{paddingHorizontal: 10 }}>
             <View style={{ flexDirection: "row", alignItems: "center", paddingTop: 10}}>
               <Text style={styles.logo}>{item.id}</Text>
-
-              <CheckBox
-                value={isSelected}
-                onValueChange={setSelection}
-                style={{ marginLeft: 10 }}
-              />
             <TouchableOpacity style={{ flexDirection: "row", alignItems: "center", justifyContent: "center" }} onPress={() => navigation.navigate('New Note Goals', { goal: 'splits', day_name: item.id})}>
               <Icon name='notes' size={30} style={{ padding: 10 }} color='rgba(6, 152, 111, 0.8)' />
             </TouchableOpacity>
@@ -171,7 +165,7 @@ function SplitsScreen() {
   
             <YoutubePlayer
                 height={120}
-                width={240}
+                width={280}
                 videoId={item.link}
             />
           </View>}
